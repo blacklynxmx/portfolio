@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCC Mundial — Two audiences, one commerce engine · David G. Mendieta</title>
+  <meta name="description" content="How I rebuilt the job-ad commerce flow for Mexico's #1 job board. Two-track research (candidate JTBD + recruiter segmentation), CAJA shopping-cart architecture, and a dynamic-pricing study users could never see." />
+  <meta name="author" content="David G. Mendieta" />
+
+  <link rel="canonical" href="https://davidgmendieta.com/work/occ.html" />
+  <link rel="alternate" hreflang="en" href="https://davidgmendieta.com/work/occ.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.com/es/work/occ.html" />
+  <link rel="alternate" hreflang="x-default" href="https://davidgmendieta.com/work/occ.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://davidgmendieta.com/work/occ.html" />
+  <meta property="og:title" content="OCC Mundial — Two audiences, one commerce engine" />
+  <meta property="og:description" content="Two-track research + shopping-cart architecture for Mexico's #1 job board. +34% revenue YoY." />
+  <meta property="og:image" content="https://davidgmendieta.com/assets/cases/occ/occ-after-hero.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/" class="active">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/occ.html" class="active" lang="en">EN</a>
+            <a href="/es/work/occ.html" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= CASE HERO ================= -->
+  <header class="case-hero">
+    <div class="container-narrow">
+      <div class="case-hero-meta">
+        <span class="num">Case 01 / 06</span>
+        <span class="divider-dot">·</span>
+        <span>2015 — 2021</span>
+        <span class="divider-dot">·</span>
+        <span>B2B SaaS · Consumer marketplace</span>
+      </div>
+
+      <div class="case-hero-client">
+        <img src="/assets/logos/occ.svg" alt="OCC Mundial" />
+        <span class="client-name">OCC Mundial · part of SEEK Limited</span>
+      </div>
+
+      <h1 class="case-title">
+        Two audiences, one <span class="accent">commerce engine</span>.
+      </h1>
+
+      <p class="case-lede">
+        Mexico's #1 job board had grown into a 20-year-old platform serving five million monthly users — and the same flow was trying to serve both the person looking for work and the business looking to hire. I split the research, rebuilt the product around a shopping cart, and set the groundwork for dynamic pricing users could never see.
+      </p>
+
+      <div class="case-hero-meta-row">
+        <div>
+          <span class="label">Role</span>
+          <span class="value">Senior UX &amp; Product Strategist</span>
+        </div>
+        <div>
+          <span class="label">Duration</span>
+          <span class="value">6 years · Full-time</span>
+        </div>
+        <div>
+          <span class="label">Team</span>
+          <span class="value">1 PO, 2 designers, 4 engineers, 2 analysts</span>
+        </div>
+        <div>
+          <span class="label">Headline impact</span>
+          <span class="value">+34% revenue YoY, +15 NPS, 106% quota</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- ================= 01 · BEFORE ================= -->
+  <section class="case-section" id="before">
+    <div class="container-narrow">
+      <p class="section-eyebrow">01 · Before</p>
+      <h2>The system we inherited.</h2>
+
+      <p>
+        OCC Mundial — officially Online Career Center — is Mexico's largest job board and part of <a href="https://www.seek.com.au/" target="_blank" rel="noopener" class="inline">SEEK Limited</a>, the Australian group that also owns the leading boards in Brazil, Southeast Asia, Hong Kong, and elsewhere. By the time I joined in 2015 the business was profitable, the traffic was enormous — five million monthly users — and almost everything under the hood had been patched rather than rebuilt since around 2005.
+      </p>
+
+      <p>
+        The commerce engine was the clearest example. It treated candidates and recruiters as if they were symmetric. They aren't — and pretending they are is where twenty years of patching started to show.
+      </p>
+
+      <div class="before-after">
+        <figure>
+          <div class="figure-frame figure-legacy">
+            <img src="/assets/cases/occ/occ-before-candidates.png" alt="Legacy OCC candidate-facing site circa 2016" />
+          </div>
+          <span class="before-after-label">Candidate site · 2016 legacy</span>
+        </figure>
+        <figure>
+          <div class="figure-frame figure-legacy">
+            <img src="/assets/cases/occ/occ-before-recruiter.png" alt="Legacy OCC recruiter admin circa 2016" />
+          </div>
+          <span class="before-after-label">Recruiter admin · 2016 legacy</span>
+        </figure>
+      </div>
+
+      <div class="figure figure-frame figure-legacy">
+        <img src="/assets/cases/occ/occ-before-admin.png" alt="Legacy OCC job-ad admin" />
+        <p class="figure-caption"><span class="label">Figure</span> The job-ad admin as it stood when I arrived. Every recruiter — from a bakery owner hiring their first employee to an HR team running a 200-role pipeline — used this same screen.</p>
+      </div>
+
+      <h3>Two audiences, one flow, and the logic didn't match either.</h3>
+
+      <p>
+        Candidates want to find a job fast, with as little friction as possible, and they want emotional reassurance that the effort is going somewhere. Recruiters want candidate quality, control over their spend, and tools that scale from one hire to a hundred. These two sets of jobs-to-be-done are adjacent — they live on the same marketplace — but they are not the same shape.
+      </p>
+
+      <p>
+        The existing commerce engine tried to flatten them. One product catalog. One pricing logic. One flow to create a job ad. Good enough when your recruiter base was homogeneous in 2005; painfully tight by 2015 when five different kinds of businesses were all trying to buy the same product for five different reasons.
+      </p>
+
+      <div class="callout for-business">
+        <span class="callout-label">The business reality</span>
+        <p>
+          Revenue growth was slowing, but the diagnosis was murky. Was it pricing? Funnel leakage? Audience saturation? Wrong product mix? The leadership team had a hypothesis on each of these and not enough evidence to pick one. That's the moment research earns its keep — not to confirm a preferred answer, but to make the problem legible enough to decide.
+        </p>
+      </div>
+
+      <blockquote class="quote">
+        The same screen was serving a bakery owner and an HR director running 200 hires. That's where 20 years of patching was catching up with us.
+        <cite class="quote-cite">— Diagnostic memo, early 2015</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 02 · RESEARCH ================= -->
+  <section class="case-section" id="research">
+    <div class="container-narrow">
+      <p class="section-eyebrow">02 · Research</p>
+      <h2>Two audiences, two tracks.</h2>
+
+      <p>
+        My first argument to leadership was structural. Most teams running research on a two-sided marketplace run one research practice covering both sides. That's where the mistakes accumulate — you end up with insights that generalize across audiences and product decisions that fit neither one cleanly.
+      </p>
+
+      <p>
+        <span class="authorship">[My call]</span> I proposed splitting the research effort into two tracks that shared tooling but not conclusions. Track A would investigate candidates with consumer-research methods — JTBD, ethnography, emotional journey mapping. Track B would investigate recruiters with B2B segmentation methods — quantitative behavior analysis, stakeholder interviews, willingness-to-pay studies. Each track would own its own deliverables, and they would converge only at the product-decision layer.
+      </p>
+
+      <div class="callout for-research">
+        <span class="callout-label">Why I framed it this way</span>
+        <p>
+          A two-sided marketplace has two kinds of truth. Candidate truth lives in emotion and behavior under pressure. Recruiter truth lives in operational constraints and unit economics. If you let one research program cover both, you'll find yourself reaching for whichever method is most comfortable — and you'll answer one side of the market with the wrong instruments. Keeping the tracks separate was the cheapest way to keep the methods honest.
+        </p>
+      </div>
+
+      <!-- ========== TRACK A ========== -->
+      <div class="case-sub-track">
+        <span class="case-sub-track-label">Track A · Candidates (B2C)</span>
+        <h3>What job seekers actually do under pressure.</h3>
+
+        <p>
+          Track A was built around one question: what does a job seeker do in the seven days between "I need to change something" and "I have a job offer"? Everything in the candidate-facing product — search, filters, alerts, the apply flow — should be tuned to that seven-day arc, not to the information architecture an engineering team finds tidy.
+        </p>
+
+        <div class="methods">
+          <div class="method">
+            <p class="method-label">Method 01</p>
+            <h4>JTBD interviews (n=10)</h4>
+            <p>90-minute conversations with recently-hired or actively-searching job seekers across Mexico. Mapped the emotional arc from trigger event to accepted offer.</p>
+          </div>
+          <div class="method">
+            <p class="method-label">Method 02</p>
+            <h4>Contextual inquiry</h4>
+            <p>Shadowed participants during real search sessions. Measured what they did vs. what they said they did — the two rarely lined up.</p>
+          </div>
+          <div class="method">
+            <p class="method-label">Method 03</p>
+            <h4>Survey (n=1,200)</h4>
+            <p>Statistical validation of archetype frequencies, emotional states, and feature-importance rankings across the candidate base.</p>
+          </div>
+          <div class="method">
+            <p class="method-label">Method 04</p>
+            <h4>Emotional journey map</h4>
+            <p>Synthesized the arc into a single reference artifact — adopted as the team lens for all candidate-facing decisions.</p>
+          </div>
+        </div>
+
+        <div class="figure figure-frame">
+          <img src="/assets/cases/occ/page-13.png" alt="Ten candidate personas synthesized from JTBD research" />
+          <p class="figure-caption"><span class="label">Figure</span> The ten participants from Track A interviews, synthesized onto a single reference. Each figure captures one real participant's trigger event, behavior pattern, and emotional state at the moment of search.</p>
+        </div>
+
+        <h4 style="margin-top: 2.5rem;">Three archetypes, one stress-test persona.</h4>
+
+        <p>
+          The ten participants clustered into three archetypes along two axes: clarity about what they wanted, and pressure to find it fast. Rather than design for a "primary persona" — a decision I've watched other teams regret — we used Fernanda, the inexperienced archetype, as the stress-test. If she could navigate a new feature, so could the other two. If she couldn't, we had work to do.
+        </p>
+
+        <div class="personas">
+          <div class="persona determined">
+            <span class="persona-archetype">The Determined</span>
+            <h4>Armando · 34</h4>
+            <p class="persona-quote">"I know my market rate. I apply where it matches."</p>
+            <dl>
+              <dt>Mood</dt><dd>Composed, selective</dd>
+              <dt>Friction</dt><dd>Slow systems, redundant forms</dd>
+              <dt>JTBD</dt><dd>Move up, not across</dd>
+            </dl>
+          </div>
+
+          <div class="persona inexperienced">
+            <span class="persona-archetype">The Inexperienced</span>
+            <h4>Fernanda · 22</h4>
+            <p class="persona-quote">"If I can't find something in five minutes, I feel I can't find one at all."</p>
+            <dl>
+              <dt>Mood</dt><dd>Anxious, optimistic</dd>
+              <dt>Friction</dt><dd>Jargon, vague requirements</dd>
+              <dt>JTBD</dt><dd>Land the first job</dd>
+            </dl>
+          </div>
+
+          <div class="persona desperate">
+            <span class="persona-archetype">The Desperate</span>
+            <h4>Carlos · 41</h4>
+            <p class="persona-quote">"I need something by Friday. Anything serious."</p>
+            <dl>
+              <dt>Mood</dt><dd>Urgent, pragmatic</dd>
+              <dt>Friction</dt><dd>Anything that isn't the apply button</dd>
+              <dt>JTBD</dt><dd>Stop the bleeding</dd>
+            </dl>
+          </div>
+        </div>
+
+        <blockquote class="quote">
+          If Fernanda can't find a job in five minutes, she believes she can't find one at all.
+          <cite class="quote-cite">— Team lens, adopted across the product</cite>
+        </blockquote>
+
+        <div class="figure figure-frame">
+          <img src="/assets/cases/occ/page-17.png" alt="Emotional journey map for Fernanda, the inexperienced archetype" />
+          <p class="figure-caption"><span class="label">Figure</span> Fernanda's emotional arc across seven days of active search. The dips at day two (first rejection) and day five (plateau of effort) drove specific feature work — notification cadence, re-engagement copy, and onboarding-for-alerts.</p>
+        </div>
+      </div>
+
+      <!-- ========== TRACK B ========== -->
+      <div class="case-sub-track">
+        <span class="case-sub-track-label track-b">Track B · Recruiters (B2B)</span>
+        <h3>Five recruiter types buying the same product for five different reasons.</h3>
+
+        <p>
+          <span class="authorship">[My call]</span> Track B started from the other end. Before interviewing anyone, I pulled three years of transactional data and ran segmentation on behavior — not on stated industry. The question wasn't "what kind of company are you" but "how do you actually buy." Those two questions return different answers, and the second one is what the product has to solve.
+        </p>
+
+        <p>
+          Five segments emerged. Each had a distinct purchase cadence, price sensitivity, and support need. A single pricing model couldn't serve all five without over-serving some and under-serving the rest — which is what the legacy product was doing.
+        </p>
+
+        <dl class="segments-table">
+          <div class="segments-table-row">
+            <dt>Micro businesses</dt>
+            <dd>1–10 employees. Hire 1–3 times per year. Self-service only — will not talk to sales. Need the cheapest ad that works. Primary failure mode: abandoning checkout at price reveal.</dd>
+          </div>
+          <div class="segments-table-row">
+            <dt>SME</dt>
+            <dd>11–250 employees. One or two HR people wearing six hats. Open to sales contact but time-poor. Primary need: a product bundle that feels decided-for-them. Willing to pay for the decision.</dd>
+          </div>
+          <div class="segments-table-row">
+            <dt>Corporate</dt>
+            <dd>250+ employees. Dedicated HR team, procurement process, requisition workflows. Primary need: volume, reporting, invoicing that matches their PO system. Sales-assisted purchase is the norm.</dd>
+          </div>
+          <div class="segments-table-row">
+            <dt>HR firms</dt>
+            <dd>Recruiting agencies reselling job ads and candidate access to their own clients. Intermediate actors. Primary need: white-label-ish transparency, volume pricing, fast account reload.</dd>
+          </div>
+          <div class="segments-table-row">
+            <dt>Massive recruitment</dt>
+            <dd>Retail, BPOs, delivery platforms. Hire hundreds per month. Primary need: throughput. Price per hire matters more than brand perception. Built-for-purpose pricing and admin tooling.</dd>
+          </div>
+        </dl>
+
+        <div class="callout for-business">
+          <span class="callout-label">What the segmentation changed</span>
+          <p>
+            Once the five segments were articulated with behavior data behind them, the product roadmap rewrote itself. Features that had been on the "nice to have" backlog turned out to be hard requirements for one segment (e.g., requisition-style PO workflows for Corporate). Features that had been planned as defaults turned out to be over-engineered for Micro. The segmentation wasn't a slide. It was the filter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 03 · ROADMAP ================= -->
+  <section class="case-section" id="roadmap">
+    <div class="container-narrow">
+      <p class="section-eyebrow">03 · Roadmap</p>
+      <h2>CAJA — Create A Job Ad, as a shopping cart.</h2>
+
+      <p>
+        With two tracks of research converging, the product question became: what single flow lets a one-person bakery and a 200-hire HR team both buy what they need without feeling like the tool was designed for the other one? The answer landed in the most boring place possible — a shopping cart.
+      </p>
+
+      <p>
+        CAJA — <em>Create A Job Ad</em> — was the internal name for the new commerce flow. The metaphor was deliberately the one everybody already knows: add things to a cart, adjust quantities, apply any codes, check out. No configurator, no bundled plan, no sales hand-off required. Every recruiter segment, from Micro to Massive, buys the same way — with a different basket.
+      </p>
+
+      <div class="callout for-engineering">
+        <span class="callout-label">Why a cart, not a configurator</span>
+        <p>
+          A configurator forces you to pre-declare your scenario: "I am X kind of business with Y need." That's exactly the kind of question no buyer wants to answer to a website. A cart lets you add and remove until the total feels right, which is how humans actually decide. It's also kinder to engineering: a cart is a small, well-understood state machine; a configurator branches combinatorially. The cart won on both ergonomics and build cost.
+        </p>
+      </div>
+
+      <div class="figure figure-wide figure-frame">
+        <img src="/assets/cases/occ/occ-roadmap.png" alt="CAJA roadmap — from e-commerce rebuild to the Age of CAJA" />
+        <p class="figure-caption"><span class="label">Figure</span> The four-phase roadmap presented to leadership. Each phase was scoped so that the phase below it delivered standalone value — a discipline that saved us twice when budget cycles tightened mid-FY20.</p>
+      </div>
+
+      <div class="roadmap">
+        <div class="roadmap-step">
+          <span class="roadmap-step-label">Phase 01</span>
+          <p class="roadmap-step-period">FY19 · Q1–Q3</p>
+          <p class="roadmap-step-title">E-commerce rebuild</p>
+          <p>Replatformed the commerce engine underneath the existing UI. No user-facing change — foundation only. Set up the substrate CAJA would run on.</p>
+        </div>
+        <div class="roadmap-step highlight">
+          <span class="roadmap-step-label">Phase 02</span>
+          <p class="roadmap-step-period">FY20 · Q1</p>
+          <p class="roadmap-step-title">CAJA launches</p>
+          <p>Shopping-cart flow goes live. First product tiers (Classic / Standout / Premium) plus à-la-carte visibility boosters. Quarter-one revenue exceeded target by 18%.</p>
+        </div>
+        <div class="roadmap-step">
+          <span class="roadmap-step-label">Phase 03</span>
+          <p class="roadmap-step-period">FY20 · Q2</p>
+          <p class="roadmap-step-title">Omnichannel</p>
+          <p>Unified cart state across web, mobile, and sales-assisted purchases. Recruiters could start online, finish with sales, and see the same cart from both sides.</p>
+        </div>
+        <div class="roadmap-step">
+          <span class="roadmap-step-label">Phase 04</span>
+          <p class="roadmap-step-period">FY20+</p>
+          <p class="roadmap-step-title">Age of CAJA</p>
+          <p>Pricing experimentation, promotion engine, dynamic pricing groundwork. The phase where the cart becomes a pricing surface, not just a checkout.</p>
+        </div>
+      </div>
+
+      <!-- EVOLUTION — FLEX PRICING -->
+      <h3 style="margin-top: 4rem;">Evolution — Flex Pricing research.</h3>
+
+      <p>
+        Once CAJA was live, the natural next question arrived from SEEK: could we introduce dynamic pricing — the kind that had worked elsewhere in the portfolio — without breaking user trust in a market where "variable pricing" carries a different cultural weight than in Australia or Southeast Asia?
+      </p>
+
+      <div class="callout for-research">
+        <span class="callout-label"><span class="authorship">[My call]</span> The hard constraint</span>
+        <p>
+          The instruction from leadership was explicit: "Users must never understand they are being priced dynamically. Every price must feel standard to the user." That single sentence shaped the entire research methodology — I couldn't ask direct questions about price fairness, couldn't A/B test pricing visibly, couldn't even use the word "dynamic" in a survey. The methodology had to work inside that constraint without breaking it.
+        </p>
+      </div>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">Phase 01 · Quantitative</p>
+          <h4>Historical data analysis</h4>
+          <p>Three years of transaction data run through elasticity modeling by segment, by month, by product tier. Identified three distinct elasticity bands and the macro variables that shifted each one (hiring seasonality, end-of-quarter rushes, specific industry events).</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Phase 02 · Qualitative</p>
+          <h4>Constrained-language validation</h4>
+          <p>Survey and interview protocols designed with rigid linguistic rules: never mention "price," "dynamic," "variable," or "discount." Only ask about perceived fairness of the experience, comfort with product tiers, and whether anything felt "off." The signal we wanted lived in the absence of negative reaction.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Phase 03 · Operational</p>
+          <h4><span class="authorship team">[Team]</span> POC testing with guardrails</h4>
+          <p>Quiet A/B test on a small cohort. Primary metric: conversion lift. Guardrail metrics: complaint rate, churn, brand sentiment pulse. No breakout in any guardrail — the test could continue. The output was a methodology ready for portfolio-wide rollout under the same constraint.</p>
+        </div>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label">Why this matters for senior research work</span>
+        <p>
+          Most research protocols assume you can ask the user what they think. Commercially sensitive research often can't — either because the question biases the answer, or because asking the question creates a problem you didn't have. The Flex Pricing study was the piece of work I'm most likely to reach for when someone asks what senior research looks like in a commercial context: finding a way to get a defensible answer without letting the investigation become the story.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 04 · AFTER ================= -->
+  <section class="case-section" id="after">
+    <div class="container-narrow">
+      <p class="section-eyebrow">04 · After</p>
+      <h2>What shipped, what users saw.</h2>
+
+      <p>
+        Six years of work doesn't fit into three screenshots — but three screenshots are what a recruiter scrolling this page will actually look at. Here are the moments of highest leverage, the places where a decision from research became a pixel on a page.
+      </p>
+
+      <div class="figure figure-wide">
+        <div class="browser-frame">
+          <div class="browser-frame-bar">
+            <div class="browser-frame-dots"><span></span><span></span><span></span></div>
+            <div class="browser-frame-url">www.occ.com.mx</div>
+          </div>
+          <img src="/assets/cases/occ/occ-after-hero.png" alt="OCC Mundial current hero" />
+        </div>
+        <p class="figure-caption"><span class="label">Home · today</span> The candidate-facing surface, as it stands. The search bar is the argument — the five-minute promise Fernanda needed, preserved.</p>
+      </div>
+
+      <div class="figure figure-wide">
+        <div class="browser-frame">
+          <div class="browser-frame-bar">
+            <div class="browser-frame-dots"><span></span><span></span><span></span></div>
+            <div class="browser-frame-url">www.occ.com.mx/empleador/planes</div>
+          </div>
+          <img src="/assets/cases/occ/occ-after-pricing.png" alt="OCC recruiter pricing page — Classic, Standout, Premium tiers" />
+        </div>
+        <p class="figure-caption"><span class="label">Pricing · today</span> Three product tiers — Classic, Standout, Premium — that map cleanly onto recruiter segments. Micro stays in Classic, SME picks Standout, Corporate and Massive live in Premium and Custom.</p>
+      </div>
+
+      <div class="figure figure-wide">
+        <div class="browser-frame">
+          <div class="browser-frame-bar">
+            <div class="browser-frame-dots"><span></span><span></span><span></span></div>
+            <div class="browser-frame-url">www.occ.com.mx/empleador/registro</div>
+          </div>
+          <img src="/assets/cases/occ/occ-after-register.png" alt="OCC recruiter registration" />
+        </div>
+        <p class="figure-caption"><span class="label">Recruiter registration · today</span> The entry point for new recruiter accounts. Four fields, one primary action, no sales gate. A direct consequence of the segmentation — Micro will leave if you try to talk to them.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 05 · IMPACT ================= -->
+  <section class="case-section" id="impact">
+    <div class="container-narrow">
+      <p class="section-eyebrow">05 · Impact</p>
+      <h2>The numbers.</h2>
+
+      <p>
+        FY20 closed with six measurable outcomes. The revenue lift and average-ticket lift came primarily from the tier restructuring (Standout and Premium). The NPS lift came from the recruiter-side UX overhaul that followed segmentation. The SEEK-portfolio award and 106% quota were organizational consequences of the numbers below.
+      </p>
+
+      <div class="metrics">
+        <div class="metric">
+          <p class="metric-value"><span class="accent">+34%</span></p>
+          <p class="metric-label">Revenue, year over year</p>
+          <p class="metric-sublabel">FY20 vs. FY19</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value"><span class="accent">+22%</span></p>
+          <p class="metric-label">Average ticket</p>
+          <p class="metric-sublabel">Driven by Standout &amp; Premium</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value"><span class="tech">+10%</span></p>
+          <p class="metric-label">Job ads sold, YoY</p>
+          <p class="metric-sublabel">Volume growth across all segments</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value"><span class="tech">+15</span></p>
+          <p class="metric-label">NPS points</p>
+          <p class="metric-sublabel">Recruiter segment</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value">106<span class="accent">%</span></p>
+          <p class="metric-label">Quota</p>
+          <p class="metric-sublabel">Full fiscal year</p>
+        </div>
+        <div class="metric">
+          <p class="metric-value"><span class="accent">#1</span></p>
+          <p class="metric-label">e-Commerce award</p>
+          <p class="metric-sublabel">SEEK portfolio, regional</p>
+        </div>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/occ/occ-revenue-chart.png" alt="Revenue chart FY19 vs FY20" />
+        <p class="figure-caption"><span class="label">Revenue · FY19 vs FY20</span> The shape of the curve matters as much as the delta. FY19 showed the flat trend leadership had flagged; FY20 is what happened after CAJA went live at the start of Q1.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 06 · REFLECTION ================= -->
+  <section class="case-section" id="reflection">
+    <div class="container-narrow">
+      <p class="section-eyebrow">Beyond the core delivery</p>
+      <h2>06 · Other proposals developed.</h2>
+
+      <p>
+        These are directions I proposed individually — research-backed, documented, and presented to leadership — that extended the CAJA delivery into adjacent product territory. None shipped as production features during my tenure; all three are included here as individual authorship. Screens for the recruiter backend are in design and will be published shortly.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> Proposal A</span>
+        <p>
+          <strong>Recruiter backend redesign.</strong> A proposal for a new recruiter workspace — job-ad builder, candidate inbox, real-time applicant tracking, and a performance dashboard — extending CAJA into a full self-serve admin experience. The research basis was the gap Track B surfaced: power recruiters were managing 40+ active ads through a UI designed for posting one at a time. I mapped the full task flow, defined the IA, and handed the concept to product leadership with a prioritised feature list and business case. <em>Screens in design phase — publishing soon.</em>
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> Proposal B</span>
+        <p>
+          <strong>Self-serve recruiter analytics.</strong> A proposed analytics module letting recruiters see their own ad performance against segment benchmarks — without sales involvement. The insight that justified it: Track B segmentation showed that Micro and SME-segment recruiters never asked for performance reports because they didn't know reports were available, not because they didn't want them. Surfacing the data in-product, contextually, was a zero-cost retention play. I designed the data model, the disclosure logic, and the UI concept.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> Proposal C</span>
+        <p>
+          <strong>Dynamic pricing UI.</strong> The visible output of the Flex Pricing research from section 03. The constraint I worked within: <em>users must never perceive they are being priced dynamically</em> — surfacing the mechanism would destroy trust instantly. My proposal reframed contextual pricing as "recommended package for your segment" — the right price, presented as a recommendation, not a variable. I owned the UX rationale, the copy framing, and the interaction model.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CASE NAV ================= -->
+  <nav class="case-nav" aria-label="Case navigation">
+    <div class="case-nav-inner">
+      <a href="/" class="case-nav-card prev">
+        <span class="label">All work</span>
+        <span class="title">Back to case studies</span>
+      </a>
+      <a href="/" class="case-nav-card next" aria-disabled="true" style="opacity: 0.55; pointer-events: none;">
+        <span class="label">Next — Publishing soon</span>
+        <span class="title">Compartamos · Loan origination</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p><strong style="color: var(--text-primary); font-weight: 500;">David G. Mendieta</strong></p>
+        <p>Senior UX Research &amp; Product Strategy. Available for senior and lead roles in fintech, regulated banking, and B2B SaaS.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a>
+        <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/">Work</a>
+        <a href="/es/work/occ.html">Español</a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>© <span data-year>2026</span> David G. Mendieta</span>
+      <span>Mexico City · Available remote</span>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js" defer></script>
+</body>
+</html>

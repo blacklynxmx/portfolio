@@ -1,0 +1,749 @@
+/* ==========================================================================
+   Case Study Layout
+   ========================================================================== */
+
+.case-hero {
+  padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.case-hero .container-narrow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.case-hero-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.case-hero-meta .divider-dot {
+  color: var(--border-strong);
+}
+
+.case-hero-meta .num {
+  color: var(--tech);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-hero-client {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.case-hero-client img,
+.case-hero-client svg {
+  height: 36px;
+  width: auto;
+}
+
+.case-hero-client .client-name {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.case-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+  margin-top: 0.5rem;
+}
+
+.case-title .accent {
+  color: var(--brand);
+}
+
+.case-lede {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--text-primary);
+  max-width: 60ch;
+  font-weight: 300;
+}
+
+.case-hero-meta-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+  margin-top: 2rem;
+}
+
+.case-hero-meta-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-hero-meta-row .label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-hero-meta-row .value {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Section blocks
+   ========================================================================== */
+
+.case-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.case-section .container-narrow > h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+  margin-bottom: 1rem;
+  max-width: 22ch;
+}
+
+.case-section .container-narrow > h3 {
+  font-size: 1.375rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.case-section p {
+  margin-bottom: 1.25rem;
+  max-width: var(--max-width-prose);
+}
+
+.case-section p strong {
+  color: var(--text-primary);
+}
+
+.case-section ul {
+  list-style: none;
+  max-width: var(--max-width-prose);
+  margin: 1.25rem 0;
+}
+
+.case-section ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.case-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 8px;
+  height: 0.5px;
+  background: var(--tech);
+}
+
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tech);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Callouts — audience-specific annotations
+   ========================================================================== */
+
+.callout {
+  background: var(--surface);
+  border-left: 2px solid var(--border-strong);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  max-width: var(--max-width-prose);
+}
+
+.callout-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.callout p + p {
+  margin-top: 0.75rem;
+}
+
+.callout.for-engineering {
+  border-left-color: var(--audience-eng);
+}
+.callout.for-engineering .callout-label {
+  color: var(--audience-eng);
+}
+
+.callout.for-research {
+  border-left-color: var(--audience-research);
+}
+.callout.for-research .callout-label {
+  color: var(--audience-research);
+}
+
+.callout.for-business {
+  border-left-color: var(--audience-business);
+}
+.callout.for-business .callout-label {
+  color: var(--audience-business);
+}
+
+.callout.for-ops {
+  border-left-color: var(--audience-ops);
+}
+.callout.for-ops .callout-label {
+  color: var(--audience-ops);
+}
+
+/* ==========================================================================
+   Quote block
+   ========================================================================== */
+
+.quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.25;
+  font-weight: 300;
+  color: var(--text-primary);
+  font-style: italic;
+  max-width: 28ch;
+  margin: 3rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--brand);
+  letter-spacing: -0.01em;
+}
+
+.quote-cite {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-style: normal;
+  color: var(--text-tertiary);
+  letter-spacing: 0;
+}
+
+/* ==========================================================================
+   Figures & mockups
+   ========================================================================== */
+
+.figure {
+  margin: 2.5rem 0;
+  max-width: 100%;
+}
+
+.figure-wide {
+  margin: 3rem calc(-1 * max((100vw - var(--max-width-narrow)) / 4, 0rem)) 3rem;
+  max-width: calc(100% + max((100vw - var(--max-width-narrow)) / 2, 0rem));
+}
+
+.figure img,
+.figure svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.figure-frame {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.figure-frame img {
+  border-radius: var(--radius-sm);
+}
+
+.figure-legacy {
+  background: #FFFFFF;
+  padding: 1rem;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.figure-caption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 12px;
+  line-height: 1.5;
+  max-width: var(--max-width-prose);
+}
+
+.figure-caption .label {
+  color: var(--text-secondary);
+  margin-right: 6px;
+}
+
+/* Browser chrome frame */
+.browser-frame {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.browser-frame-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 8px;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--surface-hover);
+}
+
+.browser-frame-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-frame-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  display: block;
+}
+
+.browser-frame-url {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  background: var(--bg);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  flex: 1;
+  border: 0.5px solid var(--border);
+  margin-left: 8px;
+}
+
+.browser-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Before / after split */
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 720px) {
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+}
+
+.before-after > figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.before-after-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.before-after-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
+
+.before-after-label.after::before {
+  background: var(--brand);
+}
+.before-after-label.after {
+  color: var(--brand);
+}
+
+/* ==========================================================================
+   Metrics grid
+   ========================================================================== */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.metric {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.metric-value .accent {
+  color: var(--brand);
+}
+
+.metric-value .tech {
+  color: var(--tech);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.metric-sublabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Process / research methods grid
+   ========================================================================== */
+
+.methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+}
+
+.method {
+  border: 0.5px solid var(--border);
+  background: var(--surface);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.method-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--tech);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.method h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.method p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Personas (for OCC case study)
+   ========================================================================== */
+
+.personas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+}
+
+.persona {
+  border: 0.5px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.persona-archetype {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+.persona.determined .persona-archetype {
+  background: rgba(251, 191, 36, 0.12);
+  color: #FBBF24;
+}
+
+.persona.inexperienced .persona-archetype {
+  background: rgba(225, 29, 72, 0.12);
+  color: var(--brand);
+}
+
+.persona.desperate .persona-archetype {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--tech);
+}
+
+.persona h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.persona .persona-quote {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 0.5px solid var(--border-strong);
+}
+
+.persona dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 12px;
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+.persona dt {
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+
+.persona dd {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Roadmap / timeline
+   ========================================================================== */
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 2rem 0 3rem;
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roadmap-step {
+  padding: 1.5rem;
+  border: 0.5px solid var(--border);
+  border-left: none;
+  background: var(--surface);
+  position: relative;
+}
+
+.roadmap-step:first-child {
+  border-left: 0.5px solid var(--border);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.roadmap-step:last-child {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+@media (max-width: 720px) {
+  .roadmap-step {
+    border-left: 0.5px solid var(--border);
+    border-radius: var(--radius-md) !important;
+  }
+  .roadmap-step + .roadmap-step {
+    margin-top: 0.75rem;
+  }
+}
+
+.roadmap-step-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--tech);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.roadmap-step-period {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.roadmap-step-title {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.roadmap-step p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.roadmap-step.highlight {
+  background: var(--brand-subtle);
+  border-color: var(--brand);
+}
+
+.roadmap-step.highlight .roadmap-step-label {
+  color: var(--brand);
+}
+
+/* ==========================================================================
+   Case nav (prev / next)
+   ========================================================================== */
+
+.case-nav {
+  padding: 3rem 0;
+  border-top: 0.5px solid var(--border);
+  margin-top: 4rem;
+}
+
+.case-nav-inner {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .case-nav-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-nav-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: border-color var(--dur-fast) var(--ease-out);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-nav-card:hover {
+  border-color: var(--border-strong);
+  color: inherit;
+}
+
+.case-nav-card .label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.case-nav-card .title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.case-nav-card.next {
+  text-align: right;
+}
+
+.case-nav-card .label::before {
+  content: '← ';
+  color: var(--tech);
+}
+
+.case-nav-card.next .label::before {
+  content: '';
+}
+
+.case-nav-card.next .label::after {
+  content: ' →';
+  color: var(--tech);
+}
