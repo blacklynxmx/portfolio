@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compartamos Banco — From 8 days to 2 hours · David G. Mendieta</title>
+  <meta name="description" content="How I digitized a 30-year-old paper credit process for 15,000 field agents — ethnographic research, Service Blueprinting, and a mobile-first design system built from scratch." />
+  <meta name="author" content="David G. Mendieta" />
+
+  <link rel="canonical" href="https://davidgmendieta.vercel.app/work/compartamos.html" />
+  <link rel="alternate" hreflang="en" href="https://davidgmendieta.vercel.app/work/compartamos.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/es/work/compartamos.html" />
+  <link rel="alternate" hreflang="x-default" href="https://davidgmendieta.vercel.app/work/compartamos.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://davidgmendieta.vercel.app/work/compartamos.html" />
+  <meta property="og:title" content="Compartamos Banco — From 8 days to 2 hours" />
+  <meta property="og:description" content="Digitizing a 30-year paper credit process for Latin America's largest microfinance bank. 90% cycle reduction." />
+  <meta property="og:image" content="https://davidgmendieta.vercel.app/assets/cases/compartamos/app-home.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/" class="active">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/compartamos.html" class="active" lang="en">EN</a>
+            <a href="/es/work/compartamos.html" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= CASE HERO ================= -->
+  <header class="case-hero">
+    <div class="container-narrow">
+      <div class="case-hero-meta">
+        <span class="num">Case 02 / 06</span>
+        <span class="divider-dot">·</span>
+        <span>2021 — 2025</span>
+        <span class="divider-dot">·</span>
+        <span>Microfinance Banking · CNBV Regulated</span>
+      </div>
+
+      <h1 class="case-hero-title">From 8 days to 2 hours.</h1>
+
+      <p class="case-hero-lede">
+        Compartamos Banco is Latin America's largest microfinance bank — 3 million customers, 15,000 field agents, and a credit origination process that hadn't changed in 30 years. I led the end-to-end research, service design, and product design to replace a 10-kg backpack of paperwork with a mobile-first digital system — building the Design System, the field agent app, and the Contact Center tool from scratch.
+      </p>
+
+      <div class="case-hero-client">
+        <img src="/assets/logos/compartamos.svg" alt="Compartamos Banco" class="case-hero-logo" />
+        <img src="/assets/logos/gentera.svg" alt="Gentera" class="case-hero-logo" />
+      </div>
+
+      <div class="case-hero-meta-row">
+        <div>
+          <span class="label">Role</span>
+          <span class="value">Senior UX Research &amp; Experience Strategy Lead</span>
+        </div>
+        <div>
+          <span class="label">Duration</span>
+          <span class="value">4 years · Full-time</span>
+        </div>
+        <div>
+          <span class="label">Team</span>
+          <span class="value">40+ designers, researchers, POs across 4 product lines</span>
+        </div>
+        <div>
+          <span class="label">Headline impact</span>
+          <span class="value">8 days → 2 hours · 90% cycle reduction · 300% research capacity</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- ================= 01 · BEFORE ================= -->
+  <section class="case-section" id="before">
+    <div class="container-narrow">
+      <p class="section-eyebrow">01 · The problem</p>
+      <h2>A 30-year paper process, carried on someone's back.</h2>
+
+      <p>
+        Compartamos doesn't work like a traditional bank. Its core product — the <em>crédito grupal</em> — requires forming groups of 5 to 50 people who know each other personally, all borrowing at the same time, all paying together. If one member falls behind, the group covers. It's the mechanism that keeps the bank's default rate below 3% in a market where the average exceeds 10%.
+      </p>
+
+      <p>
+        The problem was operational. Every day, thousands of field agents — called <em>promotores</em> — walked their assigned zones carrying backpacks weighing over 10kg of paper forms, ID photocopies, business photographs, and handwritten ledgers. Finding a potential group, validating each member, collecting documents, and returning to the branch to digitize everything took between 5 and 8 business days for a small group. Larger groups could wait up to 20.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label">The constraint that made this hard</span>
+        <p>
+          The process wasn't just slow because of paper — it was slow because every step had a compliance checkpoint: KYC verification, INE/IFE document validation, CURP lookup, business evidence capture, risk scoring, and legal sign-off. Any digital solution had to preserve every one of those checkpoints while eliminating the physical back-and-forth. CNBV doesn't negotiate.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 02 · RESEARCH ================= -->
+  <section class="case-section" id="research">
+    <div class="container-narrow">
+      <p class="section-eyebrow">02 · Research</p>
+      <h2>You can't design for a backpack you've never carried.</h2>
+
+      <p>
+        <span class="authorship">[My call]</span> Before touching a wireframe, I ran ethnographic field research across multiple regions — accompanying promotores on their daily routes, sitting through branch digitization sessions, and interviewing Directores, Subdirectores, and Ejecutivos de Crédito who had run these processes for 10 to 20 years. The research question wasn't "how do we digitize this?" It was "which parts of this process are compliance-required and which are just habit?"
+      </p>
+
+      <p>
+        The answer was clarifying: roughly 40% of the back-and-forth trips to the branch existed because of habit and legacy system limitations — not because CNBV required them. That 40% was where the cycle compression was hiding.
+      </p>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">Ethnographic research</p>
+          <h4>Field shadowing</h4>
+          <p>Accompanied promotores on their daily routes across urban and semi-rural zones. Mapped the physical flow step by step — where they went, what they carried, where they waited, where the process broke down.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Stakeholder alignment</p>
+          <h4>War Room</h4>
+          <p><span class="authorship">[My call]</span> Convened a cross-functional War Room with Risk, Legal, Finance, and Technology. Single rule: every "no" had to come with a counter-proposal. Used the Service Blueprint as the shared source of truth — no one could argue about "how the process works" when everyone was looking at the same artifact.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Compliance mapping</p>
+          <h4>Regulatory decomposition</h4>
+          <p>Worked directly with the AML/CFT team to tag each process step as CNBV-required, internally-required, or operationally-habitual. The third category was where we had design freedom. <span class="authorship team">[Team]</span> Legal sign-off on the reengineered flow.</p>
+        </div>
+      </div>
+
+      <div class="callout for-research">
+        <span class="callout-label">What the research actually found</span>
+        <p>
+          The promotores weren't frustrated by the paperwork itself — they were frustrated by uncertainty. They didn't know if a prospect would pass risk scoring until after they'd spent two days collecting documents. The research insight that unlocked the design: <strong>move the risk pre-check to step one</strong>. If the system could flag a likely-pass before the promotor visited, they'd carry nothing until the approval was confirmed.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 03 · DESIGN ================= -->
+  <section class="case-section" id="design">
+    <div class="container-narrow">
+      <p class="section-eyebrow">03 · Design system &amp; product</p>
+      <h2>One system. Three channels. Built from zero.</h2>
+
+      <p>
+        <span class="authorship">[My call]</span> There was no existing Design System at Compartamos when I arrived. I built it from scratch — defining the token structure, component library, and interaction patterns that would govern the field agent app, the Contact Center tool, and the Administrator Portal. The constraint: the system had to work on low-end Android devices, in variable lighting conditions, by users who weren't always looking at the screen.
+      </p>
+
+      <h3 style="margin-top: 3rem;">Design System — core components</h3>
+      <p>Primary/Secondary/Tertiary button variants with 4 interaction states each. Input components with error, focus, filled, and disabled states. Authentication flows for SMS and biometric code entry. All built with Compartamos brand tokens — the magenta accent is intentional: it's the brand color that field agents recognize instantly on-screen under direct sunlight.</p>
+
+      <div class="figure figure-wide figure-frame">
+        <img src="/assets/cases/compartamos/ds-buttons.png" alt="Compartamos Design System — Button component variants and interaction states" loading="lazy" />
+        <figcaption>Button component — Primary, Secondary, Tertiary variants × 4 states (Default, Hover/Pressed, Disabled, Active). Built for touch targets on low-end Android hardware.</figcaption>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/ds-fields.png" alt="Compartamos Design System — Input field variants" loading="lazy" />
+        <figcaption>Form fields — designed for fast data entry in field conditions. Large touch targets, high-contrast labels, inline validation.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Field agent mobile app</h3>
+      <p>
+        The app replaced the paper backpack. Home screen shows the promotor's client portfolio with payment status at a glance — who's current, who's late, and today's scheduled visits. Menu and Mi Menú adapt to role permissions: a promotor sees their own clients; a subgerente sees their entire zone. <span class="authorship">[My call]</span> The offline-first architecture — sync on connection, full functionality without it — was a research-driven decision: rural zones frequently had no 4G signal.
+      </p>
+
+      <div class="figure figure-wide figure-frame">
+        <img src="/assets/cases/compartamos/app-home.png" alt="Compartamos field agent mobile app — Home, Menu, and Mi Menú screens" loading="lazy" />
+        <figcaption>Field agent app — Home (client portfolio + payment status), Menu (role-based navigation), Mi Menú (last sync timestamp visible — critical for offline trust). Android-first, tested on entry-level devices.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Contact Center tool</h3>
+      <p>
+        Not all credit origination happens in the field. The Contact Center channel — handling inbound leads from digital marketing campaigns — needed its own interface. The web app guided agents through the same KYC and data-capture flow, but adapted for a call context: speech prompts embedded directly in the interface told agents exactly what to say at each step, reducing errors and training time simultaneously.
+      </p>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-datos-capturados.png" alt="Contact Center app — Datos capturados screen with embedded speech script" loading="lazy" />
+        <figcaption>Contact Center — Formulario de registro. Speech script embedded in the UI (the purple "Speech:" blocks) tells the agent what to say verbatim. Customer data captured in real time on the right panel. Compliance-required LFPDPPP privacy notice integrated into the opening script.</figcaption>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-tipificar-llamada.png" alt="Contact Center app — Tipificar la llamada screen" loading="lazy" />
+        <figcaption>Call wrap-up — agents classify the outcome immediately after hanging up. The green confirmation at the top confirms the prospect reached the "Creación de prospecto" stage before the call ended. Structured data replaces free-text notes.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Performance indicators — field view</h3>
+      <p>
+        Promotores and Subgerentes needed to track their own portfolio performance without going back to the branch. The indicators module surfaced Cartera Activa, Ciclo del Producto, and Incremento neto — the three metrics their bonuses depended on — directly in the app. <span class="authorship team">[Team]</span> Data pipeline integration with the core banking system.
+      </p>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/indicadores-cartera.jpg" alt="Cartera Asesor — portfolio performance indicators" loading="lazy" />
+        <figcaption>Cartera Asesor — real-time portfolio balance, credit cycle, and net growth. Timestamp shown on load; updates on sync. Designed for a 10-second scan between client visits.</figcaption>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 04 · COMPLIANCE ================= -->
+  <section class="case-section" id="compliance">
+    <div class="container-narrow">
+      <p class="section-eyebrow">04 · Regulatory compliance</p>
+      <h2>Every checkpoint, preserved. Every trip to the branch, eliminated.</h2>
+
+      <p>
+        The regulatory work ran in parallel with the design work — not after it. Key compliance integrations built into the product:
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> KYC &amp; AML/CFT</span>
+        <p>
+          Designed the end-to-end digital identity verification flow — INE/IFE capture via device camera, CURP lookup, biometric confirmation — working directly with the AML/CFT team to obtain regulatory sign-off before launch. The flow had to match the paper-based process step for step in legal terms while being 80% faster in practice.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label">LFPDPPP consent</span>
+        <p>
+          Defined the consent architecture and privacy notice placement across both the mobile app and the Contact Center tool, collaborating with the DPO to comply with Mexico's Federal Data Protection Law. The speech script in the Contact Center (visible in the Datos Capturados screen) is the delivery mechanism for the legally-required oral privacy notice — designed to be natural, not robotic.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> RBAC &amp; access control</span>
+        <p>
+          Validated Role-Based Access Control structures for the Administrator Portal — ensuring that a promotor could only see their own clients, a subgerente could see their zone, and a director could see their region. Permission hierarchies reviewed and approved by Internal Audit and Information Security for 15,000+ users across field and back-office roles.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 05 · IMPACT ================= -->
+  <section class="case-section" id="impact">
+    <div class="container-narrow">
+      <p class="section-eyebrow">05 · Results</p>
+      <h2>The numbers.</h2>
+    </div>
+
+    <div class="container-wide">
+      <ul class="impact-grid">
+        <li class="impact-card">
+          <span class="impact-num">8d → 2h</span>
+          <span class="impact-label">Credit origination cycle</span>
+          <span class="impact-detail">90% reduction in cycle time. Later optimized to 40 minutes in the fully digital flow.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">15,000+</span>
+          <span class="impact-label">Field agents on the system</span>
+          <span class="impact-detail">Promotores and Asesores across urban and rural zones, including low-connectivity areas.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">300%</span>
+          <span class="impact-label">Research capacity scaled</span>
+          <span class="impact-detail">Built the organization's first Research Toolkit, training PMs and Designers to run autonomous usability tests in Maze/Useberry.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">&lt;3%</span>
+          <span class="impact-label">Default rate maintained</span>
+          <span class="impact-detail">The digital process preserved the group credit model's risk structure. CNBV sign-off obtained without compliance incidents.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 3rem;">
+      <div class="callout for-ops">
+        <span class="callout-label">On timeline and stakeholder management</span>
+        <p>
+          The most complex challenge wasn't technical or regulatory — it was convincing leadership that research takes time and that rework costs more than discovery. Results were committed at board level before the team was assembled. My first month was spent negotiating a realistic timeline grounded in the Service Blueprint evidence — and winning that argument before touching a single wireframe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 06 · RESEARCHOPS ================= -->
+  <section class="case-section" id="reflection">
+    <div class="container-narrow">
+      <p class="section-eyebrow">06 · ResearchOps legacy</p>
+      <h2>What I left behind.</h2>
+
+      <p>
+        Beyond the product itself, I built the research infrastructure that didn't exist when I arrived and that the organization will use long after I left.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> Research Toolkit</span>
+        <p>
+          The organization's first centralized research toolkit — test templates, tagging conventions, synthesis frameworks, and a panel management system. Trained 40+ designers, researchers, and PMs to run unmoderated usability tests independently in Maze and Useberry. Research capacity went from "one person doing everything" to a distributed practice that ran without me.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> VoC program</span>
+        <p>
+          Implemented the Voice of Customer program integrating NPS, CES, and CSAT across all digital and field touchpoints. Data collection and storage architecture reviewed and approved by the DPO team. The program fed directly into the product roadmap — not as a quarterly report, but as a live signal.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> CX Governance Framework</span>
+        <p>
+          Designed the framework standardizing interactions across the Mobile App, Contact Center, and Field Agent channels — ensuring that a customer's experience was consistent whether they were talking to a promotor on the street, an agent on the phone, or using the app independently. The framework covered tone of voice, escalation protocols, and interaction design principles for 15,000 internal users.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CASE NAV ================= -->
+  <nav class="case-nav" aria-label="Case navigation">
+    <div class="case-nav-inner">
+      <a href="/work/occ.html" class="case-nav-card prev">
+        <span class="label">Previous case</span>
+        <span class="title">OCC Mundial — Two audiences, one commerce engine</span>
+      </a>
+      <a href="/" class="case-nav-card next">
+        <span class="label">All work</span>
+        <span class="title">Back to portfolio</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>

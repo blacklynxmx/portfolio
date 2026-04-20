@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compartamos Banco — De 8 días a 2 horas · David G. Mendieta</title>
+  <meta name="description" content="Cómo digitalicé un proceso de crédito de 30 años para 15,000 gestoras de campo — investigación etnográfica, Service Blueprinting y un sistema de diseño móvil construido desde cero." />
+  <meta name="author" content="David G. Mendieta" />
+
+  <link rel="canonical" href="https://davidgmendieta.vercel.app/es/work/compartamos.html" />
+  <link rel="alternate" hreflang="en" href="https://davidgmendieta.vercel.app/work/compartamos.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/es/work/compartamos.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://davidgmendieta.vercel.app/es/work/compartamos.html" />
+  <meta property="og:title" content="Compartamos Banco — De 8 días a 2 horas" />
+  <meta property="og:description" content="Digitalizar un proceso de crédito de 30 años para el banco de microfinanzas más grande de América Latina. 90% de reducción del ciclo." />
+  <meta property="og:image" content="https://davidgmendieta.vercel.app/assets/cases/compartamos/app-home.png" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="/es/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menú</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/es/" class="active">Trabajo</a></li>
+        <li><a href="/es/about.html">Sobre mí</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/compartamos.html" lang="en">EN</a>
+            <a href="/es/work/compartamos.html" class="active" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= CASE HERO ================= -->
+  <header class="case-hero">
+    <div class="container-narrow">
+      <div class="case-hero-meta">
+        <span class="num">Caso 02 / 06</span>
+        <span class="divider-dot">·</span>
+        <span>2021 — 2025</span>
+        <span class="divider-dot">·</span>
+        <span>Banca de Microfinanzas · Regulado por CNBV</span>
+      </div>
+
+      <h1 class="case-hero-title">De 8 días a 2 horas.</h1>
+
+      <p class="case-hero-lede">
+        Compartamos Banco es el banco de microfinanzas más grande de América Latina — 3 millones de clientes, 15,000 gestoras de campo, y un proceso de originación de crédito que no había cambiado en 30 años. Lideré la investigación end-to-end, el diseño de servicio y el diseño de producto para reemplazar una mochila de 10 kg de papeleo con un sistema digital mobile-first — construyendo el Design System, la app de campo y la herramienta de Contact Center desde cero.
+      </p>
+
+      <div class="case-hero-client">
+        <img src="/assets/logos/compartamos.svg" alt="Compartamos Banco" class="case-hero-logo" />
+        <img src="/assets/logos/gentera.svg" alt="Gentera" class="case-hero-logo" />
+      </div>
+
+      <div class="case-hero-meta-row">
+        <div>
+          <span class="label">Rol</span>
+          <span class="value">Senior UX Research &amp; Experience Strategy Lead</span>
+        </div>
+        <div>
+          <span class="label">Duración</span>
+          <span class="value">4 años · Tiempo completo</span>
+        </div>
+        <div>
+          <span class="label">Equipo</span>
+          <span class="value">40+ diseñadores, researchers y POs en 4 líneas de producto</span>
+        </div>
+        <div>
+          <span class="label">Impacto principal</span>
+          <span class="value">8 días → 2 horas · 90% reducción del ciclo · 300% capacidad de research</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- ================= 01 · ANTES ================= -->
+  <section class="case-section" id="before">
+    <div class="container-narrow">
+      <p class="section-eyebrow">01 · El problema</p>
+      <h2>Un proceso de 30 años cargado en la espalda.</h2>
+
+      <p>
+        Compartamos no funciona como un banco tradicional. Su producto principal — el <em>crédito grupal</em> — requiere formar grupos de 5 a 50 personas que se conocen entre sí, todas pidiendo crédito al mismo tiempo, todas pagando juntas. Si un integrante se atrasa, el grupo cubre la diferencia. Es el mecanismo que mantiene la tasa de mora del banco por debajo del 3% en un mercado donde el promedio supera el 10%.
+      </p>
+
+      <p>
+        El problema era operativo. Cada día, miles de gestoras de campo — llamadas <em>promotoras</em> — recorrían sus zonas asignadas cargando mochilas de más de 10 kg con formularios en papel, fotocopias de INE, fotografías del negocio y registros escritos a mano. Encontrar un grupo potencial, validar a cada integrante, recopilar documentos y regresar a la sucursal a digitalizar todo tomaba entre 5 y 8 días hábiles para un grupo pequeño. Los grupos más grandes podían esperar hasta 20.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label">La restricción que lo complicaba todo</span>
+        <p>
+          El proceso no era lento solo por el papel — era lento porque cada paso tenía un checkpoint de cumplimiento: verificación KYC, validación de documentos INE/IFE, consulta de CURP, captura de evidencia del negocio, scoring de riesgo y firma legal. Cualquier solución digital tenía que preservar cada uno de esos checkpoints mientras eliminaba el ir y venir físico. La CNBV no negocia.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 02 · RESEARCH ================= -->
+  <section class="case-section" id="research">
+    <div class="container-narrow">
+      <p class="section-eyebrow">02 · Investigación</p>
+      <h2>No puedes diseñar para una mochila que nunca has cargado.</h2>
+
+      <p>
+        <span class="authorship">[Yo]</span> Antes de tocar un wireframe, hice investigación etnográfica de campo en múltiples regiones — acompañando a promotoras en sus rutas diarias, sentándome en sesiones de digitalización en sucursal, y entrevistando a Directores, Subgerentes y Ejecutivos de Crédito que habían operado estos procesos durante 10 a 20 años. La pregunta de investigación no era "¿cómo digitalizamos esto?" Era "¿qué partes de este proceso son requeridas por compliance y cuáles son simplemente costumbre?"
+      </p>
+
+      <p>
+        La respuesta fue reveladora: aproximadamente el 40% de los viajes de regreso a la sucursal existían por hábito y limitaciones de sistemas legacy — no porque la CNBV los requiriera. Ese 40% era donde estaba escondida la compresión del ciclo.
+      </p>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">Investigación etnográfica</p>
+          <h4>Shadowing en campo</h4>
+          <p>Acompañé a promotoras en sus rutas diarias en zonas urbanas y semi-rurales. Mapeé el flujo físico paso a paso — a dónde iban, qué cargaban, dónde esperaban, dónde se rompía el proceso.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Alineación de stakeholders</p>
+          <h4>War Room</h4>
+          <p><span class="authorship">[Yo]</span> Convoqué una War Room multifuncional con Riesgo, Legal, Finanzas y Tecnología. Una sola regla: cada "no" tenía que venir con una contrapropuesta. Usé el Service Blueprint como fuente única de verdad — nadie podía discutir "cómo funciona el proceso" cuando todos estaban mirando el mismo artefacto.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Mapeo regulatorio</p>
+          <h4>Descomposición normativa</h4>
+          <p>Trabajé directamente con el equipo AML/CFT para etiquetar cada paso del proceso como requerido-CNBV, requerido-interno u operacionalmente-habitual. La tercera categoría era donde teníamos libertad de diseño. <span class="authorship team">[Equipo]</span> Firma legal del flujo rediseñado.</p>
+        </div>
+      </div>
+
+      <div class="callout for-research">
+        <span class="callout-label">Lo que la investigación realmente encontró</span>
+        <p>
+          Las promotoras no estaban frustradas por el papeleo en sí — estaban frustradas por la incertidumbre. No sabían si un prospecto pasaría el scoring de riesgo hasta después de haber pasado dos días recopilando documentos. El insight de investigación que desbloqueó el diseño: <strong>mover la pre-verificación de riesgo al paso uno</strong>. Si el sistema podía señalar una aprobación probable antes de que la promotora visitara, no cargaría nada hasta que la aprobación estuviera confirmada.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 03 · DISEÑO ================= -->
+  <section class="case-section" id="design">
+    <div class="container-narrow">
+      <p class="section-eyebrow">03 · Sistema de diseño y producto</p>
+      <h2>Un sistema. Tres canales. Construido desde cero.</h2>
+
+      <p>
+        <span class="authorship">[Yo]</span> No existía ningún Design System en Compartamos cuando llegué. Lo construí desde cero — definiendo la estructura de tokens, la librería de componentes y los patrones de interacción que gobernarían la app de campo, la herramienta de Contact Center y el Portal de Administrador. La restricción: el sistema tenía que funcionar en dispositivos Android de gama baja, en condiciones de iluminación variable, para usuarios que no siempre miraban la pantalla.
+      </p>
+
+      <h3 style="margin-top: 3rem;">Design System — componentes core</h3>
+      <p>Variantes de botón Primary/Secondary/Tertiary con 4 estados de interacción cada una. Componentes de input con estados de error, focus, filled y disabled. Flujos de autenticación para entrada de código SMS y biométrico. Todo construido con los tokens de marca de Compartamos — el acento magenta es intencional: es el color de marca que las gestoras de campo reconocen instantáneamente en pantalla bajo luz solar directa.</p>
+
+      <div class="figure figure-wide figure-frame">
+        <img src="/assets/cases/compartamos/ds-buttons.png" alt="Design System Compartamos — variantes y estados del componente Button" loading="lazy" />
+        <figcaption>Componente Button — variantes Primary, Secondary, Tertiary × 4 estados (Default, Hover/Pressed, Disabled, Active). Construido para touch targets en hardware Android de gama baja.</figcaption>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/ds-fields.png" alt="Design System Compartamos — variantes de campo de formulario" loading="lazy" />
+        <figcaption>Campos de formulario — diseñados para captura rápida de datos en condiciones de campo. Touch targets grandes, etiquetas de alto contraste, validación inline.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">App móvil para gestoras de campo</h3>
+      <p>
+        La app reemplazó la mochila de papel. La pantalla de inicio muestra el portafolio de clientes de la promotora con el estado de pagos de un vistazo — quién está al corriente, quién está en atraso, y las visitas programadas para hoy. Menú y Mi Menú se adaptan a los permisos del rol: una promotora ve solo sus clientes; un subgerente ve toda su zona. <span class="authorship">[Yo]</span> La arquitectura offline-first — sincroniza con conexión, funcionalidad completa sin ella — fue una decisión basada en investigación: las zonas rurales frecuentemente no tenían señal 4G.
+      </p>
+
+      <div class="figure figure-wide figure-frame">
+        <img src="/assets/cases/compartamos/app-home.png" alt="App móvil para gestoras — pantallas de Inicio, Menú y Mi Menú" loading="lazy" />
+        <figcaption>App de campo — Inicio (portafolio de clientes + estado de pago), Menú (navegación basada en rol), Mi Menú (timestamp de última sincronización visible — crítico para la confianza offline). Prioritario Android, probado en dispositivos de gama baja.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Herramienta de Contact Center</h3>
+      <p>
+        No toda la originación de crédito ocurre en campo. El canal de Contact Center — que maneja leads entrantes de campañas de marketing digital — necesitaba su propia interfaz. La aplicación web guiaba a los agentes a través del mismo flujo de KYC y captura de datos, pero adaptado para un contexto de llamada: los guiones de voz integrados directamente en la interfaz le decían al agente exactamente qué decir en cada paso, reduciendo errores y tiempos de capacitación simultáneamente.
+      </p>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-datos-capturados.png" alt="App de Contact Center — pantalla de Datos capturados con guión de voz integrado" loading="lazy" />
+        <figcaption>Contact Center — Formulario de registro. El guión de voz integrado en la UI (los bloques morados "Speech:") le dice al agente qué decir verbatim. Datos del cliente capturados en tiempo real en el panel derecho. Aviso de privacidad LFPDPPP integrado en el guión de apertura.</figcaption>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-tipificar-llamada.png" alt="App de Contact Center — pantalla de Tipificar la llamada" loading="lazy" />
+        <figcaption>Cierre de llamada — los agentes clasifican el resultado inmediatamente después de colgar. La confirmación verde en la parte superior confirma que el prospecto llegó a la etapa de "Creación de prospecto" antes de terminar la llamada. Datos estructurados reemplazan las notas de texto libre.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Indicadores de desempeño — vista de campo</h3>
+      <p>
+        Las promotoras y subgerentes necesitaban rastrear el desempeño de su propio portafolio sin regresar a la sucursal. El módulo de indicadores mostraba Cartera Activa, Ciclo del Producto e Incremento neto — las tres métricas de las que dependían sus bonos — directamente en la app. <span class="authorship team">[Equipo]</span> Integración del pipeline de datos con el sistema bancario core.
+      </p>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/indicadores-cartera.jpg" alt="Cartera Asesor — indicadores de desempeño del portafolio" loading="lazy" />
+        <figcaption>Cartera Asesor — saldo del portafolio en tiempo real, ciclo de crédito e incremento neto. Timestamp visible al cargar; actualiza en sincronización. Diseñado para un escaneo de 10 segundos entre visitas a clientes.</figcaption>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 04 · CUMPLIMIENTO ================= -->
+  <section class="case-section" id="compliance">
+    <div class="container-narrow">
+      <p class="section-eyebrow">04 · Cumplimiento regulatorio</p>
+      <h2>Cada checkpoint, preservado. Cada viaje a la sucursal, eliminado.</h2>
+
+      <p>
+        El trabajo regulatorio corrió en paralelo con el diseño — no después. Integraciones de compliance construidas en el producto:
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[Yo]</span> KYC &amp; AML/CFT</span>
+        <p>
+          Diseñé el flujo de verificación de identidad digital end-to-end — captura de INE/IFE por cámara del dispositivo, consulta de CURP, confirmación biométrica — trabajando directamente con el equipo AML/CFT para obtener la firma regulatoria antes del lanzamiento. El flujo tenía que coincidir paso a paso con el proceso en papel en términos legales mientras era 80% más rápido en la práctica.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label">Consentimiento LFPDPPP</span>
+        <p>
+          Definí la arquitectura de consentimiento y la ubicación del aviso de privacidad tanto en la app móvil como en la herramienta de Contact Center, colaborando con el DPO para cumplir con la Ley Federal de Protección de Datos Personales. El guión de voz en el Contact Center (visible en la pantalla de Datos Capturados) es el mecanismo de entrega del aviso de privacidad oral legalmente requerido — diseñado para sonar natural, no robótico.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[Yo]</span> RBAC y control de acceso</span>
+        <p>
+          Validé las estructuras de Control de Acceso Basado en Roles para el Portal de Administrador — asegurando que una promotora solo pudiera ver sus propios clientes, un subgerente su zona, y un director su región. Jerarquías de permisos revisadas y aprobadas por Auditoría Interna y Seguridad de la Información para más de 15,000 usuarios en roles de campo y back-office.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 05 · IMPACTO ================= -->
+  <section class="case-section" id="impact">
+    <div class="container-narrow">
+      <p class="section-eyebrow">05 · Resultados</p>
+      <h2>Los números.</h2>
+    </div>
+
+    <div class="container-wide">
+      <ul class="impact-grid">
+        <li class="impact-card">
+          <span class="impact-num">8d → 2h</span>
+          <span class="impact-label">Ciclo de originación de crédito</span>
+          <span class="impact-detail">90% de reducción en tiempo de ciclo. Posteriormente optimizado a 40 minutos en el flujo completamente digital.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">15,000+</span>
+          <span class="impact-label">Gestoras de campo en el sistema</span>
+          <span class="impact-detail">Promotoras y Asesoras en zonas urbanas y rurales, incluyendo áreas de baja conectividad.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">300%</span>
+          <span class="impact-label">Capacidad de research escalada</span>
+          <span class="impact-detail">Construí el primer Research Toolkit de la organización, capacitando a PMs y Diseñadores para ejecutar pruebas de usabilidad autónomas en Maze/Useberry.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">&lt;3%</span>
+          <span class="impact-label">Tasa de mora mantenida</span>
+          <span class="impact-detail">El proceso digital preservó la estructura de riesgo del modelo de crédito grupal. Firma CNBV obtenida sin incidentes de cumplimiento.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 3rem;">
+      <div class="callout for-ops">
+        <span class="callout-label">Sobre tiempos y gestión de stakeholders</span>
+        <p>
+          El reto más complejo no fue técnico ni regulatorio — fue convencer a los directivos de que la investigación lleva su tiempo y que el retrabajo cuesta más que el discovery previo. Los resultados ya estaban comprometidos a nivel mesa directiva antes de que se armara el equipo. Mi primer mes lo dediqué a negociar un timeline realista con evidencia del Service Blueprint — y a ganar ese argumento antes de tocar un solo wireframe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 06 · RESEARCHOPS ================= -->
+  <section class="case-section" id="reflection">
+    <div class="container-narrow">
+      <p class="section-eyebrow">06 · Legado ResearchOps</p>
+      <h2>Lo que dejé construido.</h2>
+
+      <p>
+        Más allá del producto en sí, construí la infraestructura de investigación que no existía cuando llegué y que la organización usará mucho después de que me fui.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[Yo]</span> Research Toolkit</span>
+        <p>
+          El primer toolkit centralizado de investigación de la organización — templates de pruebas, convenciones de etiquetado, frameworks de síntesis y un sistema de gestión de panel. Capacité a 40+ diseñadores, researchers y PMs para ejecutar pruebas de usabilidad no moderadas de forma independiente en Maze y Useberry. La capacidad de investigación pasó de "una persona haciendo todo" a una práctica distribuida que funcionaba sin mí.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[Yo]</span> Programa VoC</span>
+        <p>
+          Implementé el programa de Voz del Cliente integrando NPS, CES y CSAT en todos los touchpoints digitales y de campo. Arquitectura de recopilación y almacenamiento de datos revisada y aprobada por el equipo DPO. El programa alimentaba directamente el roadmap de producto — no como un reporte trimestral, sino como una señal en vivo.
+        </p>
+      </div>
+
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[Yo]</span> Marco de Gobierno CX</span>
+        <p>
+          Diseñé el marco que estandarizaba las interacciones en la App Móvil, el Contact Center y los canales de Gestoras de Campo — asegurando que la experiencia de un cliente fuera consistente ya sea que estuviera hablando con una promotora en la calle, un agente por teléfono o usando la app de forma independiente. El marco cubría tono de voz, protocolos de escalación y principios de diseño de interacción para 15,000 usuarios internos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CASE NAV ================= -->
+  <nav class="case-nav" aria-label="Navegación de caso">
+    <div class="case-nav-inner">
+      <a href="/es/work/occ.html" class="case-nav-card prev">
+        <span class="label">Caso anterior</span>
+        <span class="title">OCC Mundial — Dos audiencias, un motor de comercio</span>
+      </a>
+      <a href="/es/" class="case-nav-card next">
+        <span class="label">Todo el trabajo</span>
+        <span class="title">Volver al portafolio</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
