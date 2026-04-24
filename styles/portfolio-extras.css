@@ -423,14 +423,21 @@ figure[data-zoomable]:hover img { opacity: 0.92; transition: opacity 0.15s; }
    PHASE 2 · PATCH — overflow, clickable cards, scroll margin
    ========================================================================== */
 
-/* Fix: before-after y figuras anchas que se salen en viewports estrechos */
-.before-after {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+/* Fix: before-after grid items necesitan min-width:0 para contraerse */
+.before-after > figure {
+  min-width: 0;
+}
+
+.before-after figure img,
+.before-after .figure-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .figure-wide {
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .figure-wide img {
