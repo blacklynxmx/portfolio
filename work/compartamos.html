@@ -32,6 +32,8 @@
 </head>
 <body>
 
+  <script src="/scripts/lightbox.js" defer></script>
+
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
       <a href="/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
@@ -160,6 +162,36 @@
         </p>
       </div>
 
+      <h3 style="margin-top: 4rem;">Research artifacts — Customer Journey Maps</h3>
+      <p>
+        These are the current-state journey maps produced during the research phase — not aspirational future-state diagrams, but documented reality captured from field shadowing and interviews. They became the shared source of truth in every War Room session: when a Risk director said "the process works fine," we put the journey map on the screen. The conversation changed.
+      </p>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/journey-cambaceo.png" alt="Journey map — Cambaceo (field prospecting flow)" loading="lazy" />
+        <figcaption><strong>Cambaceo</strong> — The full daily cycle of a field promotor: prospecting a zone, identifying potential group members, initiating contact, and managing the prospect pipeline. The friction points visible here (the repeated trips, the waiting states) directly fed the product backlog. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/journey-nueva-contratacion-a.png" alt="Journey map — Nueva Contratación, Phase 1: data capture and offer generation" loading="lazy" />
+        <figcaption><strong>Nueva Contratación (Phase 1)</strong> — From prospect assignment to offer generation. Captures the data collection and risk pre-check stages — the part of the flow where the 8-day cycle was being burned on back-and-forth trips that compliance didn't actually require. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/journey-nueva-contratacion-b.png" alt="Journey map — Nueva Contratación, Phase 2: disbursement and confirmation" loading="lazy" />
+        <figcaption><strong>Nueva Contratación (Phase 2)</strong> — Disbursement and confirmation. The final stages from credit approval through digital signature and SMS confirmation to the client. This is the part the client actually sees — and where the 2-hour target was validated end-to-end. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/journey-renovacion.png" alt="Journey map — Renovación (credit renewal flow)" loading="lazy" />
+        <figcaption><strong>Renovación</strong> — Credit renewal for existing group members. Substantially simpler than new origination — the journey map confirmed this and informed the accelerated renewal UX that bypasses most of the capture steps. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-frame" style="max-width: 480px;">
+        <img src="/assets/cases/compartamos/journey-mis-clientes.png" alt="Journey map — Mis Clientes (field portfolio management)" loading="lazy" />
+        <figcaption><strong>Mis Clientes</strong> — How a promotor manages their active client portfolio: tracking payment status, flagging at-risk accounts, and planning the day's visit route. The mobile screen layout was designed around this journey's key decision point: who needs a call today vs. who can wait.</figcaption>
+      </div>
+
     </div>
   </section>
 
@@ -221,6 +253,83 @@
       <div class="figure figure-frame">
         <img src="/assets/cases/compartamos/indicadores-cartera.jpg" alt="Cartera Asesor — portfolio performance indicators" loading="lazy" />
         <figcaption>Cartera Asesor — real-time portfolio balance, credit cycle, and net growth. Timestamp shown on load; updates on sync. Designed for a 10-second scan between client visits.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Hierarchy navigation — Subgerente and Asesor views</h3>
+      <p>
+        The same app served multiple roles with very different information needs. A promotor needs their own client list. A Subgerente needs to see who falls under their supervision. A Gerente needs regional visibility. <span class="authorship">[My call]</span> Rather than building separate apps, RBAC drove what each role could see and do — one codebase, role-appropriate information depth.
+      </p>
+
+      <div class="phone-trio">
+        <figure class="figure figure-frame">
+          <img src="/assets/cases/compartamos/app-subgerentes.jpg" alt="Subgerentes CI — hierarchy view showing supervisor and their reports" loading="lazy" />
+          <figcaption>Subgerentes CI — supervisor-level drill-down. Select any Subgerente to view their team and individual metrics.</figcaption>
+        </figure>
+        <figure class="figure figure-frame">
+          <img src="/assets/cases/compartamos/app-clientes.jpg" alt="Clientes Asesor — client portfolio with product breakdown" loading="lazy" />
+          <figcaption>Clientes — product breakdown per Asesor. Total and new clients, disbursed amounts segmented by credit type.</figcaption>
+        </figure>
+        <figure class="figure figure-frame">
+          <img src="/assets/cases/compartamos/app-renovacion.jpg" alt="Renovación — retention metrics view" loading="lazy" />
+          <figcaption>Renovación — retention rate, target vs. actual. Visible daily, not just at monthly review.</figcaption>
+        </figure>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Authentication &amp; push notifications</h3>
+      <p>
+        Field agents aren't always in a quiet office with stable connectivity. Authentication had to be fast, forgiving, and trust-building. <span class="authorship">[My call]</span> SMS 6-digit code as the primary second factor — no app install required for the client side, no dependency on biometric hardware availability.
+      </p>
+
+      <div class="figure figure-frame" style="max-width: 520px;">
+        <img src="/assets/cases/compartamos/ds-sms-code.png" alt="SMS 6-digit authentication code entry — dual-row numeric keypad pattern" loading="lazy" />
+        <figcaption>SMS code entry — two rows of six digits. Empty state at top (masked), numeric keypad at bottom. Large touch targets, designed for one-handed entry in field conditions. The pattern became a DS component reused across app and Contact Center.</figcaption>
+      </div>
+
+      <div class="figure figure-frame" style="max-width: 480px;">
+        <img src="/assets/cases/compartamos/ds-push.png" alt="Push notification component — single-line notification bar" loading="lazy" />
+        <figcaption>Push notification — system-level alert for payment deadlines, sync confirmations, and manager approvals. Designed as a single-line component to respect the notification tray conventions of entry-level Android devices.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Contact Center — expanded flows</h3>
+      <p>
+        Beyond the data-capture and call-wrap screens already shown, the Contact Center tool handled two additional flows critical to data quality: the agent's own profile and permission verification, and the duplicate-record resolution screen — surfaced when an incoming caller matched an existing prospect in the system.
+      </p>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-mi-perfil.png" alt="Contact Center — Mi Perfil screen showing agent identity and reporting hierarchy" loading="lazy" />
+        <figcaption>Mi Perfil — Contact Center agent profile. Shows the logged-in agent's full name, role classification (Ejecutivo / Administrador de Operaciones / Auxiliar), and direct supervisor. The version number (V 2.0.1) is visible in the nav — used by agents to confirm they're on the current build before escalating issues.</figcaption>
+      </div>
+
+      <div class="figure figure-frame">
+        <img src="/assets/cases/compartamos/cc-registro-existente.png" alt="Contact Center — Registro duplicado screen for resolving duplicate prospect records" loading="lazy" />
+        <figcaption><strong>Registro duplicado</strong> — <span class="authorship">[My call]</span> One of the more complex edge cases: when an inbound caller's data matches two existing records with different names or dates, the agent must pick the correct one before continuing. The side-by-side comparison layout (with folio, age, birthdate, contact visible for both) was designed specifically to support this decision without requiring a supervisor escalation. The non-selected record is automatically archived.</figcaption>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Contact Center — Prospect Manager</h3>
+      <p>
+        Beyond the data-capture and call-wrap screens shown above, the Contact Center tool included a dedicated <strong>Gestor de Prospectos</strong> — a prospect search and tracking module that allowed agents to look up existing prospects by name, folio, or date of birth before initiating a new call. This prevented duplicate records, enabled follow-up on previously contacted prospects, and surfaced the current pipeline status directly in the agent's view.
+      </p>
+
+      <div class="callout for-research">
+        <span class="callout-label"><span class="authorship">[My call]</span> The data model behind the interface</span>
+        <p>
+          The prospect table was designed around a status taxonomy I defined with the operations team: <em>Perfilamiento</em> (initial qualification), <em>Validación</em> (identity verification), <em>Llamada cortada</em> (call dropped — requires follow-up), and <em>Creación de prospecto</em> (successfully registered). Each status drove a different next action for the agent, color-coded inline so a 2-second scan was enough to know what to do next without reading the detail.
+        </p>
+      </div>
+
+      <div class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/gestor-busqueda-vacia.png" alt="Gestor de Prospectos — empty search state" loading="lazy" />
+        <figcaption>Gestor de Prospectos — empty state. The search form is the agent's entry point: folio, full name, or date of birth, any combination. "Consultados recientemente" below shows the last prospects accessed, giving immediate context even before searching. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/gestor-busqueda-resultados.png" alt="Gestor de Prospectos — search results with status tags" loading="lazy" />
+        <figcaption>Search results — the table surfaces name, phone, birthdate, location, pipeline status, rejection reason, and a follow-up flag in a single scannable row. Status badges (Perfilamiento, Validación, Llamada cortada) are color-coded: green for active qualification, amber for follow-up needed. The "Retomar seguimiento" arrow drops the agent directly into the prospect's existing record without re-entering data. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/gestor-busqueda-perfilamiento.png" alt="Gestor de Prospectos — found prospect with Perfilamiento status" loading="lazy" />
+        <figcaption>Found prospect with active <em>Perfilamiento</em> status — the agent can see the prospect was already in qualification stage from a previous call. This single view prevented the most common error in the pre-digital flow: calling the same prospect twice, re-doing the same questions, and creating duplicate records in the system. <em>Click to expand.</em></figcaption>
       </div>
 
     </div>
@@ -330,6 +439,37 @@
         <p>
           Implemented the Voice of Customer program integrating NPS, CES, and CSAT across all digital and field touchpoints. Data collection and storage architecture reviewed and approved by the DPO team. The program fed directly into the product roadmap — not as a quarterly report, but as a live signal.
         </p>
+      </div>
+
+      <p style="margin-top: 2rem;">
+        The VoC program ran measurement cycles across regions independently — allowing the team to detect regional variation in adoption, not just aggregate satisfaction. The dashboards below are real outputs from the program: satisfaction scores broken down by flow (Prospección, Contratación, Gestión de crédito, Renovación) and process stage (Captura, Generar oferta, Desembolso, Agenda), measured with SUS, CSAT, and NPS simultaneously.
+      </p>
+
+      <div class="callout for-research">
+        <span class="callout-label">What the regional split revealed</span>
+        <p>
+          Toluca (9 months with the app) scored consistently higher than Jalisco (4 months) — 76.2% vs. 69.3% overall. The gap wasn't satisfaction with the product; it was familiarity with the digital flow. The "Prospecto asignado a CC" flow (the handoff between field and Contact Center) had the lowest scores in both regions, confirming that the integration point between channels was the real friction, not either channel in isolation. This finding drove the Q1 2024 roadmap.
+        </p>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-comparativa.png" alt="VoC comparative dashboard — Toluca vs Jalisco satisfaction scores across flows and processes" loading="lazy" />
+        <figcaption>VoC comparativa — Jalisco vs. Toluca side-by-side. SUS, CSAT, and NPS tracked simultaneously. Note the consistent pattern: Contratación scores well everywhere; Prospecto asignado a CC is the persistent weak point. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-toluca.png" alt="VoC dashboard — Toluca region CI satisfaction scores" loading="lazy" />
+        <figcaption>Toluca region — 9 months post-launch. 76.2% overall satisfaction. 20 asesores consulted. SUS 74% · CSAT 90% · NPS 70%. High CSAT against lower NPS indicated high task satisfaction but moderate recommendation intent. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-jalisco.png" alt="VoC dashboard — Jalisco region CI satisfaction scores" loading="lazy" />
+        <figcaption>Jalisco region — 4 months post-launch. 69.3% overall. 21 asesores consulted. Lower scores vs. Toluca are consistent with shorter exposure time — the trend line in both regions was positive, confirming adoption over resistance. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-occidente.png" alt="VoC dashboard — Occidente / Dirección aggregate satisfaction scores" loading="lazy" />
+        <figcaption>Occidente / Dirección aggregate — 113 asesores consulted. 74.3% overall. At scale, the regional pattern held: Contratación strong, Prospecto-CC handoff consistently the floor. <em>Click to expand.</em></figcaption>
       </div>
 
       <div class="callout for-ops">

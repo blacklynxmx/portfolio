@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whisper BI — From Zero to First B2B Clients in 3 Months · David G. Mendieta</title>
+  <meta name="description" content="Building a research practice from zero on a bootstrapped timeline — JTBD for analysts vs. executives, conversational BI architecture, and an onboarding redesign that lifted conversion 40%." />
+  <meta name="author" content="David G. Mendieta" />
+
+  <link rel="canonical" href="https://davidgmendieta.vercel.app/work/whisper.html" />
+  <link rel="alternate" hreflang="en" href="https://davidgmendieta.vercel.app/work/whisper.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/es/work/whisper.html" />
+  <link rel="alternate" hreflang="x-default" href="https://davidgmendieta.vercel.app/work/whisper.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://davidgmendieta.vercel.app/work/whisper.html" />
+  <meta property="og:title" content="Whisper BI — From Zero to First B2B Clients in 3 Months" />
+  <meta property="og:description" content="Building a conversational BI platform for SMEs. Research-led MVP, 40% onboarding lift, first paying clients in under 90 days." />
+  <meta property="og:image" content="https://davidgmendieta.vercel.app/assets/cases/whisper/whisper-interface.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+</head>
+<body>
+
+  <script src="/scripts/lightbox.js" defer></script>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/" class="active">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/whisper.html" class="active" lang="en">EN</a>
+            <a href="/es/work/whisper.html" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================= CASE HERO ================= -->
+  <header class="case-hero">
+    <div class="container-narrow">
+      <div class="case-hero-meta">
+        <span class="num">Case 03 / 06</span>
+        <span class="divider-dot">·</span>
+        <span>2025 — Present</span>
+        <span class="divider-dot">·</span>
+        <span>B2B SaaS · AI-Powered Business Intelligence</span>
+      </div>
+
+      <h1 class="case-hero-title">The interface <em>is</em> the research question.</h1>
+
+      <p class="case-hero-lede">
+        Whisper BI is a conversational Business Intelligence platform that lets SMEs and enterprise teams query their own data in plain language — no SQL, no analyst dependency, no 48-hour wait for a report. I joined as Head of Product &amp; UX Research and built the research practice, the product architecture, and the onboarding flow from zero — securing first paying B2B clients within 3 months of launch.
+      </p>
+
+      <div class="case-hero-meta-row">
+        <div>
+          <span class="label">Role</span>
+          <span class="value">Head of Product &amp; UX Research</span>
+        </div>
+        <div>
+          <span class="label">Context</span>
+          <span class="value">B2B SaaS · Bootstrapped · Zero-to-one</span>
+        </div>
+        <div>
+          <span class="label">Stack</span>
+          <span class="value">Figma · Maze · JTBD framework · AI-assisted prototyping</span>
+        </div>
+        <div>
+          <span class="label">Headline impact</span>
+          <span class="value">First B2B clients in 90 days · 40% onboarding conversion lift · 60% content production reduction via AI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- ================= 01 · CONTEXT ================= -->
+  <section class="case-section" id="context">
+    <div class="container-narrow">
+      <p class="section-eyebrow">01 · The problem</p>
+      <h2>Business Intelligence is powerful. It's also completely inaccessible to the people who need it most.</h2>
+
+      <p>
+        The BI market is dominated by platforms built for data teams — Tableau, Power BI, Looker. They require technical configuration, dedicated analysts, and weeks of setup before a business owner sees their first insight. For the SME decision-maker who needs to know why last quarter's margin dropped, the tools available are either too complex to use independently or too shallow to trust.
+      </p>
+
+      <p>
+        Whisper BI was built on a different premise: what if the interface itself was the analyst? Instead of drag-and-drop dashboards, a conversational AI that interprets natural-language questions about connected data sources — ERP, CRM, spreadsheets — and responds with structured analysis, charts, and proactive alerts. Not a question-and-answer chatbot. A system that notices things before you ask.
+      </p>
+
+      <div class="callout for-business">
+        <span class="callout-label">The competitive gap we were exploiting</span>
+        <p>
+          Enterprise BI tools optimize for data depth and configurability — they assume a technical user. Consumer AI tools optimize for general knowledge — they assume an anonymous user. The gap between them is the business analyst persona: someone with domain expertise, real data, and no time to write SQL. That was our target user, and no one was building for them at SME price points.
+        </p>
+      </div>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-login.png" alt="Whisper BI — Login screen with Google and Microsoft SSO" loading="lazy" />
+        <figcaption>Login — SSO via Google or Microsoft, plus email. The dual-tab design (Iniciar Sesión / Crear Cuenta) reduces perceived barrier to trial: a first-time user can create an account without navigating away. The tagline "Inteligencia de Negocios con IA" frames the category immediately. <em>Click to expand.</em></figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 02 · RESEARCH ================= -->
+  <section class="case-section" id="research">
+    <div class="container-narrow">
+      <p class="section-eyebrow">02 · Research</p>
+      <h2>Two users, one interface — and they want opposite things.</h2>
+
+      <p>
+        <span class="authorship">[My call]</span> Before writing a single spec, I ran a JTBD-framed discovery with two distinct user types we'd identified through early sales conversations: <strong>Data Analysts</strong> and <strong>Business Executives</strong>. The hypothesis was that they'd want the same product. The research showed they wanted fundamentally different things from it.
+      </p>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">JTBD · Profile A</p>
+          <h4>The Data Analyst</h4>
+          <p>Job-to-be-done: <em>"Produce the report my manager asked for without spending two days cleaning data first."</em> Pain: context-switching between tools, re-doing the same calculations. They wanted depth, control, and export. They could tolerate complexity if it saved them time downstream.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">JTBD · Profile B</p>
+          <h4>The Business Executive</h4>
+          <p>Job-to-be-done: <em>"Tell me if something is wrong before I find out in a meeting."</em> Pain: dependency on the analyst, waiting for reports, not knowing what questions to ask. They wanted proactivity, plain language, and decisions — not data. They had zero tolerance for complexity.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Architecture decision</p>
+          <h4>One product, two modes</h4>
+          <p><span class="authorship">[My call]</span> The insight that shaped the product: both users could share the same conversational interface if the <em>response type</em> was configurable. "Análisis rápido" for the executive who needs a sentence. "Análisis detallado" for the analyst who needs the breakdown. "Tablero" for the manager who wants to pin it to a dashboard. Same question, three output formats.</p>
+        </div>
+      </div>
+
+      <div class="callout for-research">
+        <span class="callout-label">Why conversational and not dashboards</span>
+        <p>
+          The temptation in BI is to build dashboards — they look impressive in demos. But dashboards answer the questions you thought to ask last month. The research showed both user types were routinely surprised by their own data: a margin they thought was stable wasn't, a region they'd ignored was outperforming. The most valuable insight is the one you didn't know to request. That's why we built a proactive alert system on top of the chat interface — the system surfaces anomalies even when the user isn't actively querying.
+        </p>
+      </div>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-interface.png" alt="Whisper BI — main conversational interface with sidebar navigation by topic" loading="lazy" />
+        <figcaption>Main interface — the sidebar organizes past conversations by business domain (Ventas, Finanzas, Operaciones). This was a deliberate research-backed decision: users remembered their queries by business context, not by date. The "Ver Alertas" button (red badge) surfaces the proactive intelligence layer without requiring a separate screen. Response type selector (Análisis rápido / Análisis detallado / Tablero) is always visible at the bottom — the user's intent drives the output format before they even type. <em>Click to expand.</em></figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 03 · PRODUCT ================= -->
+  <section class="case-section" id="product">
+    <div class="container-narrow">
+      <p class="section-eyebrow">03 · Product design</p>
+      <h2>The dashboard is a response, not a starting point.</h2>
+
+      <p>
+        Traditional BI puts the dashboard first. You configure charts, select date ranges, pick metrics. Then you try to read meaning into what you see. Whisper BI inverts this: you ask the question first, and the system decides the best format to answer it. When the answer warrants a chart, it generates one. When it warrants a table, it builds one. When it warrants a number and an explanation, it gives you that.
+      </p>
+
+      <p>
+        <span class="authorship">[My call]</span> The dashboard view is a <em>child</em> of the conversation — generated on demand, accessible via "Volver al chat," and optionally pinned. This kept the mental model clean: the chat is where insight lives, the dashboard is where it gets promoted to permanent reference.
+      </p>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-dashboard.png" alt="Whisper BI — dashboard view generated from a conversational query" loading="lazy" />
+        <figcaption>Dashboard generated from a natural-language query — the user asked about sales performance by category, and the system built KPI cards (Ingresos Totales, Total de Órdenes, Productos Vendidos, Margen de Ganancia) plus a bar chart by category and a geographic distribution below. The "Volver al chat" breadcrumb makes it explicit that this view is downstream of the conversation, not a separate product. <em>Click to expand.</em></figcaption>
+      </figure>
+
+      <div class="callout for-engineering">
+        <span class="callout-label">AI-assisted design workflow</span>
+        <p>
+          <span class="authorship">[My call]</span> Beyond the product itself, I used AI-assisted design (Claude + Figma integration) to accelerate the creation of UI variants, report templates, and interface personalization assets. This reduced content production time by 60% — which on a bootstrapped timeline translates directly to more research cycles and faster iteration.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 04 · ONBOARDING ================= -->
+  <section class="case-section" id="onboarding">
+    <div class="container-narrow">
+      <p class="section-eyebrow">04 · Onboarding design</p>
+      <h2>The hardest question in conversational BI: what do I ask first?</h2>
+
+      <p>
+        The first-use problem in conversational interfaces is severe: users who don't know what to ask drop off immediately. They open the chat, see a blank input, and close the tab. The research showed that the anxiety isn't about the tool — it's about the data. Users worried their question was "wrong," that it wouldn't connect to their actual files, or that they'd waste time configuring something they didn't understand.
+      </p>
+
+      <p>
+        <span class="authorship">[My call]</span> The solution was a 7-step progressive onboarding that converted the blank-screen problem into a guided tour — not a product demo, but a series of micro-tasks that produced real output. By step 3, the user had already received an AI-generated analysis of their own data. By step 5, they'd seen a chart. By step 7, they'd set up their first alert. The onboarding <em>was</em> the first successful use of the product.
+      </p>
+
+      <div class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-onboarding-1.png" alt="Whisper BI — Onboarding step 1: Welcome and capability overview" loading="lazy" />
+        <figcaption>Step 1 of 7 — "¡Bienvenido a WhisperBI!" The opening step doesn't ask for anything. It frames four capabilities (connect data sources, ask in natural language, get automatic analysis, generate reports) and gives users a "Saltar tutorial" escape hatch for those who want to explore independently. The progress bar at top makes the commitment visible — 7 steps, not infinite setup. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-onboarding-2.png" alt="Whisper BI — Onboarding step 2: Navigation panel orientation" loading="lazy" />
+        <figcaption>Step 2 — "Panel de Navegación." The tooltip highlights the sidebar, explaining that conversations are organized by topic and can be archived. <span class="authorship">[My call]</span> This step exists because research showed users who didn't understand the conversation history feature abandoned the tool after their second session — they thought their first analysis was lost. Surfacing the organizational model early prevented that drop-off pattern. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <div class="callout for-research">
+        <span class="callout-label">How the 40% lift was measured</span>
+        <p>
+          We defined "onboarding conversion" as reaching step 7 and then initiating a first unprompted query within the same session. The baseline (pre-redesign flow) was a single welcome modal and then direct exposure to the chat interface. Conversion: 28%. After the 7-step progressive onboarding: 40%. The measurement was done via session event tracking — no artificial completion incentive, no prompted query, no pre-filled input. Users who reached step 7 and then queried their own data spontaneously.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 05 · GO-TO-MARKET ================= -->
+  <section class="case-section" id="gtm">
+    <div class="container-narrow">
+      <p class="section-eyebrow">05 · Go-to-market design</p>
+      <h2>The landing page is a research artifact.</h2>
+
+      <p>
+        On a bootstrapped timeline, the marketing site isn't just a sales tool — it's the fastest way to test whether your value proposition resonates before you've built the full product. <span class="authorship">[My call]</span> I designed the landing page as a research instrument: every section was a hypothesis. "Optimizar Costos / Aumentar Ventas / Reducir Riesgos" tested whether the business impact framing worked better than feature-first messaging. The cases of use ("Casos de Éxito") section tested whether social proof with specific metrics converted better than generic testimonials.
+      </p>
+
+      <div class="callout for-business">
+        <span class="callout-label">Pricing as a product decision</span>
+        <p>
+          <span class="authorship">[My call]</span> I defined the pricing model and feature packaging (unit economics: LTV/CAC) to maximize runway in a bootstrapped environment. The key tension: pricing low enough to attract SME trial, high enough to signal enterprise credibility. The landing page "Inteligencia Proactiva a un Precio Accesible" headline was the output of that tension — it names both the aspiration (proactive intelligence) and the qualifier (accessible price) in a single phrase, positioning against enterprise BI without attacking it directly.
+        </p>
+      </div>
+
+      <figure class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/whisper/whisper-landing.png" alt="Whisper BI — full landing page V1" loading="lazy" />
+        <figcaption>Landing page V1 — top-to-bottom: hero with conversational demo concept, value pillars (Optimizar / Aumentar / Reducir), use cases with outcome metrics, testimonials, and CTA. The dark/accent-orange color system was designed to signal modernity without the sterile blue of enterprise BI. Each section was a testable hypothesis. <em>Click to expand.</em></figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ================= 06 · IMPACT ================= -->
+  <section class="case-section" id="impact">
+    <div class="container-narrow">
+      <p class="section-eyebrow">06 · Results</p>
+      <h2>The numbers.</h2>
+    </div>
+
+    <div class="container-wide">
+      <ul class="impact-grid">
+        <li class="impact-card">
+          <span class="impact-num">&lt; 90</span>
+          <span class="impact-label">Days to first paying B2B clients</span>
+          <span class="impact-detail">First paying enterprise clients secured within 3 months of launch — including clients with internal compliance review processes for new software.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">40%</span>
+          <span class="impact-label">Onboarding conversion lift</span>
+          <span class="impact-detail">From 28% to 40% of users completing onboarding and initiating a first unprompted query — measured via session event tracking, no artificial incentives.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">60%</span>
+          <span class="impact-label">Content production time reduced</span>
+          <span class="impact-detail">AI-assisted design workflow (Claude + Figma) cut the time to produce UI variants, report templates, and interface personalization assets — freeing cycles for research and iteration.</span>
+        </li>
+        <li class="impact-card">
+          <span class="impact-num">7</span>
+          <span class="impact-label">Onboarding steps that converted</span>
+          <span class="impact-detail">Progressive onboarding designed so that completing step 7 meant the user had already successfully used the product — not just toured it.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 3rem;">
+      <div class="callout for-ops">
+        <span class="callout-label"><span class="authorship">[My call]</span> On building research discipline in a startup</span>
+        <p>
+          A bootstrapped startup has a built-in excuse to skip research: "we don't have time." I ran counter to that. Every major product decision — interface architecture, onboarding structure, pricing model, landing page framing — was grounded in at least a lightweight user validation before shipping. The 40% onboarding lift and the 90-day client acquisition aren't coincidences. They're the compound return on research done at the right moment, even when time was scarce.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CASE NAV ================= -->
+  <nav class="case-nav" aria-label="Case navigation">
+    <div class="case-nav-inner">
+      <a href="/work/occ.html" class="case-nav-card prev">
+        <span class="label">Previous case</span>
+        <span class="title">OCC Mundial — Two audiences, one commerce engine</span>
+      </a>
+      <a href="/" class="case-nav-card next">
+        <span class="label">All work</span>
+        <span class="title">Back to portfolio</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
