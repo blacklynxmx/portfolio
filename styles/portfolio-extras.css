@@ -418,3 +418,43 @@
 .lb-close:hover { color: #fff; }
 figure[data-zoomable] { cursor: zoom-in; }
 figure[data-zoomable]:hover img { opacity: 0.92; transition: opacity 0.15s; }
+
+/* ==========================================================================
+   PHASE 2 · PATCH — overflow, clickable cards, scroll margin
+   ========================================================================== */
+
+/* Fix: before-after y figuras anchas que se salen en viewports estrechos */
+.before-after {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.figure-wide {
+  overflow-x: hidden;
+}
+
+.figure-wide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix: scroll margin para que nav sticky no tape secciones con ancla */
+.case-section {
+  scroll-margin-top: 80px;
+}
+
+/* Fix: case-card-cta oculto cuando el card entero ya es <a> */
+a.case-card .case-card-cta {
+  display: none;
+}
+
+/* Case card hover — señal visual de que todo el card es clickable */
+a.case-card {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.case-card:hover h3 {
+  color: var(--brand);
+  transition: color 0.15s;
+}
