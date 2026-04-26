@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Jupiter CRM — Unificando Sistemas Legacy en Santander México · David G. Mendieta</title>
+  <meta name="description" content="Rediseño del CRM interno de Santander México: de 5+ herramientas legacy fragmentadas a un sistema unificado — investigación contextual, talleres de design thinking y 3 sprints de diseño." />
+
+  <link rel="canonical" href="https://davidgmendieta.vercel.app/es/work/santander.html" />
+  <link rel="alternate" hreflang="en" href="https://davidgmendieta.vercel.app/work/santander.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/es/work/santander.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+</head>
+<body>
+
+  <script src="/scripts/lightbox.js" defer></script>
+
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="/es/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menú</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/es/" class="active">Trabajo</a></li>
+        <li><a href="/es/about.html">Sobre mí</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/santander.html" lang="en">EN</a>
+            <a href="/es/work/santander.html" class="active" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="container-narrow">
+      <div class="case-hero-meta">
+        <span class="num">Caso 04 / 06</span>
+        <span class="divider-dot">·</span>
+        <span>2014 — 2015</span>
+        <span class="divider-dot">·</span>
+        <span>Banca · CRM Interno · UX Enterprise</span>
+      </div>
+
+      <h1 class="case-hero-title">Cinco herramientas legacy. Un CRM. <em>Sin capacitación.</em></h1>
+
+      <p class="case-hero-lede">
+        Los ejecutivos de crédito de Santander México cambiaban entre 5+ sistemas basados en comandos para atender una sola solicitud de cliente — simuladores de crédito, historiales de transacciones, rastreadores de portafolio, módulos de capacitación, catálogos de productos. Todos separados. Todos inconsistentes. Neo Jupiter fue el intento de resolverlo correctamente: un CRM unificado, rediseñado desde la investigación, adoptado a nivel nacional.
+      </p>
+
+      <div class="case-hero-meta-row">
+        <div>
+          <span class="label">Rol</span>
+          <span class="value">Arquitecto UX y Director de Departamento UI</span>
+        </div>
+        <div>
+          <span class="label">Cliente / Contexto</span>
+          <span class="value">Santander México · vía Leo Burnett · Entorno bancario regulado por CNBV</span>
+        </div>
+        <div>
+          <span class="label">Equipo</span>
+          <span class="value">Investigador UX único · 3 Diseñadores UI · 2 Tech Leads · Stakeholders de sucursal, dirección regional y nivel ejecutivo</span>
+        </div>
+        <div>
+          <span class="label">Impacto principal</span>
+          <span class="value">+8% venta cruzada · -30% tiempo de capacitación · Adopción nacional reemplazando el sistema Jupiter legacy</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="divider" />
+
+  <!-- 01 · CONTEXTO -->
+  <section class="case-section" id="context">
+    <div class="container-narrow">
+      <p class="section-eyebrow">01 · Contexto</p>
+      <h2>La agencia sabía de publicidad. El banco sabía de regulación. Ninguno conocía a los usuarios.</h2>
+
+      <p>
+        Leo Burnett es una de las agencias de publicidad más reconocidas del mundo — responsable de íconos culturales desde las mascotas de los cereales de Kellogg's hasta el vaquero Marlboro. Su calidad de producción y disciplina de marca eran excepcionales. Pero cuando el engagement pasó de marketing a diseñar un CRM bancario, la brecha se hizo evidente: el expertise en expresión de marca no se traduce automáticamente en UX enterprise para herramientas financieras reguladas.
+      </p>
+
+      <p>
+        <span class="authorship">[Mi rol]</span> Me incorporé para cerrar esa brecha. El proyecto necesitaba alguien que pudiera hablar ambos idiomas — suficientemente técnico para entender las capacidades y restricciones de los sistemas legacy que se iban a reemplazar, y con suficiente expertise en UX para traducir esas restricciones en un producto que los empleados del banco realmente usaran sin necesidad de un manual.
+      </p>
+
+      <div class="callout for-business">
+        <span class="callout-label">La capa regulatoria</span>
+        <p>
+          Este no era un producto que se pudiera lanzar e iterar libremente. Cada decisión de visualización de datos, cada control de acceso, cada vista de historial de cliente tenía que pasar por Auditoría Interna y cumplir con los requisitos de manejo de datos de clientes de la CNBV y las políticas globales de seguridad de TI de Santander. El diseño no era solo un problema de UX — era un problema de compliance que también tenía que ser un buen problema de UX.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 02 · INVESTIGACIÓN -->
+  <section class="case-section" id="research">
+    <div class="container-narrow">
+      <p class="section-eyebrow">02 · Investigación</p>
+      <h2>El problema real no eran los sistemas. Era el modelo mental.</h2>
+
+      <p>
+        Antes de cualquier trabajo de diseño, conduje una fase de investigación multi-método con tres tipos de participantes: ejecutivos de crédito de primera línea que usaban las herramientas diariamente, directores de sucursal y regionales que supervisaban y necesitaban visibilidad sin el detalle operativo, y ejecutivos bancarios a nivel estratégico cuyo buy-in era necesario para la adopción nacional.
+      </p>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">Talleres con stakeholders</p>
+          <h4>Alineando qué debía ser el sistema</h4>
+          <p>Talleres con ejecutivos de varios niveles jerárquicos para mapear necesidades, dolores y flujos óptimos. El hallazgo central: cada nivel de la organización tenía un modelo mental distinto de para qué servía el CRM. Los ejecutivos querían un dashboard de ventas. Los gerentes querían visibilidad de equipo. El personal de primera línea quería una forma más rápida de consultar datos de clientes sin cambiar de herramienta.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">User shadowing</p>
+          <h4>Observando el flujo real</h4>
+          <p>Observé a ejecutivos de crédito usando los sistemas legacy en sucursal. El hallazgo clave: una sola interacción con un cliente requería cambiar entre 3+ herramientas, cada una con su propia sintaxis de comandos. La carga cognitiva no era solo ineficiencia — era una fuente de errores con implicaciones de compliance.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Mapas de empatía y JTBD</p>
+          <h4>Lo que cada rol realmente necesitaba</h4>
+          <p>Mapeé el JTBD principal para cada tipo de usuario. El que más moldeó la arquitectura: <em>"Acceder rápidamente al historial completo del cliente para identificar la venta cruzada correcta."</em> El sistema legacy convertía esto en un proceso de 4 pasos en 3 aplicaciones. El objetivo de diseño era hacerlo una vista única.</p>
+        </div>
+      </div>
+
+      <div class="callout for-research">
+        <span class="callout-label">La dimensión del equipo internacional</span>
+        <p>
+          El equipo de UI era multinacional — incluyendo a Alicia Milessi, diseñadora UI que se incorporó desde Polonia. Trabajar con perspectivas de diseño de diferentes mercados agudizó la necesidad de un vocabulario compartido claro: no solo tokens de diseño, sino alineación sobre qué significaba "facilidad de uso" para un empleado de banco mexicano con una fila de clientes y una obligación de compliance. El lenguaje común fueron los entregables de investigación — los mapas de empatía y los frameworks JTBD se convirtieron en el punto de referencia que mantuvo a todos alineados a través de las diferencias culturales y disciplinares.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 03 · DISEÑO -->
+  <section class="case-section" id="design">
+    <div class="container-narrow">
+      <p class="section-eyebrow">03 · Diseño</p>
+      <h2>Tres sprints. Un sistema. Construido con las personas que tenían que usarlo.</h2>
+
+      <p>
+        <span class="authorship">[Yo]</span> El proceso de diseño se estructuró como tres sprints ágiles, cada uno con un alcance específico y un checkpoint con stakeholders antes de avanzar. No era preferencia estética — era un mecanismo para asegurar que los requisitos de compliance y operativos estuvieran integrados en cada etapa, no añadidos al final.
+      </p>
+
+      <div class="methods">
+        <div class="method">
+          <p class="method-label">Sprint 1</p>
+          <h4>Mapear y codiseñar la estructura</h4>
+          <p>Mapear flujos existentes y codiseñar la nueva arquitectura de información del CRM con stakeholders de todos los niveles. Sin wireframes aún — solo diagramas de flujo y validación de IA con usuarios reales. El entregable: acuerdo sobre qué módulos existían, cómo se llamaban y quién podía ver qué.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Sprint 2</p>
+          <h4>Prototipar y testear módulos clave</h4>
+          <p>Prototipar el dashboard de clientes y el simulador de crédito — los dos módulos más usados y más reclamados — y testearlos con ejecutivos de crédito. Los hallazgos alimentaron directamente el diseño: el layout inicial del simulador asumía que los usuarios navegarían linealmente; la observación mostró que saltaban entre secciones constantemente.</p>
+        </div>
+        <div class="method">
+          <p class="method-label">Sprint 3</p>
+          <h4>Refinar para accesibilidad y eficiencia</h4>
+          <p>Refinar la interfaz completa basándose en el feedback del Sprint 2, con enfoque específico en accesibilidad (requisitos adyacentes a CNBV) y eficiencia de tarea — medida como tiempo-en-tarea para los 5 flujos más frecuentes de los ejecutivos de crédito. Los inputs basados en comandos se reemplazaron con flujos visuales y búsquedas de historial en toda la aplicación.</p>
+        </div>
+      </div>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/santander/neo-jupiter-crm-screen.jpg" alt="Neo Jupiter — vista de perfil de cliente con datos de contacto, alertas y recomendaciones de productos" loading="lazy" />
+        <figcaption>Perfil de cliente Neo Jupiter — toda la información relevante en una pantalla: datos de contacto, historial de relación, productos activos, alertas de venta cruzada y valor de portafolio. El layout reemplazó una secuencia de consulta en 3 herramientas por una vista única. <em>Clic para ampliar.</em></figcaption>
+      </figure>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/santander/neo-jupiter-client-dashboard.jpg" alt="Neo Jupiter — datos de cliente con mapa de productos, timeline de historial y agenda" loading="lazy" />
+        <figcaption>Detalle de datos del cliente — el mapa de productos (Lealtad, Domiciliación, Paquetes, Seguros) da al ejecutivo una visión visual de la relación del cliente con el banco, con un timeline de interacciones abajo. Esta vista fue el entregable principal del Sprint 2 — prototipada, testeada y validada con personal de primera línea antes de finalizar. <em>Clic para ampliar.</em></figcaption>
+      </figure>
+
+      <h3 style="margin-top: 3rem;">Vista de Director Regional</h3>
+      <p>
+        El CRM servía a múltiples niveles de rol con necesidades de información muy distintas. Un ejecutivo de crédito necesitaba datos granulares de clientes. Un director regional necesitaba visibilidad a nivel zona — qué sucursales tenían buen desempeño, cuáles necesitaban atención, sin el ruido operativo de los registros individuales de clientes. <span class="authorship">[Yo]</span> La arquitectura de información para la vista regional se diseñó alrededor de esta distinción: desempeño del territorio de un vistazo, drill-down solo cuando se necesitara.
+      </p>
+
+      <figure class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/santander/neo-jupiter-regional-director.jpg" alt="Neo Jupiter — vista de director regional: wireframe (arriba) vs diseño pre-producción (abajo)" loading="lazy" />
+        <figcaption>Vista de Director Regional — wireframe vs. diseño pre-producción. La vista de zona basada en mapa (Zona Colima mostrada) da a los directores el estado visual del territorio de un vistazo: avance de metas %, productividad, acciones comerciales, agenda diaria y desempeño de portafolio. La fidelidad wireframe-a-producción demuestra cómo el sistema de diseño transportó las decisiones visuales desde la ideación hasta la implementación sin perder claridad estructural. <em>Clic para ampliar.</em></figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 04 · CUMPLIMIENTO -->
+  <section class="case-section" id="compliance">
+    <div class="container-narrow">
+      <p class="section-eyebrow">04 · Trabajo regulatorio y de compliance</p>
+      <h2>Diseñar para compliance no era una restricción. Era parte del brief.</h2>
+
+      <p>
+        Santander México opera bajo supervisión de la CNBV y las políticas globales de seguridad de TI de Grupo Santander. Cada decisión de diseño que involucrara datos financieros de clientes tenía que validarse contra los requisitos de Auditoría Interna — no como revisión post-diseño, sino como parte integrada del proceso de sprint.
+      </p>
+
+      <p>
+        Rediseñé el flujo del CRM en colaboración estrecha con los equipos de Compliance y Auditoría Interna, asegurando que toda captura de datos, acceso a historial de clientes y flujos de venta cruzada cumplieran con los requisitos de manejo de datos de la CNBV. La arquitectura de información para datos financieros sensibles aplicó principios de minimización de datos explícitamente: visibilidad de información apropiada al rol, sin filtración de datos entre roles, integridad del trail de auditoría para cada registro de cliente accedido.
+      </p>
+
+      <div class="callout for-ops">
+        <span class="callout-label">Diseño de comunicación regulatoria</span>
+        <p>
+          Más allá de la interfaz en sí, desarrollé guías de tono de voz y estilo para aplicaciones internas — asegurando que los avisos de compliance y divulgaciones regulatorias se comunicaran claramente al personal bancario sin crear fricción operativa. Un requisito de compliance que los empleados ignoran porque está enterrado en texto legal denso es peor que uno expresado de forma simple y prominente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- 05 · IMPACTO -->
+  <section class="case-section" id="impact">
+    <div class="container-narrow">
+      <p class="section-eyebrow">05 · Resultados</p>
+      <h2>Los números.</h2>
+    </div>
+
+    <div class="container-wide">
+      <div class="impact-grid">
+        <div class="impact-card">
+          <span class="impact-num">+8%</span>
+          <span class="impact-label">Venta cruzada de productos de crédito</span>
+          <span class="impact-detail">Los prompts contextuales de venta cruzada integrados en la vista de perfil de cliente impulsaron un incremento del 8% en ventas de productos de crédito — al mostrar la recomendación correcta en el momento de mayor intención.</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">−30%</span>
+          <span class="impact-label">Tiempo de capacitación de nuevos empleados</span>
+          <span class="impact-detail">La interfaz intuitiva eliminó la necesidad de memorizar códigos de comandos legacy. Los nuevos ejecutivos alcanzaron competencia operativa un 30% más rápido que con el sistema anterior.</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">5+</span>
+          <span class="impact-label">Herramientas legacy reemplazadas</span>
+          <span class="impact-detail">Simuladores de crédito, historiales de transacciones, rastreadores de portafolio, módulos de capacitación y catálogos de productos — todos unificados en una interfaz consistente bajo un único sistema de diseño.</span>
+        </div>
+        <div class="impact-card">
+          <span class="impact-num">100%</span>
+          <span class="impact-label">Adopción a nivel nacional</span>
+          <span class="impact-detail">Neo Jupiter fue adoptado en todas las sucursales de Santander México, reemplazando el sistema Jupiter legacy. El CRM sigue en uso activo a nivel nacional.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 3rem;">
+      <div class="callout for-research">
+        <span class="callout-label">Sobre conseguir el buy-in de stakeholders en un entorno regulado</span>
+        <p>
+          El insight de investigación más valioso no fue sobre la interfaz — fue sobre el proceso de toma de decisiones. En un banco regulado, el diseño no se aprueba porque guste. Se aprueba al demostrar que no introduce riesgo de compliance. Correr los talleres de stakeholders temprano, involucrar a Auditoría Interna en los checkpoints de sprint, y enmarcar cada decisión de diseño en términos de su implicación de compliance acortó sustancialmente el ciclo de aprobación. Para cuando Neo Jupiter llegó a la firma final, cada stakeholder principal ya había co-autorado el sistema que se le pedía aprobar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE NAV -->
+  <nav class="case-nav" aria-label="Navegación de caso">
+    <div class="case-nav-inner">
+      <a href="/es/work/whisper.html" class="case-nav-card prev">
+        <span class="label">Caso anterior</span>
+        <span class="title">Whisper BI — De cero a primeros clientes en 90 días</span>
+      </a>
+      <a href="/es/" class="case-nav-card next">
+        <span class="label">Todo el trabajo</span>
+        <span class="title">Volver al portafolio</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
