@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diseño UI &amp; Design Systems — David G. Mendieta</title>
+  <meta name="description" content="Design System components, mobile UI craft, and product interfaces across Compartamos Banco and Whisper BI. High-fidelity Figma exports." />
+  <meta name="author" content="David G. Mendieta" />
+  <link rel="canonical" href="https://davidgmendieta.vercel.app/work/ui-design.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/work/ui-design.html" />
+  <link rel="alternate" hreflang="es" href="https://davidgmendieta.vercel.app/es/work/ui-design.html" class="active" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/case.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
+  <style>
+    /* ── UI Showcase specific styles ─────────────────────────────────────── */
+    .ui-hero {
+      padding: 6rem 0 4rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .exhibit {
+      padding: 5rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .exhibit:last-child {
+      border-bottom: none;
+    }
+
+    .exhibit-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 720px) {
+      .exhibit-header { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    .exhibit-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.5rem;
+    }
+
+    .exhibit-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .exhibit-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      margin-top: 0.75rem;
+    }
+
+    .exhibit-description {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .exhibit-decision {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 2px solid var(--tech);
+      background: var(--surface);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .exhibit-decision strong {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tech);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Asset containers */
+    .asset-frame {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .asset-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .asset-frame.dark {
+      background: #0d1117;
+    }
+
+    .asset-caption {
+      padding: 1rem 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      border-top: 0.5px solid var(--border);
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+    }
+
+    /* Phone frame trio */
+    .phone-showcase {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .phone-showcase .asset-frame {
+      flex: 0 1 200px;
+      min-width: 160px;
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    }
+
+    /* DS grid */
+    .ds-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .ds-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Color tokens strip */
+    .color-strip {
+      display: flex;
+      gap: 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      height: 48px;
+      margin: 1.5rem 0;
+    }
+
+    .color-swatch {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .color-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.04em;
+      opacity: 0.75;
+    }
+
+    /* Annotation */
+    .annotation {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--tech);
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .annotation::before {
+      content: "↑";
+      font-size: 0.9rem;
+    }
+
+    /* Whisper dual */
+    .dual-frame {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 720px) {
+      .dual-frame { grid-template-columns: 1fr; }
+    }
+
+    .dual-frame .asset-frame {
+      min-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <script src="/scripts/lightbox.js" defer></script>
+
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="/es/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links">Menú</button>
+      <ul class="nav-links" id="nav-links" data-nav-links>
+        <li><a href="/es/" class="active">Trabajo</a></li>
+        <li><a href="/es/about.html">Sobre mí</a></li>
+        <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li>
+          <div class="lang-toggle">
+            <a href="/work/ui-design.html" lang="es">EN</a>
+            <a href="/es/work/ui-design.html" class="active" lang="es">ES</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="ui-hero">
+    <div class="container-narrow">
+      <p class="section-eyebrow">Diseño UI &amp; Design Systems</p>
+      <h1 class="case-hero-title" style="max-width: 18ch;">El sistema detrás de la pantalla.</h1>
+      <p class="case-hero-lede">
+        Research informs what to build. Design systems determine whether it can be built consistently, at scale, and maintained by people who weren't in the room when decisions were made. This page shows the UI craft and system thinking behind two of the engagements in this portfolio — Compartamos Banco and Whisper BI.
+      </p>
+      <div style="display:flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="/es/work/compartamos.html" class="btn btn-ghost">Compartamos case study →</a>
+        <a href="/es/work/whisper.html" class="btn btn-ghost">Caso Whisper BI →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 01 — DESIGN SYSTEM: COLOR & TOKENS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="tokens">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 01</p>
+          <h2 class="exhibit-title">Design tokens &amp; brand system</h2>
+          <p class="exhibit-meta">Compartamos Banco · Mobile app &amp; Contact Center</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The Compartamos DLS is built on a single brand constraint: the magenta (#E8007D) must be instantly visible in direct sunlight on a low-end Android screen. Everything else — typography scale, spacing, surface colors, state indicators — derives from that constraint.</p>
+          <div class="exhibit-decision">
+            <strong>Design decision</strong>
+            The color system uses the brand magenta exclusively for primary actions and critical status indicators. Secondary interactions use a teal accent — distinct enough to carry information independently from the primary color, compliant with WCAG AA contrast ratios on both light and dark surfaces.
+          </div>
+        </div>
+      </div>
+
+      <!-- Color strip -->
+      <div class="color-strip">
+        <div class="color-swatch" style="background: #E8007D;">
+          <span class="color-label" style="color: #fff;">Brand / Primary</span>
+        </div>
+        <div class="color-swatch" style="background: #B8005E;">
+          <span class="color-label" style="color: #fff;">Brand Dark</span>
+        </div>
+        <div class="color-swatch" style="background: #007DC3;">
+          <span class="color-label" style="color: #fff;">Secondary / Link</span>
+        </div>
+        <div class="color-swatch" style="background: #1B6B1A;">
+          <span class="color-label" style="color: #fff;">Success</span>
+        </div>
+        <div class="color-swatch" style="background: #CC0000;">
+          <span class="color-label" style="color: #fff;">Error</span>
+        </div>
+        <div class="color-swatch" style="background: #F5F5F5; border: 0.5px solid #e0e0e0;">
+          <span class="color-label" style="color: #333;">Surface</span>
+        </div>
+        <div class="color-swatch" style="background: #1A1A1A;">
+          <span class="color-label" style="color: #fff;">Text Primary</span>
+        </div>
+        <div class="color-swatch" style="background: #666666;">
+          <span class="color-label" style="color: #fff;">Text Secondary</span>
+        </div>
+      </div>
+
+      <!-- Type scale -->
+      <div class="asset-frame" style="padding: 2rem 2.5rem; margin-top: 1.5rem;">
+        <p style="font-size: 0.7rem; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin: 0 0 1.5rem;">Typography scale</p>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="font-size: 1.75rem; font-weight: 700; color: #E8007D; line-height: 1; min-width: 200px;">Hola, Carmen</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">28px · Bold · Brand · Screen headers</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="font-size: 1.125rem; font-weight: 600; color: #1A1A1A; line-height: 1; min-width: 200px;">Gabriela Alvarez</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">18px · Semibold · Client names / section heads</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="font-size: 1rem; font-weight: 400; color: #1A1A1A; line-height: 1; min-width: 200px;">Crédito Individual</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">16px · Regular · Body / list items</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="font-size: 0.875rem; font-weight: 400; color: #666; line-height: 1; min-width: 200px;">ID 1234567812390</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">14px · Regular · Secondary / metadata</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+            <span style="font-size: 0.75rem; font-weight: 400; color: #666; line-height: 1; min-width: 200px;">Actualización 18/Oct/2023</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">12px · Regular · Timestamps / helper text</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 02 — DS COMPONENTS
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="components">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 02</p>
+          <h2 class="exhibit-title">Component library</h2>
+          <p class="exhibit-meta">Compartamos Banco · Built in Figma</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The component library covers the full interaction surface of the field agent app and Contact Center tool. Every component is documented with usage rules, state variations, and accessibility annotations — so designers joining the project mid-stream and external contractors could work without a design review on every screen.</p>
+          <div class="exhibit-decision">
+            <strong>Design decision</strong>
+            Input components use floating labels rather than static labels above fields — a deliberate choice for a small-screen context where vertical space is at a premium. The label collapses into the field on focus, recovering a full field height worth of vertical space per input.
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-grid">
+        <div>
+          <figure class="asset-frame" data-zoomable>
+            <img src="/assets/cases/ui/ds-buttons-full.png" alt="Compartamos Design System — button variants: primary, secondary, tertiary, disabled" loading="lazy" />
+          </figure>
+          <p class="annotation">Button system — 4 variants · Primary / Secondary / Tertiary / Disabled</p>
+        </div>
+        <div>
+          <figure class="asset-frame" data-zoomable>
+            <img src="/assets/cases/ui/ds-auth.png" alt="Compartamos Design System — 6-digit authentication code component states" loading="lazy" />
+          </figure>
+          <p class="annotation">Auth component — empty / filled / error / success states</p>
+        </div>
+      </div>
+
+      <figure class="asset-frame" data-zoomable style="margin-top: 1.5rem;">
+        <img src="/assets/cases/ui/ds-fields-full.png" alt="Compartamos Design System — input field variants: masks, states, sizes" loading="lazy" />
+      </figure>
+      <p class="annotation">Input field system — format masks (phone, currency, date, card) · Status states (default, focus, filled, error, validation, disabled) · Size variants</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 03 — MOBILE APP
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="mobile">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 03</p>
+          <h2 class="exhibit-title">Mobile app — field agent interface</h2>
+          <p class="exhibit-meta">Compartamos Banco · Android · 15,000+ field agents</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The field agent app had to work on entry-level Android devices, under variable lighting, with intermittent connectivity. UI decisions were made with those three constraints as hard limits — not aspirations.</p>
+          <div class="exhibit-decision">
+            <strong>Key UI constraints</strong>
+            Minimum touch target: 48×48dp. No gesture-only interactions — every action needed a visible tap target. Offline-capable state management: the sync status indicator (green dot + "Sincronización completa") was designed to be the first thing a user sees — before any data. If you don't know whether your data is current, you can't trust what you're looking at.
+          </div>
+        </div>
+      </div>
+
+      <figure class="asset-frame" data-zoomable style="background: #f0f0f0; padding: 2rem;">
+        <img src="/assets/cases/ui/compartamos-app-home.png" alt="Compartamos mobile app — Home, Menú, and Mi Menú screens showing the full navigation system" loading="lazy" />
+      </figure>
+      <p class="annotation">Home · Menú · Mi Menú — the three entry points of the field agent workflow. Role-based: promotoras see a 3-item home grid; asesores CI see an expanded menu with additional product lines.</p>
+
+      <div class="phone-showcase" style="margin-top: 3rem;">
+        <figure class="asset-frame" data-zoomable>
+          <img src="/assets/cases/ui/app-clientes.jpg" alt="Compartamos app — Clientes screen with product breakdown" loading="lazy" />
+          <div class="asset-caption">Clientes — product-level portfolio view</div>
+        </figure>
+        <figure class="asset-frame" data-zoomable>
+          <img src="/assets/cases/ui/app-renovacion.jpg" alt="Compartamos app — Renovación screen with retention metrics" loading="lazy" />
+          <div class="asset-caption">Renovación — retention metrics, target vs. actual</div>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 04 — CONTACT CENTER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="contact-center">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 04</p>
+          <h2 class="exhibit-title">Contact Center — web tool</h2>
+          <p class="exhibit-meta">Compartamos Banco · Web · Responsive</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The Contact Center tool served a different user than the mobile app — office-based agents handling inbound calls, managing large data volumes, resolving exceptions. The design shifted from the mobile-first, thumb-friendly patterns of the field app to a denser, information-rich layout optimized for a 13"+ monitor.</p>
+          <div class="exhibit-decision">
+            <strong>The most complex screen</strong>
+            The duplicate record resolution screen — shown here — was the hardest UX problem in the CC tool. When an incoming caller's data matches two existing records with different names or dates, the agent must decide which record is correct and archive the other. The side-by-side comparison layout was tested with agents before finalizing: initial versions used a sequential reveal (show one, then the other) — agents found they couldn't compare without scrolling. Side-by-side eliminated that entirely.
+          </div>
+        </div>
+      </div>
+
+      <figure class="asset-frame" data-zoomable>
+        <img src="/assets/cases/ui/cc-duplicate.png" alt="Compartamos Contact Center — Registro duplicado screen for resolving duplicate prospect records side by side" loading="lazy" />
+      </figure>
+      <p class="annotation">Registro duplicado — side-by-side comparison layout. Folio, age, birthdate, birthplace, and contact visible for both records simultaneously. The non-selected record auto-archives on confirmation — no supervisor escalation required.</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 05 — WHISPER BI
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="whisper">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 05</p>
+          <h2 class="exhibit-title">Whisper BI — conversational analytics</h2>
+          <p class="exhibit-meta">B2B SaaS · Dark theme · AI-powered</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The visual language of Whisper BI had to signal "enterprise intelligence" without the cold sterility of traditional BI tools. Dark background, electric blue primary actions, high-contrast data visualization — legible at a glance, familiar to a business user who has seen Slack and Notion.</p>
+          <div class="exhibit-decision">
+            <strong>AI-assisted design workflow</strong>
+            This interface was produced using an AI-assisted design workflow — Claude integrated with Figma — which reduced iteration time by approximately 60%. The workflow is worth noting not as a novelty, but as a skill: knowing when to use AI generation vs. manual craft, and how to quality-control the output, is now a core competency in the design stack.
+          </div>
+        </div>
+      </div>
+
+      <div class="dual-frame">
+        <figure class="asset-frame dark" data-zoomable>
+          <img src="/assets/cases/ui/whisper-interface.png" alt="Whisper BI — main conversational interface with sidebar navigation by business topic" loading="lazy" />
+          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Conversational interface — sidebar by business domain, response type selector always visible</div>
+        </figure>
+        <figure class="asset-frame dark" data-zoomable>
+          <img src="/assets/cases/ui/whisper-dashboard.png" alt="Whisper BI — dashboard generated from a natural language query" loading="lazy" />
+          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Dashboard output — generated from a conversational query, not pre-configured</div>
+        </figure>
+      </div>
+
+      <div class="callout for-engineering" style="margin-top: 3rem;">
+        <span class="callout-label">Design system contrast: mobile vs. web vs. AI-native</span>
+        <p>
+          These two products — Compartamos and Whisper BI — represent opposite ends of the design constraint spectrum. Compartamos: light theme, maximum contrast, large touch targets, offline-capable, for a user who may be using the phone with one hand in the sun. Whisper BI: dark theme, dense information, keyboard-navigable, for a user at a desk who needs to see data and act on it in the same view. The underlying system thinking is identical — the visual output is intentionally different because the context of use is different.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV -->
+  <nav class="case-nav" aria-label="Navegación">
+    <div class="case-nav-inner">
+      <a href="/es/" class="case-nav-card prev">
+        <span class="label">Todo el trabajo</span>
+        <span class="title">Volver al portafolio</span>
+      </a>
+      <a href="/es/work/compartamos.html" class="case-nav-card next">
+        <span class="label">Ver el caso completo</span>
+        <span class="title">Compartamos Banco — from 8 days to 2 hours</span>
+      </a>
+    </div>
+  </nav>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </footer>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
