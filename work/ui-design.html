@@ -325,6 +325,32 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 01B — SPACING & GRID
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="spacing">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 01B</p>
+          <h2 class="exhibit-title">Spacing scale &amp; grid system</h2>
+          <p class="exhibit-meta">Compartamos Banco · Mobile 4-col · Web 12-col</p>
+        </div>
+        <div class="exhibit-description">
+          <p>The spacing system is built on an 8pt base grid — every space value is a multiple of 8, with a 4px exception for fine adjustments. This constraint kept the mobile app visually consistent across 12+ screens built by different designers and contractors over 3 years without a design review bottleneck.</p>
+          <div class="exhibit-decision">
+            <strong>Why two different grids</strong>
+            The mobile app uses a 4-column grid (16dp margin, 8dp gutter) optimized for 360dp viewports — the target device was an entry-level Android at 5". The Contact Center web tool uses a 12-column grid (40px margin, 24px gutter) anchored to 1280px — the target was a 13" laptop in an office environment. Same design system, different spatial logic for each context.
+          </div>
+        </div>
+      </div>
+      <figure class="asset-frame" data-zoomable>
+        <img src="/assets/cases/ui/ds-spacing-grid.png" alt="Compartamos DLS — spacing scale 8pt grid, mobile 4-column grid, and web 12-column grid documentation" loading="lazy" />
+      </figure>
+      <p class="annotation">8pt base grid · Mobile 4-col (360dp) · Web 12-col (1280px) · 48dp minimum touch target</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
        EXHIBIT 02 — DS COMPONENTS
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="components">
@@ -364,6 +390,84 @@
       </figure>
       <p class="annotation">Input field system — format masks (phone, currency, date, card) · Status states (default, focus, filled, error, validation, disabled) · Size variants</p>
 
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 02B — ATOMS LIBRARY
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="atoms">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 02B</p>
+          <h2 class="exhibit-title">Atoms — icons, badges, chips, progress</h2>
+          <p class="exhibit-meta">Compartamos Banco · Full atom library</p>
+        </div>
+        <div class="exhibit-description">
+          <p>Atoms are the smallest reusable units in the system — they don't compose other components, they are composed. Every icon, badge, chip, and progress indicator here has a defined usage rule, a documented state set, and a specific meaning in the Compartamos product language.</p>
+          <div class="exhibit-decision">
+            <strong>Status badges as a design language</strong>
+            The six pipeline states — Perfilamiento, Validación, Llamada cortada, En atraso, Completado, Nuevo — are not just UI labels. They are operational definitions that determine what action a Contact Center agent takes next. The color semantics (green = active qualification, amber = follow-up needed, red = past due) were validated with the operations team before implementation. A design decision that looked cosmetic was actually a process definition.
+          </div>
+        </div>
+      </div>
+      <figure class="asset-frame" data-zoomable>
+        <img src="/assets/cases/ui/ds-atoms.png" alt="Compartamos DLS — atom library: icons with states, status badges, chips, progress indicators, and avatar system" loading="lazy" />
+      </figure>
+      <p class="annotation">Icons (24×24dp · 3 states) · Status badges (6 pipeline states) · Chips (4 variants) · Progress (linear + step) · Avatar system (4 sizes + stack)</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 02C — MOLECULES
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="molecules">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 02C</p>
+          <h2 class="exhibit-title">Molecules — form groups &amp; list items</h2>
+          <p class="exhibit-meta">Compartamos Banco · All states documented</p>
+        </div>
+        <div class="exhibit-description">
+          <p>Molecules are where atoms become functional. The form group molecule — label + field + helper text + states — is the primary data-collection pattern in the Compartamos product. It appears 47 times across the loan origination flow. Getting it right once meant every instance was right.</p>
+          <div class="exhibit-decision">
+            <strong>The floating label decision</strong>
+            Floating labels — which collapse from placeholder position to a small label above the field on focus — were chosen over static labels for one specific reason: vertical space on a 5" Android screen. Each floating label recovers the equivalent of one field height per input. In a form with 12 fields, that compounds into a measurable reduction in scroll depth, which directly reduced the abandonment rate at the data-capture step.
+          </div>
+        </div>
+      </div>
+      <figure class="asset-frame" data-zoomable>
+        <img src="/assets/cases/ui/ds-molecules.png" alt="Compartamos DLS — molecules: form group all states (default, focus, filled, error, validation, disabled, money mask), complete form example, and list item variants" loading="lazy" />
+      </figure>
+      <p class="annotation">Form group · 7 states documented · Complete form in context · List item · 5 variants (basic, badge, selected, section header, secondary action)</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       EXHIBIT 02D — HANDOFF ANNOTATION
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="exhibit" id="handoff">
+    <div class="container-narrow">
+      <div class="exhibit-header">
+        <div>
+          <p class="exhibit-num">Exhibit 02D</p>
+          <h2 class="exhibit-title">Handoff annotation — engineering specs</h2>
+          <p class="exhibit-meta">Compartamos Banco · CC-004 Registro Duplicado</p>
+        </div>
+        <div class="exhibit-description">
+          <p>A design system is only as good as the handoff that bridges it to engineering. This annotation document for the Registro Duplicado screen — one of the most complex in the Contact Center tool — shows how design decisions were communicated: layout specs, typography tokens, color references, component names, and interaction behavior in a single document.</p>
+          <div class="exhibit-decision">
+            <strong>The handoff format</strong>
+            Rather than relying on Figma comments alone (which engineers rarely read in sequence), I produced structured spec sheets for complex screens — one page per screen, organized by concern: layout first, then typography, then color tokens, then components referenced, then interaction behavior. This reduced the back-and-forth between design and engineering by making every decision explicit before implementation started.
+          </div>
+        </div>
+      </div>
+      <figure class="asset-frame" data-zoomable>
+        <img src="/assets/cases/ui/ds-handoff.png" alt="Compartamos DLS — handoff annotation for CC-004 Registro Duplicado: layout specs, typography, color tokens, components referenced, interaction behavior" loading="lazy" />
+      </figure>
+      <p class="annotation">CC-004 Registro Duplicado · Layout · Typography · Color tokens · Components referenced · Interaction states · Engineering-ready spec format</p>
     </div>
   </section>
 
