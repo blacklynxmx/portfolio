@@ -1,5 +1,5 @@
-/* lightbox.js — minimal zoomable image overlay
-   Targets any <figure data-zoomable> element. */
+/* lightbox.js — zoomable image overlay
+   Targets any element with [data-zoomable] attribute (figure, div, etc.) */
 (function () {
   'use strict';
   var overlay, overlayImg;
@@ -40,10 +40,12 @@
   }
 
   function init() {
-    document.querySelectorAll('figure[data-zoomable]').forEach(function(fig){
-      var img = fig.querySelector('img');
+    /* Match ANY element with data-zoomable — covers both <figure> and <div> */
+    document.querySelectorAll('[data-zoomable]').forEach(function(el){
+      var img = el.querySelector('img');
       if (!img) return;
-      fig.addEventListener('click', function(){ open(img.src, img.alt); });
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', function(){ open(img.src, img.alt); });
     });
   }
 
