@@ -1,9 +1,4 @@
 # robots.txt — David G. Mendieta portfolio
-# Allow all public content; block private case studies from crawling.
-
+# Private portfolio — not for public indexing
 User-agent: *
-Allow: /
-Disallow: /private/
-Disallow: /es/private/
-
-Sitemap: https://davidgmendieta.com/sitemap.xml
+Disallow: /
