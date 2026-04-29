@@ -85,9 +85,30 @@ a.case-card .case-card-cta { display: none; }
 .before-after > figure { min-width: 0; }
 .before-after figure img, .before-after .figure-frame img { width: 100%; height: auto; display: block; }
 
-/* Figure wide */
-.figure-wide { max-width: 100%; overflow: hidden; }
-.figure-wide img { max-width: 100%; height: auto; }
+/* Figure wide — rompe fuera del container-narrow */
+.figure-wide {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.figure-wide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: none; /* permite que la imagen se muestre completa con scroll horizontal */
+}
+/* Cuando está dentro de container-narrow, expande al ancho del viewport */
+.container-narrow .figure-wide {
+  width: calc(100vw - 4rem);
+  max-width: 1120px;
+  margin-left: calc(-1 * (100vw - 4rem - 100%) / 2);
+}
+@media (max-width: 720px) {
+  .container-narrow .figure-wide {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 
 /* Scroll margin */
 .case-section { scroll-margin-top: 80px; }
