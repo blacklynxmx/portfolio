@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OCC Mundial — Two audiences, one commerce engine · David G. Mendieta</title>
   <meta name="description" content="How I rebuilt the job-ad commerce flow for Mexico's #1 job board. Two-track research (candidate JTBD + recruiter segmentation), CAJA shopping-cart architecture, and a dynamic-pricing study users could never see." />
@@ -408,6 +407,22 @@
           Most research protocols assume you can ask the user what they think. Commercially sensitive research often can't — either because the question biases the answer, or because asking the question creates a problem you didn't have. The Flex Pricing study was the piece of work I'm most likely to reach for when someone asks what senior research looks like in a commercial context: finding a way to get a defensible answer without letting the investigation become the story.
         </p>
       </div>
+
+      <h3 style="margin-top: 4rem;">CAJA in action — the job posting flow.</h3>
+
+      <p>
+        What a recruiter actually sees when they post a job. The flow was designed around one finding from the segmentation: Micro recruiters abandon when there are too many required fields before they can see what they're buying. The solution was a step-by-step structure that defers complexity — location, category, and role name first; compensation and modality later in the flow.
+      </p>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-form-publish.jpg" alt="OCC CAJA — job posting form: role, category, location, education, contract type, schedule, modality" loading="lazy" />
+        <figcaption><span class="label">Step 1 · Basic information</span> The first screen of the CAJA posting flow. Role title, category, location, education requirement, contract type (permanent / project / intern), schedule (full / part time), and modality (on-site / hybrid / remote). The order reflects the research: start with what candidates search for, not with what the recruiter needs to decide. <em>Click to expand.</em></figcaption>
+      </figure>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-form-salary.jpg" alt="OCC CAJA — compensation module: salary range, modality selection, commission toggle, hide salary option" loading="lazy" />
+        <figcaption><span class="label">Compensation module</span> Salary range (min / max), workspace modality selector, commission toggle, and "hide salary" option — a field that didn't exist in the legacy flow at all. The recruiter segmentation showed that Corporate recruiters almost never disclose salary publicly; Micro recruiters almost always do. Both needed to be right in the same flow. The toggle let the product serve both without forcing either to misrepresent their position. <em>Click to expand.</em></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -455,6 +470,17 @@
         </div>
         <p class="figure-caption"><span class="label">Recruiter registration · today</span> The entry point for new recruiter accounts. Four fields, one primary action, no sales gate. A direct consequence of the segmentation — Micro will leave if you try to talk to them.</p>
       </div>
+
+      <h3 style="margin-top: 3rem;">The recruiter's pipeline view.</h3>
+
+      <p>
+        Beyond pricing and registration, the core of the recruiter's daily workflow is the vacancies manager — the screen they open every morning to see what moved overnight. The contrast with the legacy admin (shown in the Before section) is the clearest single-screen demonstration of the redesign: same function, completely different approach to information density, status taxonomy, and actionability.
+      </p>
+
+      <figure class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-recruiter-dashboard.jpg" alt="OCC recruiter dashboard — vacancy pipeline with status tabs (active, paused, expired, drafts) and per-vacancy metrics" loading="lazy" />
+        <figcaption><span class="label">Recruiter dashboard · current</span> The vacancy pipeline. Left sidebar: status tabs (Activas 3 / En pausa 1 / Expiradas 2 / Borradores 12) — the state machine a recruiter actually uses to manage their inventory. Each card: visits, unreviewed candidates, interest signals, and discard count. The "Por revisar · Sin ver" badge is the piece the legacy system couldn't do at all — surfacing which candidates haven't been touched. <em>Click to expand.</em></figcaption>
+      </figure>
     </div>
   </section>
 

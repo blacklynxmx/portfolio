@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OCC Mundial — Dos audiencias, un motor de commerce · David G. Mendieta</title>
   <meta name="description" content="Cómo reconstruí el flujo de compra de vacantes para la bolsa de trabajo #1 de México. Research en dos tracks (JTBD de candidatos + segmentación de reclutadores), arquitectura CAJA como carrito de compras, y un estudio de pricing dinámico que los usuarios nunca podían ver." />
@@ -408,6 +407,22 @@
           La mayoría de los protocolos de research asumen que le puedes preguntar al usuario qué piensa. El research comercialmente sensible muchas veces no puede — ya sea porque la pregunta sesga la respuesta, o porque hacer la pregunta crea un problema que no tenías. El estudio de Flex Pricing es la pieza de trabajo que más probablemente agarro cuando alguien me pregunta cómo se ve el research senior en un contexto comercial: encontrar cómo llegar a una respuesta defendible sin dejar que la investigación se vuelva la historia.
         </p>
       </div>
+
+      <h3 style="margin-top: 4rem;">CAJA en acción — el flujo de publicación.</h3>
+
+      <p>
+        Lo que un reclutador ve cuando publica una vacante. El flujo fue diseñado a partir de un hallazgo específico de la segmentación: los reclutadores Micro abandonan cuando hay demasiados campos obligatorios antes de poder ver qué están comprando. La solución fue una estructura paso a paso que difiere la complejidad — primero el puesto, la categoría y la ubicación; después la compensación y la modalidad.
+      </p>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-form-publish.jpg" alt="OCC CAJA — formulario de publicación: puesto, categoría, ubicación, escolaridad, tipo de contratación, horario, modalidad" loading="lazy" />
+        <figcaption><span class="label">Paso 1 · Información básica</span> La primera pantalla del flujo de publicación CAJA. Puesto, categoría, ubicación, nivel de escolaridad, tipo de contratación (tiempo indeterminado / por proyecto / becario), horario (completo / medio tiempo) y modalidad (presencial / híbrido / desde casa). El orden refleja la investigación: empezar por lo que los candidatos buscan, no por lo que el reclutador necesita decidir. <em>Clic para ampliar.</em></figcaption>
+      </figure>
+
+      <figure class="figure figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-form-salary.jpg" alt="OCC CAJA — módulo de compensación: rango salarial, modalidad, toggle de comisiones, opción de ocultar sueldo" loading="lazy" />
+        <figcaption><span class="label">Módulo de compensación</span> Rango salarial (mínimo / máximo), selector de modalidad de espacio de trabajo, toggle de comisiones y opción de "ocultar el sueldo en la publicación" — un campo que no existía en el flujo legacy. La segmentación mostró que los reclutadores Corporativos casi nunca publican el sueldo; los Micro casi siempre lo hacen. El toggle permitió que el producto sirva a ambos sin forzar a ninguno a actuar fuera de sus políticas. <em>Clic para ampliar.</em></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -455,6 +470,17 @@
         </div>
         <p class="figure-caption"><span class="label">Registro reclutador · hoy</span> La puerta de entrada para nuevas cuentas de reclutador. Cuatro campos, una acción primaria, sin gate de ventas. Consecuencia directa de la segmentación — Micro se va si intentas que les hable ventas.</p>
       </div>
+
+      <h3 style="margin-top: 3rem;">La vista de pipeline del reclutador.</h3>
+
+      <p>
+        Más allá de los precios y el registro, el núcleo del trabajo diario del reclutador es el gestor de vacantes — la pantalla que abren cada mañana para ver qué se movió. El contraste con el admin legacy (mostrado en la sección Antes) es la demostración más clara del rediseño en una sola pantalla: misma función, enfoque completamente distinto en densidad de información, taxonomía de estados y accionabilidad.
+      </p>
+
+      <figure class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/occ/occ-recruiter-dashboard.jpg" alt="Dashboard de reclutador OCC — pipeline de vacantes con pestañas de estado (activas, en pausa, expiradas, borradores) y métricas por vacante" loading="lazy" />
+        <figcaption><span class="label">Dashboard de reclutador · actual</span> El pipeline de vacantes. Barra lateral izquierda: pestañas de estado (Activas 3 / En pausa 1 / Expiradas 2 / Borradores 12) — la máquina de estados que un reclutador usa para gestionar su inventario. Cada tarjeta: visitas, candidatos sin revisar, señales de interés y descartados. El badge "Por revisar · Sin ver" es lo que el sistema legacy no podía hacer: mostrar cuáles candidatos no han sido tocados. <em>Clic para ampliar.</em></figcaption>
+      </figure>
     </div>
   </section>
 
