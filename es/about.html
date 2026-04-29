@@ -31,7 +31,7 @@
       <ul class="nav-links" id="nav-links" data-nav-links>
         <li><a href="/es/">Trabajo</a></li>
         <li><a href="/es/about.html" class="active">Sobre mí</a></li>
-        <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li><a href="#" data-user="davidgerardom" data-domain="gmail.com" class="mailto-link">Contacto</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/about.html" lang="en">EN</a>
@@ -53,7 +53,7 @@
           Investigador UX senior y estratega de producto. Me especialicé —sin del todo planearlo— en los proyectos donde el usuario real se topa de frente con lo que Riesgo, Legal e Ingeniería están dispuestos a soltar. Esa fricción es exactamente donde el trabajo se pone interesante.
         </p>
         <div class="hero-ctas">
-          <a href="mailto:davidgerardom@gmail.com" class="btn btn-primary">Escríbeme <span class="arrow">→</span></a>
+          <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="btn btn-primary mailto-link">Escríbeme <span class="arrow">→</span></a>
           <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
           <a href="/assets/cv/David_Mendieta_CV.pdf" download class="btn btn-secondary">Descargar CV ↓</a>
         </div>
@@ -259,9 +259,8 @@
         Busco activamente roles senior o de liderazgo en investigación UX, estrategia de producto o diseño de servicio. Fintech, banca regulada o B2B SaaS — CDMX híbrido o remoto internacional.
       </p>
       <div class="hero-ctas" style="margin-top: 2rem;">
-        <a href="mailto:davidgerardom@gmail.com" class="btn btn-primary">davidgerardom@gmail.com <span class="arrow">→</span></a>
+        <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="btn btn-primary mailto-link">davidgerardom@gmail.com <span class="arrow">→</span></a>
         <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
-        <a href="/assets/cv/David_Mendieta_CV.pdf" download class="btn btn-secondary">Descargar CV ↓</a>
       </div>
     </div>
   </section>
@@ -273,7 +272,7 @@
         <p>Investigación UX · Estrategia de Producto · Service Design. Disponible para roles senior en fintech, banca regulada y B2B SaaS.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a>
+        <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="mailto-link">davidgerardom@gmail.com</a>
         <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a>
         <a href="/es/">Trabajo</a>
         <a href="/about.html">English</a>
@@ -286,5 +285,11 @@
   </footer>
 
   <script src="/scripts/main.js" defer></script>
+  <script>
+    // Mailto obfuscation — prevents email harvesting by scrapers
+    document.querySelectorAll('.mailto-link').forEach(function(el) {
+      el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
+    });
+  </script>
 </body>
 </html>

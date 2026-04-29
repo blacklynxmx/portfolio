@@ -40,7 +40,7 @@
       <ul class="nav-links" id="nav-links" data-nav-links>
         <li><a href="/">Work</a></li>
         <li><a href="/about.html" class="active">About</a></li>
-        <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li><a href="#" data-user="davidgerardom" data-domain="gmail.com" class="mailto-link">Contact</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/about.html" class="active" lang="en">EN</a>
@@ -63,11 +63,12 @@
           Senior UX research and product strategy lead. 15+ years at the seam between user behavior and operational reality — regulated finance, legacy systems, high-stakes operations. Born, raised, and working out of Mexico City.
         </p>
         <div class="hero-ctas">
-          <a href="mailto:davidgerardom@gmail.com" class="btn btn-primary">
+          <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="btn btn-primary mailto-link">
             Get in touch
             <span class="arrow">→</span>
           </a>
           <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+          <a href="/assets/cv/David_Mendieta_CV.pdf" download class="btn btn-secondary">Download CV ↓</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -308,7 +309,7 @@
         Actively looking for senior or lead roles in UX research, product strategy, or service design — fintech, regulated banking, or B2B SaaS. CDMX hybrid, or remote.
       </p>
       <div class="hero-ctas" style="margin-top: 2rem;">
-        <a href="mailto:davidgerardom@gmail.com" class="btn btn-primary">
+        <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="btn btn-primary mailto-link">
           davidgerardom@gmail.com
           <span class="arrow">→</span>
         </a>
@@ -325,7 +326,7 @@
         <p>Senior UX Research &amp; Product Strategy. Available for senior and lead roles in fintech, regulated banking, and B2B SaaS.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a>
+        <a href="#" data-user="davidgerardom" data-domain="gmail.com" class="mailto-link">davidgerardom@gmail.com</a>
         <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a>
         <a href="/">Work</a>
         <a href="/es/about.html">Español</a>
@@ -338,5 +339,11 @@
   </footer>
 
   <script src="/scripts/main.js" defer></script>
+  <script>
+    // Mailto obfuscation — prevents email harvesting by scrapers
+    document.querySelectorAll('.mailto-link').forEach(function(el) {
+      el.href = 'mailto:' + el.dataset.user + '@' + el.dataset.domain;
+    });
+  </script>
 </body>
 </html>
