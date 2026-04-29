@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UI Design &amp; Design Systems — David G. Mendieta</title>
+  <title>UI Design &amp; Design Systems - David G. Mendieta</title>
   <meta name="description" content="Design System components, mobile UI craft, and product interfaces across Compartamos Banco and Whisper BI. High-fidelity Figma exports." />
   <meta name="author" content="David G. Mendieta" />
   <link rel="canonical" href="https://davidgmendieta.vercel.app/work/ui-design.html" />
@@ -239,7 +239,7 @@
       <p class="section-eyebrow">UI Design &amp; Design Systems</p>
       <h1 class="case-hero-title" style="max-width: 18ch;">The system behind the screen.</h1>
       <p class="case-hero-lede">
-        Research informs what to build. Design systems determine whether it can be built consistently, at scale, and maintained by people who weren't in the room when decisions were made. This page shows the UI craft and system thinking behind two of the engagements in this portfolio — Compartamos Banco and Whisper BI.
+        Research informs what to build. Design systems determine whether it can be built consistently, at scale, and maintained by people who weren't in the room when decisions were made. This page shows the UI craft and system thinking behind two of the engagements in this portfolio - Compartamos Banco and Whisper BI.
       </p>
       <div style="display:flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
         <a href="/work/compartamos.html" class="btn btn-ghost">Compartamos case study →</a>
@@ -249,7 +249,7 @@
   </header>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 01 — DESIGN SYSTEM: COLOR & TOKENS
+       EXHIBIT 01 - DESIGN SYSTEM: COLOR & TOKENS
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="tokens">
     <div class="container-narrow">
@@ -260,10 +260,10 @@
           <p class="exhibit-meta">Compartamos Banco · Mobile app &amp; Contact Center</p>
         </div>
         <div class="exhibit-description">
-          <p>The Compartamos DLS is built on a single brand constraint: the magenta (#E8007D) must be instantly visible in direct sunlight on a low-end Android screen. Everything else — typography scale, spacing, surface colors, state indicators — derives from that constraint.</p>
+          <p>The Compartamos DLS is built on a single brand constraint: the magenta (#E8007D) must be instantly visible in direct sunlight on a low-end Android screen. Everything else - typography scale, spacing, surface colors, state indicators - derives from that constraint.</p>
           <div class="exhibit-decision">
             <strong>Design decision</strong>
-            The color system uses the brand magenta exclusively for primary actions and critical status indicators. Secondary interactions use a teal accent — distinct enough to carry information independently from the primary color, compliant with WCAG AA contrast ratios on both light and dark surfaces.
+            The color system uses the brand magenta exclusively for primary actions and critical status indicators. Secondary interactions use a teal accent - distinct enough to carry information independently from the primary color, compliant with WCAG AA contrast ratios on both light and dark surfaces.
           </div>
         </div>
       </div>
@@ -326,7 +326,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 01B — SPACING & GRID
+       EXHIBIT 01B - SPACING & GRID
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="spacing">
     <div class="container-narrow">
@@ -337,22 +337,22 @@
           <p class="exhibit-meta">Compartamos Banco · Mobile 4-col · Web 12-col</p>
         </div>
         <div class="exhibit-description">
-          <p>The spacing system is built on an 8pt base grid — every space value is a multiple of 8, with a 4px exception for fine adjustments. This constraint kept the mobile app visually consistent across 12+ screens built by different designers and contractors over 3 years without a design review bottleneck.</p>
+          <p>The spacing system is built on an 8pt base grid - every space value is a multiple of 8, with a 4px exception for fine adjustments. This constraint kept the mobile app visually consistent across 12+ screens built by different designers and contractors over 3 years without a design review bottleneck.</p>
           <div class="exhibit-decision">
             <strong>Why two different grids</strong>
-            The mobile app uses a 4-column grid (16dp margin, 8dp gutter) optimized for 360dp viewports — the target device was an entry-level Android at 5". The Contact Center web tool uses a 12-column grid (40px margin, 24px gutter) anchored to 1280px — the target was a 13" laptop in an office environment. Same design system, different spatial logic for each context.
+            The mobile app uses a 4-column grid (16dp margin, 8dp gutter) optimized for 360dp viewports - the target device was an entry-level Android at 5". The Contact Center web tool uses a 12-column grid (40px margin, 24px gutter) anchored to 1280px - the target was a 13" laptop in an office environment. Same design system, different spatial logic for each context.
           </div>
         </div>
       </div>
       <figure class="asset-frame" data-zoomable>
-        <img src="/assets/cases/ui/ds-spacing-grid.png" alt="Compartamos DLS — spacing scale 8pt grid, mobile 4-column grid, and web 12-column grid documentation" loading="lazy" />
+        <img src="/assets/cases/ui/ds-spacing-grid.png" alt="Compartamos DLS - spacing scale 8pt grid, mobile 4-column grid, and web 12-column grid documentation" loading="lazy" />
       </figure>
       <p class="annotation">8pt base grid · Mobile 4-col (360dp) · Web 12-col (1280px) · 48dp minimum touch target</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 02 — DS COMPONENTS
+       EXHIBIT 02 - DS COMPONENTS
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="components">
     <div class="container-narrow">
@@ -363,10 +363,10 @@
           <p class="exhibit-meta">Compartamos Banco · Built in Figma</p>
         </div>
         <div class="exhibit-description">
-          <p>The component library covers the full interaction surface of the field agent app and Contact Center tool. Every component is documented with usage rules, state variations, and accessibility annotations — so designers joining the project mid-stream and external contractors could work without a design review on every screen.</p>
+          <p>The component library covers the full interaction surface of the field agent app and Contact Center tool. Every component is documented with usage rules, state variations, and accessibility annotations - so designers joining the project mid-stream and external contractors could work without a design review on every screen.</p>
           <div class="exhibit-decision">
             <strong>Design decision</strong>
-            Input components use floating labels rather than static labels above fields — a deliberate choice for a small-screen context where vertical space is at a premium. The label collapses into the field on focus, recovering a full field height worth of vertical space per input.
+            Input components use floating labels rather than static labels above fields - a deliberate choice for a small-screen context where vertical space is at a premium. The label collapses into the field on focus, recovering a full field height worth of vertical space per input.
           </div>
         </div>
       </div>
@@ -374,137 +374,137 @@
       <div class="ds-grid">
         <div>
           <figure class="asset-frame" data-zoomable>
-            <img src="/assets/cases/ui/ds-buttons-full.png" alt="Compartamos Design System — button variants: primary, secondary, tertiary, disabled" loading="lazy" />
+            <img src="/assets/cases/ui/ds-buttons-full.png" alt="Compartamos Design System - button variants: primary, secondary, tertiary, disabled" loading="lazy" />
           </figure>
-          <p class="annotation">Button system — 4 variants · Primary / Secondary / Tertiary / Disabled</p>
+          <p class="annotation">Button system - 4 variants · Primary / Secondary / Tertiary / Disabled</p>
         </div>
         <div>
           <figure class="asset-frame" data-zoomable>
-            <img src="/assets/cases/ui/ds-auth.png" alt="Compartamos Design System — 6-digit authentication code component states" loading="lazy" />
+            <img src="/assets/cases/ui/ds-auth.png" alt="Compartamos Design System - 6-digit authentication code component states" loading="lazy" />
           </figure>
-          <p class="annotation">Auth component — empty / filled / error / success states</p>
+          <p class="annotation">Auth component - empty / filled / error / success states</p>
         </div>
       </div>
 
       <figure class="asset-frame" data-zoomable style="margin-top: 1.5rem;">
-        <img src="/assets/cases/ui/ds-fields-full.png" alt="Compartamos Design System — input field variants: masks, states, sizes" loading="lazy" />
+        <img src="/assets/cases/ui/ds-fields-full.png" alt="Compartamos Design System - input field variants: masks, states, sizes" loading="lazy" />
       </figure>
-      <p class="annotation">Input field system — format masks (phone, currency, date, card) · Status states (default, focus, filled, error, validation, disabled) · Size variants</p>
+      <p class="annotation">Input field system - format masks (phone, currency, date, card) · Status states (default, focus, filled, error, validation, disabled) · Size variants</p>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 02B — ATOMS LIBRARY
+       EXHIBIT 02B - ATOMS LIBRARY
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="atoms">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 02B</p>
-          <h2 class="exhibit-title">Atoms — icons, badges, chips, progress</h2>
+          <h2 class="exhibit-title">Atoms - icons, badges, chips, progress</h2>
           <p class="exhibit-meta">Compartamos Banco · Full atom library</p>
         </div>
         <div class="exhibit-description">
-          <p>Atoms are the smallest reusable units in the system — they don't compose other components, they are composed. Every icon, badge, chip, and progress indicator here has a defined usage rule, a documented state set, and a specific meaning in the Compartamos product language.</p>
+          <p>Atoms are the smallest reusable units in the system - they don't compose other components, they are composed. Every icon, badge, chip, and progress indicator here has a defined usage rule, a documented state set, and a specific meaning in the Compartamos product language.</p>
           <div class="exhibit-decision">
             <strong>Status badges as a design language</strong>
-            The six pipeline states — Perfilamiento, Validación, Llamada cortada, En atraso, Completado, Nuevo — are not just UI labels. They are operational definitions that determine what action a Contact Center agent takes next. The color semantics (green = active qualification, amber = follow-up needed, red = past due) were validated with the operations team before implementation. A design decision that looked cosmetic was actually a process definition.
+            The six pipeline states - Perfilamiento, Validación, Llamada cortada, En atraso, Completado, Nuevo - are not just UI labels. They are operational definitions that determine what action a Contact Center agent takes next. The color semantics (green = active qualification, amber = follow-up needed, red = past due) were validated with the operations team before implementation. A design decision that looked cosmetic was actually a process definition.
           </div>
         </div>
       </div>
       <figure class="asset-frame" data-zoomable>
-        <img src="/assets/cases/ui/ds-atoms.png" alt="Compartamos DLS — atom library: icons with states, status badges, chips, progress indicators, and avatar system" loading="lazy" />
+        <img src="/assets/cases/ui/ds-atoms.png" alt="Compartamos DLS - atom library: icons with states, status badges, chips, progress indicators, and avatar system" loading="lazy" />
       </figure>
       <p class="annotation">Icons (24×24dp · 3 states) · Status badges (6 pipeline states) · Chips (4 variants) · Progress (linear + step) · Avatar system (4 sizes + stack)</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 02C — MOLECULES
+       EXHIBIT 02C - MOLECULES
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="molecules">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 02C</p>
-          <h2 class="exhibit-title">Molecules — form groups &amp; list items</h2>
+          <h2 class="exhibit-title">Molecules - form groups &amp; list items</h2>
           <p class="exhibit-meta">Compartamos Banco · All states documented</p>
         </div>
         <div class="exhibit-description">
-          <p>Molecules are where atoms become functional. The form group molecule — label + field + helper text + states — is the primary data-collection pattern in the Compartamos product. It appears 47 times across the loan origination flow. Getting it right once meant every instance was right.</p>
+          <p>Molecules are where atoms become functional. The form group molecule - label + field + helper text + states - is the primary data-collection pattern in the Compartamos product. It appears 47 times across the loan origination flow. Getting it right once meant every instance was right.</p>
           <div class="exhibit-decision">
             <strong>The floating label decision</strong>
-            Floating labels — which collapse from placeholder position to a small label above the field on focus — were chosen over static labels for one specific reason: vertical space on a 5" Android screen. Each floating label recovers the equivalent of one field height per input. In a form with 12 fields, that compounds into a measurable reduction in scroll depth, which directly reduced the abandonment rate at the data-capture step.
+            Floating labels - which collapse from placeholder position to a small label above the field on focus - were chosen over static labels for one specific reason: vertical space on a 5" Android screen. Each floating label recovers the equivalent of one field height per input. In a form with 12 fields, that compounds into a measurable reduction in scroll depth, which directly reduced the abandonment rate at the data-capture step.
           </div>
         </div>
       </div>
       <figure class="asset-frame" data-zoomable>
-        <img src="/assets/cases/ui/ds-molecules.png" alt="Compartamos DLS — molecules: form group all states (default, focus, filled, error, validation, disabled, money mask), complete form example, and list item variants" loading="lazy" />
+        <img src="/assets/cases/ui/ds-molecules.png" alt="Compartamos DLS - molecules: form group all states (default, focus, filled, error, validation, disabled, money mask), complete form example, and list item variants" loading="lazy" />
       </figure>
       <p class="annotation">Form group · 7 states documented · Complete form in context · List item · 5 variants (basic, badge, selected, section header, secondary action)</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 02D — HANDOFF ANNOTATION
+       EXHIBIT 02D - HANDOFF ANNOTATION
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="handoff">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 02D</p>
-          <h2 class="exhibit-title">Handoff annotation — engineering specs</h2>
+          <h2 class="exhibit-title">Handoff annotation - engineering specs</h2>
           <p class="exhibit-meta">Compartamos Banco · CC-004 Registro Duplicado</p>
         </div>
         <div class="exhibit-description">
-          <p>A design system is only as good as the handoff that bridges it to engineering. This annotation document for the Registro Duplicado screen — one of the most complex in the Contact Center tool — shows how design decisions were communicated: layout specs, typography tokens, color references, component names, and interaction behavior in a single document.</p>
+          <p>A design system is only as good as the handoff that bridges it to engineering. This annotation document for the Registro Duplicado screen - one of the most complex in the Contact Center tool - shows how design decisions were communicated: layout specs, typography tokens, color references, component names, and interaction behavior in a single document.</p>
           <div class="exhibit-decision">
             <strong>The handoff format</strong>
-            Rather than relying on Figma comments alone (which engineers rarely read in sequence), I produced structured spec sheets for complex screens — one page per screen, organized by concern: layout first, then typography, then color tokens, then components referenced, then interaction behavior. This reduced the back-and-forth between design and engineering by making every decision explicit before implementation started.
+            Rather than relying on Figma comments alone (which engineers rarely read in sequence), I produced structured spec sheets for complex screens - one page per screen, organized by concern: layout first, then typography, then color tokens, then components referenced, then interaction behavior. This reduced the back-and-forth between design and engineering by making every decision explicit before implementation started.
           </div>
         </div>
       </div>
       <figure class="asset-frame" data-zoomable>
-        <img src="/assets/cases/ui/ds-handoff.png" alt="Compartamos DLS — handoff annotation for CC-004 Registro Duplicado: layout specs, typography, color tokens, components referenced, interaction behavior" loading="lazy" />
+        <img src="/assets/cases/ui/ds-handoff.png" alt="Compartamos DLS - handoff annotation for CC-004 Registro Duplicado: layout specs, typography, color tokens, components referenced, interaction behavior" loading="lazy" />
       </figure>
       <p class="annotation">CC-004 Registro Duplicado · Layout · Typography · Color tokens · Components referenced · Interaction states · Engineering-ready spec format</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 03 — MOBILE APP
+       EXHIBIT 03 - MOBILE APP
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="mobile">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 03</p>
-          <h2 class="exhibit-title">Mobile app — field agent interface</h2>
+          <h2 class="exhibit-title">Mobile app - field agent interface</h2>
           <p class="exhibit-meta">Compartamos Banco · Android · 15,000+ field agents</p>
         </div>
         <div class="exhibit-description">
-          <p>The field agent app had to work on entry-level Android devices, under variable lighting, with intermittent connectivity. UI decisions were made with those three constraints as hard limits — not aspirations.</p>
+          <p>The field agent app had to work on entry-level Android devices, under variable lighting, with intermittent connectivity. UI decisions were made with those three constraints as hard limits - not aspirations.</p>
           <div class="exhibit-decision">
             <strong>Key UI constraints</strong>
-            Minimum touch target: 48×48dp. No gesture-only interactions — every action needed a visible tap target. Offline-capable state management: the sync status indicator (green dot + "Sincronización completa") was designed to be the first thing a user sees — before any data. If you don't know whether your data is current, you can't trust what you're looking at.
+            Minimum touch target: 48×48dp. No gesture-only interactions - every action needed a visible tap target. Offline-capable state management: the sync status indicator (green dot + "Sincronización completa") was designed to be the first thing a user sees - before any data. If you don't know whether your data is current, you can't trust what you're looking at.
           </div>
         </div>
       </div>
 
       <figure class="asset-frame" data-zoomable style="background: #f0f0f0; padding: 2rem;">
-        <img src="/assets/cases/ui/compartamos-app-home.png" alt="Compartamos mobile app — Home, Menú, and Mi Menú screens showing the full navigation system" loading="lazy" />
+        <img src="/assets/cases/ui/compartamos-app-home.png" alt="Compartamos mobile app - Home, Menú, and Mi Menú screens showing the full navigation system" loading="lazy" />
       </figure>
-      <p class="annotation">Home · Menú · Mi Menú — the three entry points of the field agent workflow. Role-based: promotoras see a 3-item home grid; asesores CI see an expanded menu with additional product lines.</p>
+      <p class="annotation">Home · Menú · Mi Menú - the three entry points of the field agent workflow. Role-based: promotoras see a 3-item home grid; asesores CI see an expanded menu with additional product lines.</p>
 
       <div class="phone-showcase" style="margin-top: 3rem;">
         <figure class="asset-frame" data-zoomable>
-          <img src="/assets/cases/ui/app-clientes.jpg" alt="Compartamos app — Clientes screen with product breakdown" loading="lazy" />
-          <div class="asset-caption">Clientes — product-level portfolio view</div>
+          <img src="/assets/cases/ui/app-clientes.jpg" alt="Compartamos app - Clientes screen with product breakdown" loading="lazy" />
+          <div class="asset-caption">Clientes - product-level portfolio view</div>
         </figure>
         <figure class="asset-frame" data-zoomable>
-          <img src="/assets/cases/ui/app-renovacion.jpg" alt="Compartamos app — Renovación screen with retention metrics" loading="lazy" />
-          <div class="asset-caption">Renovación — retention metrics, target vs. actual</div>
+          <img src="/assets/cases/ui/app-renovacion.jpg" alt="Compartamos app - Renovación screen with retention metrics" loading="lazy" />
+          <div class="asset-caption">Renovación - retention metrics, target vs. actual</div>
         </figure>
       </div>
 
@@ -512,68 +512,68 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 04 — CONTACT CENTER
+       EXHIBIT 04 - CONTACT CENTER
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="contact-center">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 04</p>
-          <h2 class="exhibit-title">Contact Center — web tool</h2>
+          <h2 class="exhibit-title">Contact Center - web tool</h2>
           <p class="exhibit-meta">Compartamos Banco · Web · Responsive</p>
         </div>
         <div class="exhibit-description">
-          <p>The Contact Center tool served a different user than the mobile app — office-based agents handling inbound calls, managing large data volumes, resolving exceptions. The design shifted from the mobile-first, thumb-friendly patterns of the field app to a denser, information-rich layout optimized for a 13"+ monitor.</p>
+          <p>The Contact Center tool served a different user than the mobile app - office-based agents handling inbound calls, managing large data volumes, resolving exceptions. The design shifted from the mobile-first, thumb-friendly patterns of the field app to a denser, information-rich layout optimized for a 13"+ monitor.</p>
           <div class="exhibit-decision">
             <strong>The most complex screen</strong>
-            The duplicate record resolution screen — shown here — was the hardest UX problem in the CC tool. When an incoming caller's data matches two existing records with different names or dates, the agent must decide which record is correct and archive the other. The side-by-side comparison layout was tested with agents before finalizing: initial versions used a sequential reveal (show one, then the other) — agents found they couldn't compare without scrolling. Side-by-side eliminated that entirely.
+            The duplicate record resolution screen - shown here - was the hardest UX problem in the CC tool. When an incoming caller's data matches two existing records with different names or dates, the agent must decide which record is correct and archive the other. The side-by-side comparison layout was tested with agents before finalizing: initial versions used a sequential reveal (show one, then the other) - agents found they couldn't compare without scrolling. Side-by-side eliminated that entirely.
           </div>
         </div>
       </div>
 
       <figure class="asset-frame" data-zoomable>
-        <img src="/assets/cases/ui/cc-duplicate.png" alt="Compartamos Contact Center — Registro duplicado screen for resolving duplicate prospect records side by side" loading="lazy" />
+        <img src="/assets/cases/ui/cc-duplicate.png" alt="Compartamos Contact Center - Registro duplicado screen for resolving duplicate prospect records side by side" loading="lazy" />
       </figure>
-      <p class="annotation">Registro duplicado — side-by-side comparison layout. Folio, age, birthdate, birthplace, and contact visible for both records simultaneously. The non-selected record auto-archives on confirmation — no supervisor escalation required.</p>
+      <p class="annotation">Registro duplicado - side-by-side comparison layout. Folio, age, birthdate, birthplace, and contact visible for both records simultaneously. The non-selected record auto-archives on confirmation - no supervisor escalation required.</p>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       EXHIBIT 05 — WHISPER BI
+       EXHIBIT 05 - WHISPER BI
   ════════════════════════════════════════════════════════════════════════ -->
   <section class="exhibit" id="whisper">
     <div class="container-narrow">
       <div class="exhibit-header">
         <div>
           <p class="exhibit-num">Exhibit 05</p>
-          <h2 class="exhibit-title">Whisper BI — conversational analytics</h2>
+          <h2 class="exhibit-title">Whisper BI - conversational analytics</h2>
           <p class="exhibit-meta">B2B SaaS · Dark theme · AI-powered</p>
         </div>
         <div class="exhibit-description">
-          <p>The visual language of Whisper BI had to signal "enterprise intelligence" without the cold sterility of traditional BI tools. Dark background, electric blue primary actions, high-contrast data visualization — legible at a glance, familiar to a business user who has seen Slack and Notion.</p>
+          <p>The visual language of Whisper BI had to signal "enterprise intelligence" without the cold sterility of traditional BI tools. Dark background, electric blue primary actions, high-contrast data visualization - legible at a glance, familiar to a business user who has seen Slack and Notion.</p>
           <div class="exhibit-decision">
             <strong>AI-assisted design workflow</strong>
-            This interface was produced using an AI-assisted design workflow — Claude integrated with Figma — which reduced iteration time by approximately 60%. The workflow is worth noting not as a novelty, but as a skill: knowing when to use AI generation vs. manual craft, and how to quality-control the output, is now a core competency in the design stack.
+            This interface was produced using an AI-assisted design workflow - Claude integrated with Figma - which reduced iteration time by approximately 60%. The workflow is worth noting not as a novelty, but as a skill: knowing when to use AI generation vs. manual craft, and how to quality-control the output, is now a core competency in the design stack.
           </div>
         </div>
       </div>
 
       <div class="dual-frame">
         <figure class="asset-frame dark" data-zoomable>
-          <img src="/assets/cases/ui/whisper-interface.png" alt="Whisper BI — main conversational interface with sidebar navigation by business topic" loading="lazy" />
-          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Conversational interface — sidebar by business domain, response type selector always visible</div>
+          <img src="/assets/cases/ui/whisper-interface.png" alt="Whisper BI - main conversational interface with sidebar navigation by business topic" loading="lazy" />
+          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Conversational interface - sidebar by business domain, response type selector always visible</div>
         </figure>
         <figure class="asset-frame dark" data-zoomable>
-          <img src="/assets/cases/ui/whisper-dashboard.png" alt="Whisper BI — dashboard generated from a natural language query" loading="lazy" />
-          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Dashboard output — generated from a conversational query, not pre-configured</div>
+          <img src="/assets/cases/ui/whisper-dashboard.png" alt="Whisper BI - dashboard generated from a natural language query" loading="lazy" />
+          <div class="asset-caption" style="background: #161b22; color: #8b949e; border-color: #30363d;">Dashboard output - generated from a conversational query, not pre-configured</div>
         </figure>
       </div>
 
       <div class="callout for-engineering" style="margin-top: 3rem;">
         <span class="callout-label">Design system contrast: mobile vs. web vs. AI-native</span>
         <p>
-          These two products — Compartamos and Whisper BI — represent opposite ends of the design constraint spectrum. Compartamos: light theme, maximum contrast, large touch targets, offline-capable, for a user who may be using the phone with one hand in the sun. Whisper BI: dark theme, dense information, keyboard-navigable, for a user at a desk who needs to see data and act on it in the same view. The underlying system thinking is identical — the visual output is intentionally different because the context of use is different.
+          These two products - Compartamos and Whisper BI - represent opposite ends of the design constraint spectrum. Compartamos: light theme, maximum contrast, large touch targets, offline-capable, for a user who may be using the phone with one hand in the sun. Whisper BI: dark theme, dense information, keyboard-navigable, for a user at a desk who needs to see data and act on it in the same view. The underlying system thinking is identical - the visual output is intentionally different because the context of use is different.
         </p>
       </div>
 
@@ -589,7 +589,7 @@
       </a>
       <a href="/work/compartamos.html" class="case-nav-card next">
         <span class="label">See the full case</span>
-        <span class="title">Compartamos Banco — from 8 days to 2 hours</span>
+        <span class="title">Compartamos Banco - from 8 days to 2 hours</span>
       </a>
     </div>
   </nav>
