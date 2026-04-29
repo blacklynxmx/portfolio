@@ -81,36 +81,55 @@ a.case-card .case-card-cta { display: none; }
 .phone-trio figcaption { font-size: 0.78rem; }
 @media (max-width: 500px) { .phone-trio { flex-direction: column; align-items: center; } .phone-trio .figure { flex: none; width: 100%; max-width: 300px; } }
 
-/* Before/after overflow fix */
-.before-after > figure { min-width: 0; }
-.before-after figure img, .before-after .figure-frame img { width: 100%; height: auto; display: block; }
+/* ── FIGURE ALIGNMENT FIX ─────────────────────────────────────────────────
+   Fixes images that appear left-aligned instead of centered.
+   Only targets images inside case study figures — does NOT center body text.
+   ─────────────────────────────────────────────────────────────────────── */
 
-/* Figure wide — rompe fuera del container-narrow */
+/* All figure elements: center their content */
+.figure,
+div.figure,
+figure.figure {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Images inside figures: centered, never overflow */
+.figure img,
+div.figure img,
+figure.figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* figure-wide: full width within its container, no overflow */
 .figure-wide {
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
-}
-.figure-wide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: none; /* permite que la imagen se muestre completa con scroll horizontal */
-}
-/* Cuando está dentro de container-narrow, expande al ancho del viewport */
-.container-narrow .figure-wide {
-  width: calc(100vw - 4rem);
-  max-width: 1120px;
-  margin-left: calc(-1 * (100vw - 4rem - 100%) / 2);
-}
-@media (max-width: 720px) {
-  .container-narrow .figure-wide {
-    width: 100%;
-    margin-left: 0;
-  }
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Scroll margin */
+.figure-wide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Before/after overflow fix */
+.before-after > figure { min-width: 0; }
+.before-after figure img,
+.before-after .figure-frame img { width: 100%; height: auto; display: block; }
+
+/* Scroll margin for sticky nav */
 .case-section { scroll-margin-top: 80px; }
 
 /* Lightbox */
@@ -119,8 +138,10 @@ a.case-card .case-card-cta { display: none; }
 .lb-overlay img { max-width: 100%; max-height: 90vh; object-fit: contain; border-radius: var(--radius-sm); box-shadow: 0 0 60px rgba(0,0,0,0.6); cursor: default; }
 .lb-close { position: absolute; top: 1.25rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; padding: 0.25rem 0.5rem; transition: color 0.15s; }
 .lb-close:hover { color: #fff; }
-figure[data-zoomable] { cursor: zoom-in; }
-figure[data-zoomable]:hover img { opacity: 0.92; transition: opacity 0.15s; }
+figure[data-zoomable],
+div[data-zoomable] { cursor: zoom-in; }
+figure[data-zoomable]:hover img,
+div[data-zoomable]:hover img { opacity: 0.92; transition: opacity 0.15s; }
 
 /* Impact list (legacy for OCC) */
 .impact-list { list-style: none; padding: 0; margin: 2rem 0; display: flex; flex-direction: column; gap: 1rem; }
@@ -129,8 +150,6 @@ figure[data-zoomable]:hover img { opacity: 0.92; transition: opacity 0.15s; }
 .impact-list .marker { color: var(--text-primary); font-variant-numeric: tabular-nums; }
 
 /* ── ABOUT PAGE ─────────────────────────────────────────────────────────── */
-
-/* Timeline */
 .timeline { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2rem; }
 .timeline-item { display: grid; grid-template-columns: 160px 1fr; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 0.5px solid var(--border); }
 .timeline-item:last-child { border-bottom: none; }
