@@ -122,3 +122,9 @@ footer .base{border-top:1px solid var(--navy-2);margin-top:28px;padding-top:18px
 @keyframes sc{0%,100%{top:12%}50%{top:86%}}
 .feed-it{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:10px;background:var(--green-bg);margin-bottom:8px;animation:fi .4s ease}
 @keyframes fi{from{opacity:0;transform:translateY(-6px)}}
+.foto{border-radius:12px;aspect-ratio:16/10;object-fit:cover;width:100%;display:block}
+.locked{position:relative;cursor:pointer}
+.locked .foto,.locked .ph{filter:grayscale(.5) brightness(.75)}
+.lockbdg{position:absolute;top:10px;right:10px;background:var(--navy);color:#fff;font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:99px;display:flex;gap:5px;align-items:center;z-index:2}
+#lockov{display:none;position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:200;align-items:center;justify-content:center;padding:20px}
+#lockov .box{background:#fff;border-radius:16px;padding:28px;max-width:400px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)}

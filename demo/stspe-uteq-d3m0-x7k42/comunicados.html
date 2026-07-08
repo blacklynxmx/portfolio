@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Noticias y Comunicados · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>STSPE·UTEQ</span></div>
+  <nav class="main">
+    <a href="index.html">Inicio</a>
+    <a href="index.html#comisiones">Comisiones</a>
+    <a class="on" href="comunicados.html">Comunicados</a>
+    <a href="galeria.html">Galería</a>
+    <a href="index.html#convenios">Convenios</a>
+    <a href="index.html#transparencia">Transparencia</a>
+  </nav>
+  <a class="btn" href="login.html">→ Acceso Agremiados</a>
+</div></header>
+
+<section class="blk"><div class="wrap">
+  <h2 class="sec">Noticias y Comunicados</h2>
+  <p class="sec">Los comunicados marcados con 🔒 son exclusivos para agremiados — inicia sesión para leerlos.</p>
+
+  <div class="grid g3">
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/asamblea.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-grn">Convocatoria</span><span class="xs mut">19 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Asamblea General Ordinaria 2026</h3>
+        <p class="sm mut">Se convoca a todos los agremiados a la Asamblea del 15 de febrero, Auditorio Principal, 10:00 h.</p>
+        <a class="btn sm ghost mt" href="login.html">Leer completo (requiere sesión)</a>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/clinica.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-blue">Noticia</span><span class="xs mut">17 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Nuevo convenio con Clínica de Salud</h3>
+        <p class="sm mut">Descuentos especiales en servicios médicos para todos los agremiados y sus familias.</p>
+        <button class="btn sm ghost mt">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/capacitacion.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-org">Comunicado</span><span class="xs mut">14 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Programa de Capacitación 2026</h3>
+        <p class="sm mut">Cursos de actualización del primer trimestre. Inscripciones abiertas.</p>
+        <button class="btn sm ghost mt">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card locked" style="padding:0;overflow:hidden" onclick="lock()">
+      <span class="lockbdg">🔒 Solo agremiados</span>
+      <img class="foto" style="border-radius:0" src="assets/img/reunion.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-pur">Interno</span><span class="xs mut">12 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Minuta de negociación salarial</h3>
+        <p class="sm mut">Avances de la mesa de negociación con la administración universitaria…</p>
+      </div>
+    </div>
+
+    <div class="card locked" style="padding:0;overflow:hidden" onclick="lock()">
+      <span class="lockbdg">🔒 Solo agremiados</span>
+      <img class="foto" style="border-radius:0" src="assets/img/biblioteca.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-pur">Interno</span><span class="xs mut">11 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Programa de Becas para Hijos de Agremiados</h3>
+        <p class="sm mut">Convocatoria, requisitos y montos de las becas educativas 2026…</p>
+      </div>
+    </div>
+
+    <div class="card locked" style="padding:0;overflow:hidden" onclick="lock()">
+      <span class="lockbdg">🔒 Solo agremiados</span>
+      <img class="foto" style="border-radius:0" src="assets/img/festejo.jpg" alt="">
+      <div style="padding:18px">
+        <div class="row sp"><span class="badge b-pur">Interno</span><span class="xs mut">7 ene 2026</span></div>
+        <h3 style="margin:8px 0 4px">Gran Rifa Anual — lista de premios</h3>
+        <p class="sm mut">Premios, boletos y mecánica de la rifa anual del sindicato…</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div id="lockov" onclick="this.style.display='none'">
+  <div class="box" onclick="event.stopPropagation()">
+    <div style="font-size:40px">🔒</div>
+    <h3 style="color:var(--navy);margin:8px 0 6px">Contenido para agremiados</h3>
+    <p class="sm mut">Este comunicado es exclusivo para agremiados vigentes del STSPE–UTEQ. Inicia sesión para verlo.</p>
+    <div class="row mt" style="justify-content:center">
+      <a class="btn" href="login.html">→ Iniciar sesión</a>
+      <button class="btn ghost" onclick="document.getElementById('lockov').style.display='none'">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <div class="base" style="border-top:none;margin-top:0"><span>© 2026 STSPE–UTEQ</span><span>Mockup de demostración · Graphic Genius</span></div>
+</div></footer>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script>function lock(){document.getElementById('lockov').style.display='flex'}</script>
+</body></html>

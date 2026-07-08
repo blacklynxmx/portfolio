@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Propuesta Portal STSPE–UTEQ · Presentación</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2563eb;--navy:#0f172a;--orange:#f7941d;--mut:#64748b;--line:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0b1120;color:#1e293b;overflow:hidden}
+.slide{display:none;width:100vw;height:100vh;padding:6vh 8vw;flex-direction:column;justify-content:center;background:#f4f6fb}
+.slide.on{display:flex}
+.slide.dark{background:linear-gradient(135deg,var(--navy) 0%,#1e3a8a 65%,var(--blue) 100%);color:#fff}
+.slide.dark .mut{color:#cbd5e1}
+h1{font-size:clamp(30px,5vw,56px);line-height:1.15;color:var(--navy)}
+.dark h1{color:#fff}
+h2{font-size:clamp(24px,3.6vw,40px);color:var(--navy);margin-bottom:18px}
+h2 .n{color:var(--orange)}
+p,li{font-size:clamp(15px,1.6vw,20px);line-height:1.6}
+.mut{color:var(--mut)}
+ul{list-style:none;display:grid;gap:14px;margin-top:8px}
+ul li{padding-left:34px;position:relative}
+ul li:before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--orange);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tag{display:inline-block;background:rgba(247,148,29,.15);border:1px solid var(--orange);color:var(--orange);font-weight:600;font-size:14px;padding:5px 16px;border-radius:99px;margin-bottom:20px;width:max-content}
+.cols{display:grid;grid-template-columns:1.1fr 1fr;gap:5vw;align-items:center}
+.cols img{width:100%;border-radius:18px;box-shadow:0 20px 50px rgba(15,23,42,.35)}
+.kcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 4px 20px rgba(15,23,42,.07)}
+.dark .kcard{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px}
+.big{font-size:clamp(34px,4.5vw,54px);font-weight:800;color:var(--orange);line-height:1}
+.nav{position:fixed;bottom:24px;right:28px;display:flex;gap:10px;align-items:center;z-index:10}
+.nav button{font-family:inherit;border:none;background:var(--navy);color:#fff;width:44px;height:44px;border-radius:50%;font-size:18px;cursor:pointer}
+.nav span{font-size:13px;color:#94a3b8;font-weight:600}
+.logos{position:fixed;top:24px;right:28px;display:flex;gap:12px;align-items:center;z-index:10}
+.logos img{height:34px}
+.logos .u{background:var(--navy);border-radius:8px;padding:4px 7px}
+.logos .s{background:#fff;border-radius:8px;padding:3px}
+.foot{position:fixed;bottom:24px;left:28px;font-size:12px;color:#94a3b8;z-index:10}
+@media(max-width:800px){.cols,.g3{grid-template-columns:1fr}.cols img{display:none}}
+</style>
+</head>
+<body>
+<div class="logos"><span class="u"><img src="assets/logo-uteq-blanco.png" alt="UTEQ"></span><span class="s"><img src="assets/logo_stspe.png" alt="STSPE"></span></div>
+<div class="foot">Propuesta · Graphic Genius · 2026</div>
+
+<section class="slide dark on">
+  <span class="tag">Propuesta 2026</span>
+  <h1>Portal Digital<br>STSPE–UTEQ</h1>
+  <p class="mut" style="margin-top:18px;max-width:620px;font-size:clamp(17px,2vw,24px)">Un solo lugar para <b style="color:var(--orange)">informar</b>, <b style="color:var(--orange)">escuchar</b> y <b style="color:var(--orange)">decidir</b> — para los ~150 agremiados del sindicato.</p>
+</section>
+
+<section class="slide">
+  <h2><span class="n">01 ·</span> El problema de hoy</h2>
+  <div class="g3" style="grid-template-columns:repeat(2,1fr)">
+    <div class="kcard"><b>📄 Todo en papel y hojas sueltas</b><p class="mut">Comunicados, listas y acuerdos dispersos que se pierden con el tiempo.</p></div>
+    <div class="kcard"><b>❌ Pase de lista vulnerable</b><p class="mut">El QR compartido por WhatsApp permitió falsificar asistencias.</p></div>
+    <div class="kcard"><b>👁️ Sin visibilidad</b><p class="mut">No se sabe quién leyó un comunicado ni quién confirmó una convocatoria.</p></div>
+    <div class="kcard"><b>🗳️ Votaciones manuales</b><p class="mut">Conteos lentos y sin forma sencilla de comprobar resultados.</p></div>
+  </div>
+</section>
+
+<section class="slide dark">
+  <h2 style="color:#fff"><span class="n">02 ·</span> La solución: un portal propio</h2>
+  <div class="g3">
+    <div class="kcard"><div class="big">1</div><b>Sitio público</b><p class="mut">La cara del sindicato: noticias, comisiones, convenios, transparencia y galería.</p></div>
+    <div class="kcard"><div class="big">2</div><b>Área de agremiados</b><p class="mut">Cuenta personal: credencial digital, votaciones, buzón y comunicados internos.</p></div>
+    <div class="kcard"><div class="big">3</div><b>Panel de gestión</b><p class="mut">Para quienes crean y revisan información: publicar, medir y administrar.</p></div>
+  </div>
+  <p class="mut" style="margin-top:22px">En servidor independiente, con la identidad del STSPE y de la UTEQ, y contenido público o exclusivo según el nivel de cada quien.</p>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2><span class="n">03 ·</span> Credencial digital</h2>
+      <ul>
+        <li>QR <b>personal e intransferible</b> en el teléfono de cada agremiado.</li>
+        <li>Historial personal de asistencia a asambleas y eventos.</li>
+        <li>Acceso a votaciones, buzón y documentos internos.</li>
+        <li>Diseñado primero para celular.</li>
+      </ul>
+    </div>
+    <img src="assets/img/reunion.jpg" alt="">
+  </div>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2><span class="n">04 ·</span> Pase de lista confiable</h2>
+      <p class="mut" style="margin-bottom:14px">Los QR de sesión fallaron porque bastaba reenviarlos. Aquí <b>se invierte el proceso</b>:</p>
+      <ul>
+        <li>El <b>delegado escanea</b> la credencial del agremiado en la puerta.</li>
+        <li>Al escanear aparece el nombre: compartir el código deja de servir.</li>
+        <li>Hora exacta, quién escaneó, históricos y reportes exportables.</li>
+        <li><b>Sin biometría, sin GPS, sin fotografías.</b></li>
+      </ul>
+    </div>
+    <img src="assets/img/asamblea.jpg" alt="">
+  </div>
+</section>
+
+<section class="slide dark">
+  <h2 style="color:#fff"><span class="n">05 ·</span> Saber quién está enterado</h2>
+  <div class="g3">
+    <div class="kcard"><div class="big">112<span style="font-size:22px;color:#cbd5e1">/150</span></div><b>Lo han visto</b><p class="mut">Cada comunicado registra su lectura.</p></div>
+    <div class="kcard"><div class="big">87<span style="font-size:22px;color:#cbd5e1">/150</span></div><b>Confirmaron "Enterado"</b><p class="mut">Confirmación explícita para convocatorias.</p></div>
+    <div class="kcard"><div class="big">38</div><b>Sin abrir</b><p class="mut">Recordatorio dirigido solo a los pendientes, con un clic.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2><span class="n">06 ·</span> Votaciones que generan confianza</h2>
+  <ul style="max-width:720px">
+    <li><b>Padrón cerrado:</b> solo agremiados vigentes, un voto por persona.</li>
+    <li><b>Voto secreto:</b> el sistema registra <i>que votaste</i>, nunca <i>qué votaste</i>.</li>
+    <li><b>Folio verificable:</b> cada quien comprueba que su voto fue contado.</li>
+    <li><b>Quórum en tiempo real</b> y acta de resultados automática en PDF.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><span class="n">07 ·</span> Buzón en tres modalidades</h2>
+  <div class="g3">
+    <div class="kcard"><b>💬 Público</b><p class="mut">Visible con nombre, en un muro moderado.</p></div>
+    <div class="kcard"><b>🔐 Confidencial</b><p class="mut">Solo lo ve el comité ejecutivo.</p></div>
+    <div class="kcard"><b>🕶️ Anónimo verificado</b><p class="mut">Se comprueba que es un agremiado real — sin revelar quién.</p></div>
+  </div>
+  <p class="mut" style="margin-top:20px">Todo mensaje genera un <b>folio de seguimiento</b> con estados: recibido → en atención → resuelto.</p>
+</section>
+
+<section class="slide">
+  <div class="cols">
+    <div>
+      <h2><span class="n">08 ·</span> Convive con sus herramientas</h2>
+      <ul>
+        <li>Exportar asistencias, padrón y resultados a <b>Google Sheets, Excel o PDF</b> con un clic.</li>
+        <li>Importar el padrón desde la hoja de cálculo actual.</li>
+        <li>Publicar documentos desde Google Drive u Office.</li>
+        <li>Además: galerías de eventos, calendario con confirmación de asistencia y seguimiento de acuerdos de asamblea.</li>
+      </ul>
+    </div>
+    <img src="assets/img/computo.jpg" alt="">
+  </div>
+</section>
+
+<section class="slide">
+  <h2><span class="n">09 ·</span> Servicios opcionales</h2>
+  <div class="g3">
+    <div class="kcard"><b>🤖 Asistente virtual</b><p class="mut">Responde dudas frecuentes 24/7 y escala al delegado con folio cuando no puede resolver.</p></div>
+    <div class="kcard"><b>📲 Notificaciones</b><p class="mut">Correo — y opcionalmente WhatsApp — para urgentes, votaciones y convocatorias.</p></div>
+    <div class="kcard"><b>🖥️ Hosting administrado</b><p class="mut">Servidor independiente, respaldos automáticos, dominio propio.</p></div>
+  </div>
+</section>
+
+<section class="slide dark">
+  <span class="tag">Siguiente paso</span>
+  <h1 style="font-size:clamp(26px,4vw,46px)">La demo ya existe.<br>Recórrela en 10 minutos.</h1>
+  <ul style="margin-top:24px;max-width:640px">
+    <li>Mockup navegable con datos de demostración, desde celular o computadora.</li>
+    <li>Modular: se puede empezar con lo esencial y crecer por etapas.</li>
+    <li>Acompañamiento local: capacitación a los gestores y soporte directo.</li>
+  </ul>
+  <p class="mut" style="margin-top:26px">Graphic Genius · davidgerardom@gmail.com</p>
+</section>
+
+<div class="nav"><span id="pg">1 / 11</span><button onclick="go(-1)">‹</button><button onclick="go(1)">›</button></div>
+<script>
+const S=[...document.querySelectorAll('.slide')];let i=0;
+function show(){S.forEach((s,k)=>s.classList.toggle('on',k===i));document.getElementById('pg').textContent=(i+1)+' / '+S.length}
+function go(d){i=Math.min(S.length-1,Math.max(0,i+d));show()}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')go(1);if(e.key==='ArrowLeft')go(-1)});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav')&&!e.target.closest('a'))go(1)});
+show();
+</script>
+</body></html>
