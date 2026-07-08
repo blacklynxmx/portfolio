@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Galerías · Administración · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Galerías</span></div>
+  <nav class="main" style="margin-left:auto"><a href="galeria.html">Ver galería pública ↗</a><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av">MG</div><div><b style="font-size:14px">María González</b><div class="xs mut">Agremiada · Nivel gestor</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones <span class="cnt">1</span></a>
+  <a class="it" href="comunicado.html">📣 Comunicados <span class="cnt">2</span></a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <a class="it on" href="galeria-admin.html">📸 Galería</a>
+  <div class="xs mut" style="padding:16px 12px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Nivel gestor</div>
+  <a class="it" href="asistencia.html">✅ Pase de lista</a>
+  <a class="it" href="gestion.html">⚙️ Panel de gestión</a>
+  <a class="it mut" href="index.html" style="margin-top:14px">↩ Cerrar sesión</a>
+</aside>
+
+<main class="pane">
+  <div class="row sp mb">
+    <div><h2 class="sec" style="margin:0">Galerías de eventos</h2><span class="sm mut">Crea, edita y publica los álbumes que ven los agremiados y el público</span></div>
+    <button class="btn org" onclick="document.getElementById('nueva').scrollIntoView({behavior:'smooth'})">+ Nueva galería</button>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr 1fr" id="albums">
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/posada.jpg" alt="">
+      <div style="padding:16px">
+        <div class="row sp"><b class="sm">Posada Sindical 2025</b><span class="badge b-grn">Publicada</span></div>
+        <div class="xs mut" style="margin:4px 0 10px">48 fotos · 18 dic 2025</div>
+        <div class="row sp">
+          <select class="xs" style="width:auto;padding:5px 8px;font-size:12px" onchange="vis(this)"><option>🌐 Pública</option><option>🔒 Solo agremiados</option></select>
+          <div class="row" style="gap:6px"><button class="btn sm ghost" onclick="editar(this)">✏️</button><button class="btn sm ghost" style="color:var(--red);border-color:var(--red)" onclick="borrar(this)">🗑️</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/carrera.jpg" alt="">
+      <div style="padding:16px">
+        <div class="row sp"><b class="sm">Carrera 5K UTEQ</b><span class="badge b-grn">Publicada</span></div>
+        <div class="xs mut" style="margin:4px 0 10px">32 fotos · 26 oct 2025</div>
+        <div class="row sp">
+          <select class="xs" style="width:auto;padding:5px 8px;font-size:12px" onchange="vis(this)"><option>🌐 Pública</option><option>🔒 Solo agremiados</option></select>
+          <div class="row" style="gap:6px"><button class="btn sm ghost" onclick="editar(this)">✏️</button><button class="btn sm ghost" style="color:var(--red);border-color:var(--red)" onclick="borrar(this)">🗑️</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0" src="assets/img/festejo.jpg" alt="">
+      <div style="padding:16px">
+        <div class="row sp"><b class="sm">Festejo Día del Trabajador</b><span class="badge b-grn">Publicada</span></div>
+        <div class="xs mut" style="margin:4px 0 10px">39 fotos · 1 may 2025</div>
+        <div class="row sp">
+          <select class="xs" style="width:auto;padding:5px 8px;font-size:12px" onchange="vis(this)"><option selected>🔒 Solo agremiados</option><option>🌐 Pública</option></select>
+          <div class="row" style="gap:6px"><button class="btn sm ghost" onclick="editar(this)">✏️</button><button class="btn sm ghost" style="color:var(--red);border-color:var(--red)" onclick="borrar(this)">🗑️</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <img class="foto" style="border-radius:0;filter:grayscale(.4)" src="assets/img/musica.jpg" alt="">
+      <div style="padding:16px">
+        <div class="row sp"><b class="sm">Taller de Música (borrador)</b><span class="badge b-org">Borrador</span></div>
+        <div class="xs mut" style="margin:4px 0 10px">6 fotos · sin publicar</div>
+        <div class="row sp">
+          <button class="btn sm grn" onclick="publicar(this)">▶ Publicar</button>
+          <div class="row" style="gap:6px"><button class="btn sm ghost" onclick="editar(this)">✏️</button><button class="btn sm ghost" style="color:var(--red);border-color:var(--red)" onclick="borrar(this)">🗑️</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt" id="nueva">
+    <b>➕ Nueva galería</b>
+    <div class="grid g2 mt" style="align-items:start">
+      <div>
+        <label style="margin-top:0">Título del evento</label>
+        <input placeholder="ej. Asamblea General 2026" id="ntit">
+        <label>Fecha del evento</label>
+        <input type="date" value="2026-07-08">
+        <label>Visibilidad</label>
+        <select><option>🌐 Pública</option><option>🔒 Solo agremiados</option></select>
+      </div>
+      <div>
+        <label style="margin-top:0">Fotos</label>
+        <div onclick="subir()" style="border:2.5px dashed var(--line);border-radius:14px;padding:26px;text-align:center;cursor:pointer;background:#fff">
+          <div style="font-size:34px">📤</div>
+          <b class="sm">Arrastra fotos aquí o haz clic</b>
+          <div class="xs mut">JPG/PNG · se optimizan automáticamente</div>
+        </div>
+        <div class="row mt" id="thumbs" style="gap:8px"></div>
+        <button class="btn mt" style="width:100%" onclick="crear()">Guardar galería</button>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script>
+const IMGS=['familia','seguridad','biblioteca','reunion'];let n=0;
+function subir(){
+  if(n>=4)return;
+  const d=document.createElement('img');
+  d.src='assets/img/'+IMGS[n++]+'.jpg';
+  d.style.cssText='width:64px;height:48px;object-fit:cover;border-radius:8px;animation:fi .4s ease';
+  document.getElementById('thumbs').appendChild(d);
+}
+function crear(){
+  const t=document.getElementById('ntit').value||'Nueva galería';
+  const card=document.createElement('div');card.className='card';card.style.cssText='padding:0;overflow:hidden;animation:fi .4s ease';
+  card.innerHTML=`<img class="foto" style="border-radius:0" src="assets/img/familia.jpg"><div style="padding:16px"><div class="row sp"><b class="sm">${t}</b><span class="badge b-org">Borrador</span></div><div class="xs mut" style="margin:4px 0 10px">${n||0} fotos · sin publicar</div><div class="row sp"><button class="btn sm grn" onclick="publicar(this)">▶ Publicar</button><div class="row" style="gap:6px"><button class="btn sm ghost" onclick="editar(this)">✏️</button><button class="btn sm ghost" style="color:var(--red);border-color:var(--red)" onclick="borrar(this)">🗑️</button></div></div></div>`;
+  document.getElementById('albums').prepend(card);
+  document.getElementById('thumbs').innerHTML='';n=0;document.getElementById('ntit').value='';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function borrar(b){if(confirm('¿Borrar esta galería? Esta acción quedará registrada en la bitácora.'))b.closest('.card').remove()}
+function editar(b){
+  const t=b.closest('.card').querySelector('b.sm');
+  const nuevo=prompt('Editar título de la galería:',t.textContent);
+  if(nuevo)t.textContent=nuevo;
+}
+function publicar(b){
+  const c=b.closest('.card');
+  c.querySelector('.badge').className='badge b-grn';c.querySelector('.badge').textContent='Publicada';
+  c.querySelector('img').style.filter='';
+  b.outerHTML='<select class="xs" style="width:auto;padding:5px 8px;font-size:12px"><option>🌐 Pública</option><option>🔒 Solo agremiados</option></select>';
+}
+function vis(s){/* demo: cambia visibilidad */}
+</script>
+</body></html>
