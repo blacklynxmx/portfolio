@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pase de lista · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Pase de lista</span></div>
+  <nav class="main" style="margin-left:auto"><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av" style="background:var(--orange-bg);color:var(--orange-d)">AT</div><div><b style="font-size:14px">Alma Torres</b><div class="xs mut">Delegada · Nivel gestor</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones</a>
+  <a class="it" href="comunicado.html">📣 Comunicados</a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <div class="xs mut" style="padding:16px 12px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Nivel gestor</div>
+  <a class="it on" href="asistencia.html">✅ Pase de lista</a>
+  <a class="it" href="gestion.html">⚙️ Panel de gestión</a>
+</aside>
+
+<main class="pane">
+  <div class="row sp mb">
+    <div><h2 class="sec" style="margin:0">Asamblea General Ordinaria</h2><span class="sm mut">Sesión abierta 9:32 · Auditorio Principal · Delegados escaneando: 3</span></div>
+    <span class="badge b-grn" style="font-size:13px">● Registro abierto</span>
+  </div>
+
+  <div class="tabs" id="tt">
+    <button class="on">Escanear credenciales</button>
+    <button>Palomeo manual (respaldo)</button>
+    <button>Históricos</button>
+  </div>
+
+  <!-- TAB 1: escáner -->
+  <div class="tp on">
+  <div class="grid" style="grid-template-columns:340px 1fr">
+    <div>
+      <div class="card" style="text-align:center">
+        <div class="scan"><div class="beam"></div><div style="font-size:44px">📷</div><b class="sm">Apunta al QR de la credencial</b><span class="xs mut">del agremiado presente</span></div>
+        <button class="btn org mt" onclick="simular()">▶ Simular escaneo</button>
+        <div id="last" class="mt" style="display:none">
+          <div class="card" style="background:var(--green-bg);border-color:#86efac;padding:14px">
+            <div class="row"><div class="av" id="lav">JR</div><div style="text-align:left"><b id="lname">—</b><div class="xs mut" id="ldet">—</div></div><span style="margin-left:auto;font-size:22px">✅</span></div>
+          </div>
+          <div class="xs mut mt">El nombre aparece al escanear: si no corresponde con la persona, el delegado rechaza el registro.</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="grid g3 mb">
+        <div class="card" style="text-align:center"><div class="num" id="cnt">87</div><span class="xs mut">registrados</span></div>
+        <div class="card" style="text-align:center"><div class="num">150</div><span class="xs mut">padrón activo</span></div>
+        <div class="card" style="text-align:center"><div class="num" style="color:var(--green)" id="pct">58%</div><span class="xs mut">quórum (mín. 50%) ✓</span></div>
+      </div>
+      <div class="card">
+        <div class="row sp"><b>Registros en vivo</b><span class="xs mut">hora exacta · quién escaneó</span></div>
+        <div id="feed" class="mt">
+          <div class="feed-it"><b class="sm">Laura Campos #112</b><span class="xs mut">Área Administrativa · 9:47:12 · esc. A. Torres</span></div>
+          <div class="feed-it"><b class="sm">Miguel Ángel Pérez #034</b><span class="xs mut">Mantenimiento · 9:46:58 · esc. R. Luna</span></div>
+          <div class="feed-it"><b class="sm">Sofía Herrera #009</b><span class="xs mut">Área Académica · 9:46:41 · esc. A. Torres</span></div>
+          <div class="feed-it"><b class="sm">Carlos Mendoza #145</b><span class="xs mut">Vigilancia · 9:46:20 · esc. J. Ríos</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- TAB 2: palomeo -->
+  <div class="tp">
+    <div class="card">
+      <div class="row sp mb"><b>Padrón precargado — marcar presentes</b><input placeholder="🔎 Buscar agremiado…" style="max-width:260px"></div>
+      <table>
+        <tr><th>No.</th><th>Agremiado</th><th>Área</th><th>Estado</th><th></th></tr>
+        <tr><td>001</td><td>Abril Anaya Fuentes</td><td>Académica</td><td><span class="badge b-grn">Presente 9:41</span></td><td><button class="btn sm ghost">Quitar</button></td></tr>
+        <tr><td>002</td><td>Adrián Bautista Gómez</td><td>Administrativa</td><td><span class="badge b-red">Ausente</span></td><td><button class="btn sm grn">✓ Presente</button></td></tr>
+        <tr><td>003</td><td>Alejandra Cordero Nieto</td><td>Mantenimiento</td><td><span class="badge b-org">Justificada</span></td><td><button class="btn sm ghost">Ver justif.</button></td></tr>
+        <tr><td>004</td><td>Andrés Delgado Mora</td><td>Académica</td><td><span class="badge b-grn">Presente 9:38</span></td><td><button class="btn sm ghost">Quitar</button></td></tr>
+      </table>
+      <p class="xs mut mt">El palomeo manual es el respaldo si falla la red o el agremiado no trae teléfono. Alimenta el mismo histórico que el escaneo.</p>
+    </div>
+  </div>
+
+  <!-- TAB 3: históricos -->
+  <div class="tp">
+    <div class="row sp mb"><b>Históricos de asistencia</b><div class="row"><button class="btn sm grn">📊 Exportar a Google Sheets</button><button class="btn sm ghost">⬇ Excel</button></div></div>
+    <div class="card">
+      <table>
+        <tr><th>Sesión</th><th>Fecha</th><th>Asistencia</th><th>Quórum</th><th></th></tr>
+        <tr><td><b>Asamblea Extraordinaria</b></td><td>30 ago 2025</td><td>141 / 150</td><td><div class="row"><div class="bar" style="width:90px"><i class="g" style="width:94%"></i></div><span class="sm">94%</span></div></td><td><button class="btn sm ghost">Detalle</button></td></tr>
+        <tr><td><b>Asamblea Ordinaria</b></td><td>15 feb 2025</td><td>128 / 148</td><td><div class="row"><div class="bar" style="width:90px"><i class="g" style="width:86%"></i></div><span class="sm">86%</span></div></td><td><button class="btn sm ghost">Detalle</button></td></tr>
+        <tr><td><b>Junta de Comisión Escalafón</b></td><td>8 feb 2025</td><td>11 / 12</td><td><div class="row"><div class="bar" style="width:90px"><i class="g" style="width:92%"></i></div><span class="sm">92%</span></div></td><td><button class="btn sm ghost">Detalle</button></td></tr>
+      </table>
+    </div>
+    <div class="card mt" style="background:#eff6ff;border-color:#bfdbfe">
+      <b class="sm">🔒 Por qué este método sí es confiable</b>
+      <p class="sm mut" style="margin-top:6px">El QR es <b>personal</b>, no de la sesión: compartirlo no sirve porque el delegado ve el nombre al escanear y tiene enfrente a la persona. Cada registro guarda hora exacta y quién escaneó. Sin datos biométricos, sin GPS, sin fotografías.</p>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script src="app.js"></script>
+<script>
+tabs('main');
+const names=[['Jorge Ramírez #056','Académica'],['Paola Vega #023','Administrativa'],['Luis Osorio #131','Mantenimiento'],['Elena Cruz #078','Académica']];let i=0,c=87;
+function simular(){
+  const [n,a]=names[i++%names.length];c++;
+  document.getElementById('last').style.display='block';
+  document.getElementById('lname').textContent=n;
+  document.getElementById('lav').textContent=n.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+  const t=new Date();const hh=`9:${48+i}:${String(t.getSeconds()).padStart(2,'0')}`;
+  document.getElementById('ldet').textContent=a+' · registrado '+hh;
+  document.getElementById('cnt').textContent=c;
+  document.getElementById('pct').textContent=Math.round(c/150*100)+'%';
+  const d=document.createElement('div');d.className='feed-it';
+  d.innerHTML=`<b class="sm">${n}</b><span class="xs mut">${a} · ${hh} · esc. A. Torres</span>`;
+  document.getElementById('feed').prepend(d);
+}
+</script>
+</body></html>

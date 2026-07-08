@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mi Dashboard · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Área de Agremiados</span></div>
+  <nav class="main" style="margin-left:auto"><a href="index.html">← Sitio público</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av">MG</div><div><b style="font-size:14px">María González</b><div class="xs mut">Agremiada · Área Académica</div></div></div>
+  <a class="it on" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones <span class="cnt">1</span></a>
+  <a class="it" href="comunicado.html">📣 Comunicados <span class="cnt">2</span></a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <a class="it" href="galeria.html">📸 Galería</a>
+  <div class="xs mut" style="padding:16px 12px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Nivel gestor</div>
+  <a class="it" href="asistencia.html">✅ Pase de lista</a>
+  <a class="it" href="gestion.html">⚙️ Panel de gestión</a>
+  <a class="it mut" href="index.html" style="margin-top:14px">↩ Cerrar sesión</a>
+</aside>
+
+<main class="pane">
+  <div class="row sp mb">
+    <div><h2 class="sec" style="margin:0">Hola, María 👋</h2><span class="sm mut">Martes 8 de julio de 2026 · 2 pendientes requieren tu atención</span></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:340px 1fr">
+    <!-- credencial -->
+    <div>
+      <div class="cred" id="credencial">
+        <div class="row sp" style="position:relative;z-index:1"><b>Credencial digital</b><img src="assets/logo_stspe.png" style="height:26px;background:#fff;border-radius:6px;padding:2px"></div>
+        <div class="row mt" style="align-items:flex-start;position:relative;z-index:1">
+          <div class="qrbox" id="myqr"></div>
+          <div style="flex:1;min-width:120px">
+            <b>María González Ruiz</b>
+            <div class="xs" style="color:#94a3b8">Agremiada No. 087<br>Área Académica<br>Vigencia 2026</div>
+            <span class="badge b-grn" style="margin-top:8px;display:inline-block">● Vigente</span>
+          </div>
+        </div>
+        <small class="xs" style="display:block;margin-top:12px;position:relative;z-index:1">🔒 QR personal e intransferible. El delegado lo escanea para registrar tu asistencia — sin fotos, sin GPS, sin biometría.</small>
+      </div>
+
+      <div class="card mt">
+        <b class="sm">Mi historial de asistencia</b>
+        <div class="row sp mt"><span class="sm">Asambleas 2025–2026</span><b class="sm" style="color:var(--green)">7 de 8 (88%)</b></div>
+        <div class="bar mt" style="margin-top:8px"><i class="g" style="width:88%"></i></div>
+        <div class="xs mut mt">Última: Asamblea Extraordinaria · 30 ago 2025 · registrada 9:47 por Delegada A. Torres</div>
+      </div>
+    </div>
+
+    <!-- columna principal -->
+    <div>
+      <div class="card mb" style="border-left:4px solid var(--orange)">
+        <div class="row sp"><b>🗳️ Votación abierta: Reforma al Reglamento Interno</b><span class="badge b-org">Cierra hoy 18:00</span></div>
+        <p class="sm mut mt">Voto secreto con folio verificable. Aún no has emitido tu voto.</p>
+        <div class="row sp mt"><span class="xs mut">Quórum: 96 de 150 han votado</span><a class="btn sm org" href="votacion.html">Votar ahora</a></div>
+        <div class="bar mt" style="margin-top:8px"><i class="o" style="width:64%"></i></div>
+      </div>
+
+      <div class="grid g2">
+        <div class="card">
+          <b>📅 Próximos eventos</b>
+          <div class="list-it mt"><div class="ico" style="background:var(--blue-bg)">📅</div><div style="flex:1"><b class="sm">Asamblea General Ordinaria</b><div class="xs mut">15 feb · 10:00 · Auditorio Principal</div></div><button class="btn sm">Confirmar</button></div>
+          <div class="list-it" style="margin-bottom:0"><div class="ico" style="background:var(--green-bg)">🎓</div><div style="flex:1"><b class="sm">Curso: Excel intermedio</b><div class="xs mut">22 feb · 16:00 · Lab. B</div></div><span class="badge b-grn">Confirmada</span></div>
+        </div>
+        <div class="card">
+          <b>📣 Comunicados recientes</b>
+          <div class="list-it mt"><div style="flex:1"><b class="sm">Convocatoria Asamblea General 2026</b><div class="xs mut">19 ene · Requiere confirmación</div></div><a class="btn sm org" href="comunicado.html">Leer</a></div>
+          <div class="list-it" style="margin-bottom:0"><div style="flex:1"><b class="sm">Horarios especiales febrero</b><div class="xs mut">18 ene · <span style="color:var(--green)">✓ Enterada</span></div></div><a class="btn sm ghost" href="comunicado.html">Ver</a></div>
+        </div>
+        <div class="card">
+          <b>💬 Mis folios de buzón</b>
+          <div class="list-it mt" style="margin-bottom:0"><div style="flex:1"><b class="sm">Folio BZ-2026-014</b><div class="xs mut">Confidencial · En atención</div></div><a class="btn sm ghost" href="buzon.html">Seguimiento</a></div>
+        </div>
+        <div class="card">
+          <b>🎁 Rifa activa</b>
+          <div class="list-it mt" style="margin-bottom:0"><div style="flex:1"><b class="sm">Rifa de Aniversario</b><div class="xs mut">67 participantes</div></div><button class="btn sm grn">Participar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script src="app.js"></script>
+<script>qr(document.getElementById('myqr'),87);</script>
+</body></html>

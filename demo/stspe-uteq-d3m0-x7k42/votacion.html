@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Votaciones · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Votaciones</span></div>
+  <nav class="main" style="margin-left:auto"><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av">MG</div><div><b style="font-size:14px">María González</b><div class="xs mut">Agremiada · Área Académica</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it on" href="votacion.html">🗳️ Votaciones <span class="cnt">1</span></a>
+  <a class="it" href="comunicado.html">📣 Comunicados</a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <a class="it" href="galeria.html">📸 Galería</a>
+</aside>
+
+<main class="pane">
+  <h2 class="sec">Votaciones y encuestas</h2>
+  <p class="sec">Las votaciones formales usan padrón cerrado y voto secreto con folio verificable. Las encuestas son sondeos de opinión.</p>
+
+  <div class="tabs"><button class="on">Votación activa</button><button>Resultados anteriores</button><button>Encuestas</button></div>
+
+  <!-- TAB 1 -->
+  <div class="tp on">
+    <div class="grid" style="grid-template-columns:1.4fr 1fr">
+      <div class="card" id="boleta">
+        <div class="row sp"><span class="badge b-org">Votación formal · secreta</span><span class="badge b-red">Cierra hoy 18:00</span></div>
+        <h3 style="margin:12px 0 4px">Reforma al Reglamento Interno — Art. 14 y 22</h3>
+        <p class="sm mut">¿Apruebas la propuesta de reforma presentada por la Comisión Dictaminadora el 20 de junio de 2026? <a href="#">Ver documento completo</a></p>
+        <div class="mt" id="ops">
+          <label class="list-it" style="cursor:pointer"><input type="radio" name="v" style="width:auto"> A favor de la reforma</label>
+          <label class="list-it" style="cursor:pointer"><input type="radio" name="v" style="width:auto"> En contra de la reforma</label>
+          <label class="list-it" style="cursor:pointer"><input type="radio" name="v" style="width:auto"> Abstención</label>
+        </div>
+        <button class="btn org" onclick="votar()">🗳️ Emitir voto secreto</button>
+        <p class="xs mut mt">Tu voto se registra cifrado y separado de tu identidad. El padrón solo marca <i>que ya votaste</i>, nunca el sentido de tu voto.</p>
+        <div id="ok" style="display:none" class="mt">
+          <div class="card" style="background:var(--green-bg);border-color:#86efac">
+            <b>✅ Voto registrado</b>
+            <p class="sm" style="margin-top:6px">Tu folio verificable: <b style="font-family:monospace;font-size:16px">VT-2026-08-K4Q9</b></p>
+            <p class="xs mut">Guárdalo: al cierre podrás comprobar en la lista pública de folios que tu voto fue contado — sin que nadie sepa por quién votaste.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card mb">
+          <b>Quórum en tiempo real</b>
+          <div class="row sp mt"><span class="num" id="q1">96</span><span class="mut sm">de 150 agremiados<br>han votado</span></div>
+          <div class="bar mt"><i class="o" id="qb" style="width:64%"></i></div>
+          <div class="row sp mt"><span class="xs mut">Mínimo para validez: 76 (50%+1)</span><span class="badge b-grn">✓ Alcanzado</span></div>
+        </div>
+        <div class="card">
+          <b class="sm">Cómo funciona</b>
+          <ol class="sm mut" style="padding-left:18px;margin-top:8px;display:grid;gap:6px">
+            <li>Solo agremiados vigentes pueden votar (padrón cerrado).</li>
+            <li>Un voto por persona, desde su sesión.</li>
+            <li>El voto se guarda cifrado con un folio aleatorio.</li>
+            <li>Al cierre se publican resultados + lista de folios.</li>
+            <li>El acta se genera automáticamente en PDF.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tp">
+    <div class="card">
+      <div class="row sp"><div><span class="badge b-nav">Cerrada · 12 may 2026</span><h3 style="margin:8px 0 2px">Elección de Comisión de Capacitación</h3><span class="xs mut">Participación: 132 de 149 (89%) · Acta firmada</span></div><button class="btn ghost sm">📄 Acta PDF</button></div>
+      <div class="mt">
+        <div class="row sp"><span class="sm"><b>Planilla A</b> — L. Campos</span><b class="sm">74 votos (56%)</b></div>
+        <div class="bar" style="margin:6px 0 12px"><i class="g" style="width:56%"></i></div>
+        <div class="row sp"><span class="sm"><b>Planilla B</b> — R. Luna</span><b class="sm">51 votos (39%)</b></div>
+        <div class="bar" style="margin:6px 0 12px"><i style="width:39%"></i></div>
+        <div class="row sp"><span class="sm">Abstenciones</span><b class="sm">7 (5%)</b></div>
+        <div class="bar" style="margin-top:6px"><i class="o" style="width:5%"></i></div>
+      </div>
+      <div class="row mt"><button class="btn sm ghost">🔎 Verificar mi folio</button><button class="btn sm grn">📊 Exportar a Sheets</button></div>
+    </div>
+  </div>
+
+  <!-- TAB 3 -->
+  <div class="tp">
+    <div class="grid g2">
+      <div class="card"><div class="row sp"><b>Encuesta de Satisfacción 2026</b><span class="badge b-pur">Anónima</span></div><p class="sm mut mt">45 participantes hasta ahora.</p><button class="btn sm mt">Responder</button></div>
+      <div class="card"><div class="row sp"><b>Necesidades de Capacitación</b><span class="badge b-blue">Con registro</span></div><p class="sm mut mt">32 participantes hasta ahora.</p><button class="btn sm mt">Responder</button></div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script src="app.js"></script>
+<script>
+tabs('main');
+function votar(){
+  if(!document.querySelector('input[name=v]:checked')){alert('Selecciona una opción');return}
+  document.getElementById('ok').style.display='block';
+  document.getElementById('q1').textContent='97';
+  document.getElementById('qb').style.width='65%';
+  document.querySelectorAll('#ops input').forEach(x=>x.disabled=true);
+}
+</script>
+</body></html>

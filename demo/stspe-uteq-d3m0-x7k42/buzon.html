@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Buzón · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Buzón</span></div>
+  <nav class="main" style="margin-left:auto"><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av">MG</div><div><b style="font-size:14px">María González</b><div class="xs mut">Agremiada · Área Académica</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones <span class="cnt">1</span></a>
+  <a class="it" href="comunicado.html">📣 Comunicados</a>
+  <a class="it on" href="buzon.html">💬 Buzón</a>
+  <a class="it" href="galeria.html">📸 Galería</a>
+  <div class="xs mut" style="padding:16px 12px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Nivel gestor</div>
+  <a class="it" href="asistencia.html">✅ Pase de lista</a>
+  <a class="it" href="gestion.html">⚙️ Panel de gestión</a>
+</aside>
+
+<main class="pane">
+  <h2 class="sec">Buzón de agremiados</h2>
+  <p class="sec">Sugerencias, consultas y quejas — con seguimiento por folio en todos los casos.</p>
+
+  <div class="tabs"><button class="on">Nuevo mensaje</button><button>Mis folios</button><button>Bandeja (nivel gestor)</button></div>
+
+  <!-- TAB 1 -->
+  <div class="tp on">
+    <div class="grid" style="grid-template-columns:1.4fr 1fr">
+      <div class="card">
+        <label>Tipo de mensaje</label>
+        <div class="grid g3" style="gap:10px">
+          <label class="list-it" style="cursor:pointer;margin:0"><input type="radio" name="m" checked style="width:auto"><span class="sm"><b>Público</b><br><span class="xs mut">visible con tu nombre</span></span></label>
+          <label class="list-it" style="cursor:pointer;margin:0"><input type="radio" name="m" style="width:auto"><span class="sm"><b>Confidencial</b><br><span class="xs mut">solo lo ve el comité</span></span></label>
+          <label class="list-it" style="cursor:pointer;margin:0"><input type="radio" name="m" style="width:auto"><span class="sm"><b>Anónimo verificado</b><br><span class="xs mut">se valida que eres agremiado, sin revelar quién</span></span></label>
+        </div>
+        <label>Categoría</label>
+        <select><option>Sugerencia</option><option>Consulta</option><option>Queja</option><option>Reconocimiento</option></select>
+        <label>Mensaje</label>
+        <textarea rows="5" placeholder="Escribe tu mensaje…"></textarea>
+        <button class="btn mt" onclick="enviar()">📨 Enviar mensaje</button>
+        <div id="fol" style="display:none" class="mt">
+          <div class="card" style="background:var(--green-bg);border-color:#86efac">
+            <b>✅ Mensaje recibido</b>
+            <p class="sm" style="margin-top:6px">Folio de seguimiento: <b style="font-family:monospace;font-size:16px">BZ-2026-031</b></p>
+            <p class="xs mut">Consulta el estado en la pestaña "Mis folios". Recibirás aviso cuando cambie.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="background:#eff6ff;border-color:#bfdbfe">
+        <b class="sm">¿Cómo funciona el anonimato verificado?</b>
+        <p class="sm mut" style="margin-top:8px">El sistema comprueba que el mensaje viene de una cuenta de agremiado vigente y luego <b>desecha el vínculo con tu identidad</b>. El comité recibe el mensaje sabiendo que es legítimo, pero sin poder saber de quién es.</p>
+        <p class="sm mut" style="margin-top:8px">Aun así conservas tu folio para dar seguimiento: nadie más puede consultarlo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tp">
+    <div class="card">
+      <table>
+        <tr><th>Folio</th><th>Tipo</th><th>Enviado</th><th>Estado</th><th></th></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-014</b></td><td><span class="badge b-pur">Confidencial</span></td><td>28 jun</td><td><span class="badge b-org">En atención</span></td><td><button class="btn sm ghost">Ver hilo</button></td></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-002</b></td><td><span class="badge b-blue">Público</span></td><td>9 feb</td><td><span class="badge b-grn">Resuelto</span></td><td><button class="btn sm ghost">Ver hilo</button></td></tr>
+      </table>
+      <div class="card mt" style="background:var(--bg);padding:16px">
+        <b class="sm">Hilo BZ-2026-014</b>
+        <div class="list-it mt" style="background:#fff"><div style="flex:1"><b class="xs mut">Tú · 28 jun</b><p class="sm">Solicito revisión de la asignación de horarios del área académica para el próximo cuatrimestre…</p></div></div>
+        <div class="list-it" style="background:var(--blue-bg);margin-bottom:0"><div style="flex:1"><b class="xs" style="color:var(--blue-d)">Comité · 1 jul · estado → En atención</b><p class="sm">Recibido. Se turnó a la Comisión de Escalafón; respuesta estimada antes del 15 de julio.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3 -->
+  <div class="tp">
+    <div class="row sp mb"><b>Bandeja del comité</b><div class="row"><span class="badge b-red">3 nuevos</span><button class="btn sm ghost">📊 Exportar</button></div></div>
+    <div class="card">
+      <table>
+        <tr><th>Folio</th><th>Origen</th><th>Categoría</th><th>Recibido</th><th>Estado</th><th>Asignado a</th></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-030</b></td><td><span class="badge b-nav">Anónimo verif.</span></td><td>Queja</td><td>7 jul</td><td><span class="badge b-red">Nuevo</span></td><td><select style="width:130px;padding:5px"><option>Asignar…</option><option>A. Torres</option><option>R. Luna</option></select></td></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-029</b></td><td>C. Mendoza</td><td>Sugerencia</td><td>5 jul</td><td><span class="badge b-red">Nuevo</span></td><td><select style="width:130px;padding:5px"><option>Asignar…</option></select></td></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-014</b></td><td><span class="badge b-pur">Confidencial</span></td><td>Consulta</td><td>28 jun</td><td><span class="badge b-org">En atención</span></td><td>A. Torres</td></tr>
+        <tr><td><b style="font-family:monospace">BZ-2026-002</b></td><td>M. González</td><td>Público</td><td>9 feb</td><td><span class="badge b-grn">Resuelto</span></td><td>Comité</td></tr>
+      </table>
+      <p class="xs mut mt">Cada cambio de estado notifica automáticamente a quien envió el mensaje (aunque sea anónimo, vía su folio).</p>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script src="app.js"></script>
+<script>tabs('main');function enviar(){document.getElementById('fol').style.display='block'}</script>
+</body></html>

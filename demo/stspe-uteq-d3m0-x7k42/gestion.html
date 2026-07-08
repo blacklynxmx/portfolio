@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Panel de gestión · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Panel de gestión</span></div>
+  <nav class="main" style="margin-left:auto"><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av" style="background:var(--orange-bg);color:var(--orange-d)">AT</div><div><b style="font-size:14px">Alma Torres</b><div class="xs mut">Delegada · Nivel gestor</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones</a>
+  <a class="it" href="comunicado.html">📣 Comunicados</a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <div class="xs mut" style="padding:16px 12px 6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Nivel gestor</div>
+  <a class="it" href="asistencia.html">✅ Pase de lista</a>
+  <a class="it on" href="gestion.html">⚙️ Panel de gestión</a>
+</aside>
+
+<main class="pane">
+  <div class="row sp mb">
+    <div><h2 class="sec" style="margin:0">Panel de gestión</h2><span class="sm mut">Nivel gestor: crear y revisar información · los agremiados de consulta no ven este panel</span></div>
+    <button class="btn org">+ Publicar</button>
+  </div>
+
+  <div class="grid g4 mb">
+    <div class="card" style="text-align:center"><div class="num">150</div><span class="xs mut">agremiados en padrón</span></div>
+    <div class="card" style="text-align:center"><div class="num" style="color:var(--green)">88%</div><span class="xs mut">asistencia promedio</span></div>
+    <div class="card" style="text-align:center"><div class="num" style="color:var(--orange-d)">3</div><span class="xs mut">folios de buzón abiertos</span></div>
+    <div class="card" style="text-align:center"><div class="num" style="color:var(--blue)">75%</div><span class="xs mut">lectura del último comunicado</span></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <div class="row sp"><b>📣 Publicaciones</b><button class="btn sm">+ Nueva</button></div>
+      <table class="mt">
+        <tr><th>Título</th><th>Estado</th><th>Lectura</th></tr>
+        <tr><td class="sm">Convocatoria Asamblea 2026</td><td><span class="badge b-grn">Publicado</span></td><td><a class="sm" href="comunicado.html">112/150 →</a></td></tr>
+        <tr><td class="sm">Resultados rifa aniversario</td><td><span class="badge b-org">Borrador</span></td><td class="xs mut">—</td></tr>
+        <tr><td class="sm">Galería: Posada 2025</td><td><span class="badge b-blue">En revisión</span></td><td class="xs mut">—</td></tr>
+      </table>
+      <p class="xs mut mt">Flujo de dos pasos: un gestor <b>crea</b>, otro <b>revisa y publica</b>.</p>
+    </div>
+
+    <div class="card">
+      <div class="row sp"><b>🔄 Importar / Exportar</b></div>
+      <div class="list-it mt"><div class="ico" style="background:var(--green-bg)">📊</div><div style="flex:1"><b class="sm">Padrón de agremiados</b><div class="xs mut">última sincronización: hoy 9:00</div></div><button class="btn sm grn">→ Sheets</button><button class="btn sm ghost">→ Excel</button></div>
+      <div class="list-it"><div class="ico" style="background:var(--blue-bg)">✅</div><div style="flex:1"><b class="sm">Históricos de asistencia</b></div><button class="btn sm grn">→ Sheets</button><button class="btn sm ghost">→ Excel</button></div>
+      <div class="list-it"><div class="ico" style="background:var(--orange-bg)">🗳️</div><div style="flex:1"><b class="sm">Resultados de votaciones</b></div><button class="btn sm grn">→ Sheets</button><button class="btn sm ghost">→ PDF</button></div>
+      <div class="list-it" style="margin-bottom:0"><div class="ico" style="background:var(--purple-bg)">📄</div><div style="flex:1"><b class="sm">Importar documentos</b><div class="xs mut">Google Docs/Slides · Word/PowerPoint</div></div><button class="btn sm">⬆ Importar</button></div>
+    </div>
+
+    <div class="card">
+      <div class="row sp"><b>👥 Padrón y roles</b><button class="btn sm ghost">Administrar</button></div>
+      <table class="mt">
+        <tr><th>Agremiado</th><th>Área</th><th>Nivel</th></tr>
+        <tr><td class="sm">María González</td><td class="sm mut">Académica</td><td><span class="badge b-blue">Consulta</span></td></tr>
+        <tr><td class="sm">Alma Torres</td><td class="sm mut">Administrativa</td><td><span class="badge b-org">Gestor</span></td></tr>
+        <tr><td class="sm">Roberto Luna</td><td class="sm mut">Mantenimiento</td><td><span class="badge b-org">Gestor</span></td></tr>
+        <tr><td class="sm">Sofía Herrera</td><td class="sm mut">Académica</td><td><span class="badge b-blue">Consulta</span></td></tr>
+      </table>
+      <p class="xs mut mt">Dos niveles: <b>Consulta</b> (ver, votar, buzón) y <b>Gestor</b> (crear/revisar información, pase de lista, métricas).</p>
+    </div>
+
+    <div class="card">
+      <div class="row sp"><b>📌 Acuerdos de asamblea</b><span class="badge b-org">2 vencen pronto</span></div>
+      <div class="list-it mt"><div style="flex:1"><b class="sm">Cotizar seguro colectivo dental</b><div class="xs mut">Resp: Comisión Convenios · vence 15 jul</div></div><span class="badge b-org">En curso</span></div>
+      <div class="list-it"><div style="flex:1"><b class="sm">Publicar informe financiero Q2</b><div class="xs mut">Resp: Tesorería · vence 30 jul</div></div><span class="badge b-red">Pendiente</span></div>
+      <div class="list-it" style="margin-bottom:0"><div style="flex:1"><b class="sm">Actualizar reglamento de rifas</b><div class="xs mut">Resp: Dictaminadora · cerrado 20 jun</div></div><span class="badge b-grn">Cumplido</span></div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+</body></html>

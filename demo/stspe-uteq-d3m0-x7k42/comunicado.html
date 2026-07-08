@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Comunicados · STSPE–UTEQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><span class="lg-uteq"><img src="assets/logo-uteq-blanco.png" alt="UTEQ" style="height:26px"></span><img src="assets/logo_stspe.png" alt="STSPE"><span>Comunicados</span></div>
+  <nav class="main" style="margin-left:auto"><a href="dashboard.html">← Mi dashboard</a></nav>
+</div></header>
+
+<div class="shell">
+<aside class="sb">
+  <div class="who"><div class="av">MG</div><div><b style="font-size:14px">María González</b><div class="xs mut">Agremiada · Área Académica</div></div></div>
+  <a class="it" href="dashboard.html">🏠 Dashboard</a>
+  <a class="it" href="votacion.html">🗳️ Votaciones <span class="cnt">1</span></a>
+  <a class="it on" href="comunicado.html">📣 Comunicados <span class="cnt">2</span></a>
+  <a class="it" href="buzon.html">💬 Buzón</a>
+  <a class="it" href="galeria.html">📸 Galería</a>
+</aside>
+
+<main class="pane">
+  <div class="grid" style="grid-template-columns:1.5fr 1fr">
+    <!-- comunicado -->
+    <div class="card">
+      <div class="row sp"><span class="badge b-grn">Convocatoria</span><span class="xs mut">Publicado 19 ene 2026 · Comité Ejecutivo</span></div>
+      <h2 style="margin:14px 0 10px;color:var(--navy)">Convocatoria: Asamblea General Ordinaria 2026</h2>
+      <p class="sm">Se convoca a todos los agremiados del STSPE–UTEQ a la <b>Asamblea General Ordinaria</b> que se celebrará el <b>domingo 15 de febrero de 2026 a las 10:00 horas</b> en el Auditorio Principal.</p>
+      <p class="sm mt"><b>Orden del día:</b></p>
+      <ol class="sm mut" style="padding-left:20px;margin-top:6px;display:grid;gap:4px">
+        <li>Pase de lista y verificación de quórum</li>
+        <li>Lectura y aprobación del acta anterior</li>
+        <li>Informe financiero semestral</li>
+        <li>Votación: reforma al Reglamento Interno</li>
+        <li>Asuntos generales</li>
+      </ol>
+      <div class="row mt"><button class="btn ghost sm">📄 Descargar convocatoria PDF</button><button class="btn ghost sm">📅 Agregar a mi calendario</button></div>
+      <hr style="border:none;border-top:1px solid var(--line);margin:20px 0">
+      <div id="ack">
+        <div class="row sp"><div><b class="sm">Este comunicado requiere confirmación de lectura</b><div class="xs mut">Tu confirmación queda registrada con fecha y hora.</div></div><button class="btn org" onclick="ent()">✋ Enterada</button></div>
+      </div>
+      <div id="acked" class="card" style="display:none;padding:14px;background:var(--green-bg);border-color:#86efac">
+        <b class="sm" style="color:var(--green)">✓ Confirmaste lectura — 8 jul 2026, 11:02</b>
+      </div>
+    </div>
+
+    <!-- métricas (vista gestor) -->
+    <div>
+      <div class="card mb" style="border-top:3px solid var(--orange)">
+        <div class="row sp"><b>👁️ Métricas de lectura</b><span class="badge b-org">Vista nivel gestor</span></div>
+        <div class="mt">
+          <div class="row sp"><span class="sm">Lo han visto</span><b class="sm">112 / 150</b></div>
+          <div class="bar" style="margin:6px 0 14px"><i style="width:75%"></i></div>
+          <div class="row sp"><span class="sm">Confirmaron "Enterado"</span><b class="sm">87 / 150</b></div>
+          <div class="bar" style="margin:6px 0 14px"><i class="g" style="width:58%"></i></div>
+          <div class="row sp"><span class="sm">Sin abrir</span><b class="sm" style="color:var(--red)">38</b></div>
+          <div class="bar" style="margin-top:6px"><i style="width:25%;background:var(--red)"></i></div>
+        </div>
+        <button class="btn sm mt" style="width:100%">📨 Enviar recordatorio a los 38 pendientes</button>
+        <button class="btn sm ghost mt" style="width:100%;margin-top:8px">📊 Exportar lista a Sheets</button>
+      </div>
+      <div class="card">
+        <b class="sm">Pendientes de abrir (muestra)</b>
+        <table class="mt" style="font-size:13px">
+          <tr><td>Adrián Bautista</td><td class="mut xs">Administrativa</td></tr>
+          <tr><td>Carmen Ríos</td><td class="mut xs">Mantenimiento</td></tr>
+          <tr><td>Diego Fuentes</td><td class="mut xs">Académica</td></tr>
+          <tr><td colspan="2" class="mut xs">… 35 más</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="demo-note">DEMO · datos ficticios</div>
+<script>
+function ent(){document.getElementById('ack').style.display='none';document.getElementById('acked').style.display='block'}
+</script>
+</body></html>
