@@ -20,10 +20,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
   <nav class="nav" aria-label="Principal">
     <div class="nav-inner">
       <a href="/es/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
@@ -32,6 +33,7 @@
         <li><a href="/es/">Trabajo</a></li>
         <li><a href="/es/about.html" class="active">Sobre mí</a></li>
         <li><a href="#" data-user="davidgerardom" data-domain="gmail.com" class="mailto-link">Contacto</a></li>
+        <li><a href="/assets/cv/David_Mendieta_CV.pdf" download class="nav-cv">CV</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/about.html" lang="en">EN</a>
@@ -42,7 +44,7 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header id="main" class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
         <p class="eyebrow">Sobre mí</p>
@@ -79,7 +81,7 @@
 
       <p>Después vinieron seis años en OCC Mundial - que para quien no lo sepa, es parte de Seek Limited, un consorcio australiano que opera bolsas de trabajo en Australia, China, Brasil y varios países más - reconstruyendo el motor de compra de la plataforma de reclutadores. Y luego cuatro años en Compartamos Banco, el banco de microfinanzas más grande de América Latina, con tres millones de clientes: la abuela con su tienda de abarrotes, la madre soltera que vende por catálogo, el mecánico del barrio. Las personas a las que el sistema bancario tradicional simplemente les cierra la puerta.</p>
 
-      <p>El hilo que conecta todo eso: sistemas con años de operación, usuarios que no se ponen de acuerdo entre sí, y directivos que necesitan ver el caso de compliance con la misma claridad con la que ven el caso de negocio. No elegí ese nicho conscientemente - simplemente es donde los problemas más complejos tienden a vivir, y eso me gusta&nbsp; &nbsp;</p>
+      <p>El hilo que conecta todo eso: sistemas con años de operación, usuarios que no se ponen de acuerdo entre sí, y directivos que necesitan ver el caso de compliance con la misma claridad con la que ven el caso de negocio. No elegí ese nicho conscientemente - simplemente es donde los problemas más complejos tienden a vivir, y eso me gusta.</p>
 
       <h2 style="margin-top: 4rem;">Lo que  hago.</h2>
 
@@ -89,7 +91,7 @@
 
       <p><strong>Estrategia que se puede ejecutar.</strong> Service blueprints, customer journey maps, roadmapping, priorización con RICE o MoSCoW, y economía unitaria cuando el contexto lo exige. Soy más útil cuando la estrategia sobrevive el contacto con ingeniería - lo que implica entender qué es costoso de construir, no solo qué sería valioso tener.</p>
 
-      <p><strong>Alineación&nbsp; inter equipos estable y escalable.</strong> Talleres con stakeholders, war rooms cross-funcionales, presentaciones de hallazgos a nivel directivo. En industrias reguladas, la mejor investigación del mundo muere en la última junta si quien la lee no ve su problema reflejado ahí. Por eso aprendí a hablar Riesgo, Legal, Ops, Venta, Desarrollo - no para pretender ser experto en todo, sino para no perder el argumento en la sala equivocada.</p>
+      <p><strong>Alineación entre equipos estable y escalable.</strong> Talleres con stakeholders, war rooms cross-funcionales, presentaciones de hallazgos a nivel directivo. En industrias reguladas, la mejor investigación del mundo muere en la última junta si quien la lee no ve su problema reflejado ahí. Por eso aprendí a hablar Riesgo, Legal, Ops, Venta, Desarrollo - no para pretender ser experto en todo, sino para no perder el argumento en la sala equivocada.</p>
 
       <h2 style="margin-top: 4rem;">Tres cosas en las que creo con bastante firmeza.</h2>
 
@@ -131,7 +133,7 @@
           <div>
             <h3 class="timeline-role">Head of Product &amp; UX Research</h3>
             <p class="timeline-client">Whisper BI <span class="agency">· Analítica B2B SaaS · AI-powered</span></p>
-            <p class="timeline-description">Plataforma de inteligencia de negocios conversacional para clientes corporativos. Construí la práctica de investigación desde cero, definí el MVP con JTBD, rediseñé el onboarding (+40% conversión) y conseguimos los primeros clientes pagadores en menos de tres meses del lanzamiento.</p>
+            <p class="timeline-description">Plataforma de inteligencia de negocios conversacional para clientes corporativos. Construí la práctica de investigación desde cero, definí el MVP con JTBD, rediseñé el onboarding (conversión de 28% a 40%) y conseguimos los primeros clientes pagadores en menos de tres meses del lanzamiento.</p>
           </div>
         </div>
 
@@ -284,7 +286,7 @@
     </div>
   </footer>
 
-  <script src="/scripts/main.js" defer></script>
+  <script src="/scripts/main.js?v=20261003" defer></script>
   <script>
     // Mailto obfuscation - prevents email harvesting by scrapers
     document.querySelectorAll('.mailto-link').forEach(function(el) {

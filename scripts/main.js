@@ -10,17 +10,29 @@
   const navLinks = document.querySelector('[data-nav-links]');
 
   if (navToggle && navLinks) {
+    const openLabel = navToggle.textContent;
+    const closeLabel = (document.documentElement.lang || '').indexOf('es') === 0 ? 'Cerrar' : 'Close';
+
+    function setOpen(open) {
+      navLinks.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open);
+      navToggle.textContent = open ? closeLabel : openLabel;
+    }
+
     navToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
-      const expanded = navLinks.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', expanded);
+      setOpen(!navLinks.classList.contains('open'));
     });
 
     // Close on link click
     navLinks.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+
+    // Close on Escape and return focus to the toggle
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        setOpen(false);
+        navToggle.focus();
       }
     });
   }

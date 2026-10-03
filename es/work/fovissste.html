@@ -15,10 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
   <nav class="nav" aria-label="Principal">
     <div class="nav-inner">
       <a href="/es/" class="nav-brand">D.G.Mendieta<span class="dot">.</span></a>
@@ -27,6 +28,7 @@
         <li><a href="/es/" class="active">Trabajo</a></li>
         <li><a href="/es/about.html">Sobre mí</a></li>
         <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li><a href="/assets/cv/David_Mendieta_CV.pdf" download class="nav-cv">CV</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/es/work/fovissste.html" lang="es">EN</a>
@@ -37,7 +39,7 @@
     </div>
   </nav>
 
-  <header class="case-hero">
+  <header id="main" class="case-hero">
     <div class="container-narrow">
       <div class="case-hero-meta">
         <span class="num">Caso 07 / 07</span>
@@ -68,6 +70,7 @@
           <span class="value">Reconocimiento formal de la Presidencia de la República por mejora en acceso a información ciudadana, 2011–2012</span>
         </div>
       </div>
+      <a href="#impact" class="case-jump">Ver resultados ↓</a>
     </div>
   </header>
 
@@ -195,15 +198,15 @@
     </div>
   </section>
 
-  <nav class="case-nav" aria-label="Navegación de caso">
+  <nav class="case-nav" aria-label="Navegación entre casos">
     <div class="case-nav-inner">
       <a href="/es/work/compartamos-ops.html" class="case-nav-card prev">
         <span class="label">Caso anterior</span>
         <span class="title">Compartamos ResearchOps - Escalar la investigación sin contratar</span>
       </a>
-      <a href="/es/" class="case-nav-card next">
-        <span class="label">Todo el trabajo</span>
-        <span class="title">Volver al portafolio</span>
+      <a href="/es/work/ui-design.html" class="case-nav-card next">
+        <span class="label">Siguiente · Showcase de UI</span>
+        <span class="title">Diseño UI y Design Systems - El sistema detrás de la pantalla</span>
       </a>
     </div>
   </nav>
@@ -213,6 +216,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20261003"></script>
 </body>
 </html>

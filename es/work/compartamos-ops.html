@@ -18,11 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
 <body>
-  <script src="/scripts/lightbox.js" defer></script>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <script src="/scripts/lightbox.js?v=20261003" defer></script>
 
   <nav class="nav" aria-label="Principal">
     <div class="nav-inner">
@@ -32,6 +33,7 @@
         <li><a href="/es/" class="active">Trabajo</a></li>
         <li><a href="/es/about.html">Sobre mí</a></li>
         <li><a href="mailto:davidgerardom@gmail.com">Contacto</a></li>
+        <li><a href="/assets/cv/David_Mendieta_CV.pdf" download class="nav-cv">CV</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/es/work/compartamos-ops.html" lang="es">EN</a>
@@ -42,7 +44,7 @@
     </div>
   </nav>
 
-  <header class="case-hero">
+  <header id="main" class="case-hero">
     <div class="container-narrow">
       <div class="case-hero-meta">
         <span class="num">Caso 06 / 07</span>
@@ -73,6 +75,7 @@
           <span class="value">300% research capacity · VoC program with DPO approval · CX framework across 3 channels</span>
         </div>
       </div>
+      <a href="#impact" class="case-jump">Ver resultados ↓</a>
     </div>
   </header>
 
@@ -164,8 +167,38 @@
       </div>
 
       <p>
-        The regional satisfaction dashboards from this program are documented in the <a href="/es/work/compartamos.html">companion case study</a> - showing the Toluca vs. Jalisco split that identified the field-to-Contact-Center handoff as the persistent weak point in the digital origination flow.
+        El programa VoC corrió ciclos de medición por región de forma independiente - permitiendo al equipo detectar variación regional en la adopción, no solo satisfacción agregada. Los dashboards siguientes son outputs reales del programa: puntajes de satisfacción desglosados por flujo (Prospección, Contratación, Gestión de crédito, Renovación) y etapa de proceso (Captura, Generar oferta, Desembolso, Agenda), medidos simultáneamente con SUS, CSAT y NPS.
       </p>
+
+      <div class="callout for-research">
+        <span class="callout-label">Lo que reveló la división regional</span>
+        <p>
+          Toluca (9 meses con la app) puntuó consistentemente más alto que Jalisco (4 meses) - 76.2% vs. 69.3% general. La brecha no era satisfacción con el producto; era familiaridad con el flujo digital. El flujo de "Prospecto asignado a CC" (la transferencia entre campo y Contact Center) tuvo los puntajes más bajos en ambas regiones, confirmando que el punto de integración entre canales era la fricción real, no alguno de los canales por separado. Este hallazgo condujo el roadmap del Q1 2024.
+        </p>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-comparativa.png" alt="Dashboard VoC comparativo - puntajes de satisfacción Toluca vs Jalisco en flujos y procesos" loading="lazy" />
+        <figcaption>VoC comparativa - Jalisco vs. Toluca lado a lado. SUS, CSAT y NPS rastreados simultáneamente. Las gráficas de barras muestran puntajes por flujo y por proceso para ambas regiones. Patrón consistente: Contratación puntúa bien en todos lados; Prospecto asignado a CC es el punto débil persistente.</figcaption>
+      </div>
+
+      <details class="case-details">
+        <summary>Ver los dashboards regionales: Toluca, Jalisco y Occidente</summary>
+        <div class="case-details-body">
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-toluca.png" alt="Dashboard VoC - puntajes de satisfacción CI región Toluca" loading="lazy" />
+            <figcaption>Región Toluca - 9 meses post-lanzamiento. 76.2% satisfacción general. 20 asesores consultados. SUS 74% · CSAT 90% · NPS 70%. El alto CSAT (90%) frente a un NPS menor (70%) indicaba alta satisfacción con la tarea pero intención de recomendación moderada - los usuarios encontraban la herramienta útil pero no la habían interiorizado completamente como superior al proceso anterior.</figcaption>
+          </div>
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-jalisco.png" alt="Dashboard VoC - puntajes de satisfacción CI región Jalisco" loading="lazy" />
+            <figcaption>Región Jalisco - 4 meses post-lanzamiento. 69.3% general. 21 asesores consultados. Los puntajes más bajos respecto a Toluca son consistentes con menor tiempo de exposición, no con calidad del producto - la tendencia en ambas regiones era positiva, confirmando adopción en lugar de resistencia.</figcaption>
+          </div>
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-occidente.png" alt="Dashboard VoC - puntajes de satisfacción CI agregado Occidente / Dirección" loading="lazy" />
+            <figcaption>Occidente / Dirección agregado - 113 asesores consultados en la región. 74.3% general. El cohorte más grande del ciclo de medición. A escala, el patrón regional se mantuvo: Contratación sólido, el handoff Prospecto-CC consistentemente el piso.</figcaption>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -265,7 +298,7 @@
     </div>
   </section>
 
-  <nav class="case-nav" aria-label="Navegación de caso">
+  <nav class="case-nav" aria-label="Navegación entre casos">
     <div class="case-nav-inner">
       <a href="/es/work/movistar.html" class="case-nav-card prev">
         <span class="label">Caso anterior</span>
@@ -283,6 +316,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20261003"></script>
 </body>
 </html>

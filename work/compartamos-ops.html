@@ -18,11 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
 <body>
-  <script src="/scripts/lightbox.js" defer></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <script src="/scripts/lightbox.js?v=20261003" defer></script>
 
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
@@ -32,6 +33,7 @@
         <li><a href="/" class="active">Work</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li><a href="/assets/cv/David_Mendieta_CV.pdf" download class="nav-cv">CV</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/work/compartamos-ops.html" class="active" lang="en">EN</a>
@@ -42,7 +44,7 @@
     </div>
   </nav>
 
-  <header class="case-hero">
+  <header id="main" class="case-hero">
     <div class="container-narrow">
       <div class="case-hero-meta">
         <span class="num">Case 06 / 07</span>
@@ -73,6 +75,7 @@
           <span class="value">300% research capacity · VoC program with DPO approval · CX framework across 3 channels</span>
         </div>
       </div>
+      <a href="#impact" class="case-jump">See the results ↓</a>
     </div>
   </header>
 
@@ -164,8 +167,38 @@
       </div>
 
       <p>
-        The regional satisfaction dashboards from this program are documented in the <a href="/work/compartamos.html">companion case study</a> - showing the Toluca vs. Jalisco split that identified the field-to-Contact-Center handoff as the persistent weak point in the digital origination flow.
+        The VoC program ran measurement cycles across regions independently - allowing the team to detect regional variation in adoption, not just aggregate satisfaction. The dashboards below are real outputs from the program: satisfaction scores broken down by flow (Prospección, Contratación, Gestión de crédito, Renovación) and process stage (Captura, Generar oferta, Desembolso, Agenda), measured with SUS, CSAT, and NPS simultaneously.
       </p>
+
+      <div class="callout for-research">
+        <span class="callout-label">What the regional split revealed</span>
+        <p>
+          Toluca (9 months with the app) scored consistently higher than Jalisco (4 months) - 76.2% vs. 69.3% overall. The gap wasn't satisfaction with the product; it was familiarity with the digital flow. The "Prospecto asignado a CC" flow (the handoff between field and Contact Center) had the lowest scores in both regions, confirming that the integration point between channels was the real friction, not either channel in isolation. This finding drove the Q1 2024 roadmap.
+        </p>
+      </div>
+
+      <div class="figure figure-wide figure-frame" data-zoomable>
+        <img src="/assets/cases/compartamos/voc-comparativa.png" alt="VoC comparative dashboard - Toluca vs Jalisco satisfaction scores across flows and processes" loading="lazy" />
+        <figcaption>VoC comparativa - Jalisco vs. Toluca side-by-side. SUS, CSAT, and NPS tracked simultaneously. Note the consistent pattern: Contratación scores well everywhere; Prospecto asignado a CC is the persistent weak point. <em>Click to expand.</em></figcaption>
+      </div>
+
+      <details class="case-details">
+        <summary>See the regional dashboards: Toluca, Jalisco and Occidente</summary>
+        <div class="case-details-body">
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-toluca.png" alt="VoC dashboard - Toluca region CI satisfaction scores" loading="lazy" />
+            <figcaption>Toluca region - 9 months post-launch. 76.2% overall satisfaction. 20 asesores consulted. SUS 74% · CSAT 90% · NPS 70%. High CSAT against lower NPS indicated high task satisfaction but moderate recommendation intent. <em>Click to expand.</em></figcaption>
+          </div>
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-jalisco.png" alt="VoC dashboard - Jalisco region CI satisfaction scores" loading="lazy" />
+            <figcaption>Jalisco region - 4 months post-launch. 69.3% overall. 21 asesores consulted. Lower scores vs. Toluca are consistent with shorter exposure time - the trend line in both regions was positive, confirming adoption over resistance. <em>Click to expand.</em></figcaption>
+          </div>
+          <div class="figure figure-wide figure-frame" data-zoomable>
+            <img src="/assets/cases/compartamos/voc-occidente.png" alt="VoC dashboard - Occidente / Dirección aggregate satisfaction scores" loading="lazy" />
+            <figcaption>Occidente / Dirección aggregate - 113 asesores consulted. 74.3% overall. At scale, the regional pattern held: Contratación strong, Prospecto-CC handoff consistently the floor. <em>Click to expand.</em></figcaption>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -283,6 +316,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20261003"></script>
 </body>
 </html>

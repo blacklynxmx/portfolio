@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
   <style>
     /* ── UI Showcase specific styles ─────────────────────────────────────── */
@@ -50,7 +50,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--brand);
+      color: var(--brand-ink, var(--brand));
       margin-bottom: 0.5rem;
     }
 
@@ -213,7 +213,8 @@
   </style>
 </head>
 <body>
-  <script src="/scripts/lightbox.js" defer></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <script src="/scripts/lightbox.js?v=20261003" defer></script>
 
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
@@ -223,6 +224,7 @@
         <li><a href="/" class="active">Work</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="mailto:davidgerardom@gmail.com">Contact</a></li>
+        <li><a href="/assets/cv/David_Mendieta_CV.pdf" download class="nav-cv">CV</a></li>
         <li>
           <div class="lang-toggle">
             <a href="/work/ui-design.html" class="active" lang="en">EN</a>
@@ -234,7 +236,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="ui-hero">
+  <header id="main" class="ui-hero">
     <div class="container-narrow">
       <p class="section-eyebrow">UI Design &amp; Design Systems</p>
       <h1 class="case-hero-title" style="max-width: 18ch;">The system behind the screen.</h1>
@@ -581,15 +583,15 @@
   </section>
 
   <!-- BOTTOM NAV -->
-  <nav class="case-nav" aria-label="Navigation">
+  <nav class="case-nav" aria-label="Case navigation">
     <div class="case-nav-inner">
-      <a href="/" class="case-nav-card prev">
+      <a href="/work/fovissste.html" class="case-nav-card prev">
+        <span class="label">Previous case</span>
+        <span class="title">FOVISSSTE - Designing for citizens</span>
+      </a>
+      <a href="/" class="case-nav-card next">
         <span class="label">All work</span>
         <span class="title">Back to portfolio</span>
-      </a>
-      <a href="/work/compartamos.html" class="case-nav-card next">
-        <span class="label">See the full case</span>
-        <span class="title">Compartamos Banco - from 8 days to 2 hours</span>
       </a>
     </div>
   </nav>
@@ -599,6 +601,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20261003"></script>
 </body>
 </html>
