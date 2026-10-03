@@ -1,7 +1,15 @@
 # Pasada editorial · Compartamos (caso 01)
 
 **Fecha:** 3 de octubre de 2026
-**Estado:** propuesta. No se ha cambiado nada en el sitio.
+**Estado:** aplicada el 3 de octubre de 2026, con las decisiones de David:
+1. No hay pantalla de la pre-verificación. La decisión 1 se describe con una frase y usa `app-home.png` como figura.
+2. La sección 06 y el 300% se movieron al caso 06.
+3. Sin versión privada: todo lo secundario queda en `<details>`.
+4. Encabezados aprobados tal como estaban propuestos.
+
+**Resultado medido (EN):** ~1305 palabras y 6 imágenes visibles. Altura de ~27,000 a 10,012 px en desktop y de ~29,700 a 11,920 px en móvil. Los resultados empiezan a ~8,000 px (antes ~22,000). Ops quedó en ~9,600 px con los 4 dashboards (1 visible y 3 en `<details>`).
+
+Lo que no quedó en la página: los componentes del Design System, el SMS y el push (siguen en el showcase de UI), y Mi Perfil del Contact Center.
 **Aplica a:** `work/compartamos.html` y su espejo `es/work/compartamos.html` (misma estructura).
 **Criterio de corte:** por cada bloque, una pregunta: ¿esto cambia la decisión del hiring manager de llamarte? Si no la cambia, el bloque baja de capa. No se borra nada.
 

@@ -55,14 +55,13 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | Diseño · ola 1 | Hero de casos (alias `.case-hero-*`), contraste AA (`--text-tertiary`, `--brand-ink`), method/roadmap, figcaptions, callouts por audiencia, "Headline impact" en fila propia, lightbox en OCC | ✅ |
 | Diseño · ola 2 | Figuras legibles (breakout en desktop, scroll lateral de journey maps en móvil, phone trio en carrusel, láminas de `ui-design` a fila completa), link "Ver resultados ↓" en los 14 casos, métricas y tags en neutro, línea de métrica en las tarjetas del home, visual destacado en móvil, columnas alineadas, skip link, menú con Esc, lightbox con teclado, logos legibles, marco redondo del retrato | ✅ |
 | Diseño · ola 3 | Índice sticky por caso, rehacer exhibits de `ui-design`, escala tipográfica en tokens, unificar `div.figure` → `<figure>`, decidir si los casos deben medir ~27,000 px | ⬜ |
-| Editorial · Compartamos | Propuesta para bajar de ~2,930 a ~1,550 palabras visibles (capas pública / `<details>` / privada). Ver `audits/2026-10-03-editorial-compartamos.md` | ⬜ Esperando 4 decisiones de David |
+| Editorial · Compartamos | Capas aplicadas en EN y ES: ~1305 palabras y 6 imágenes visibles (antes ~2,930 y 25). Altura en desktop de ~27,000 a ~10,000 px. Secundario en `<details>`. Sección 06 (Toolkit, VoC y gobierno CX) y la tarjeta 300% se movieron al caso 06, que ahora muestra los dashboards de VoC | ✅ |
 | Diseño · L1 | Usar el mismo retrato en Home y About (decisión de David; hoy solo se corrigió el marco) | ⬜ Decisión de David |
 
 ## Backlog previo (sigue vigente)
 
 | Tarea | Por qué espera |
 |---|---|
-| Compartamos ES: VoC con análisis detallado | Menor prioridad, la narrativa ya está cubierta |
 | Journey maps en Figma hi-res (9420 px) | Poco cambio visual |
 | Vistas de Subgerente en indicadores | El caso ya tiene suficiente profundidad |
 | Rutas `/private/` | Solo si una aplicación lo pide |
