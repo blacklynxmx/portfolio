@@ -51,7 +51,7 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | M3 | Numeración | ✅ "Case NN / 07" en el orden del home, EN y ES |
 | M4 | Fórmula de rol | ✅ "Senior UX Researcher & Product Strategist" en title, OG, eyebrow, teaser y footer del home, y en About EN. Falta alinear el headline de LinkedIn (fuera del repo). El CV ya usa la misma fórmula |
 | M5 | CV accesible | ✅ "CV" en la nav de las 20 páginas y "Download CV" como CTA secundario del home (reemplaza "About me", que sigue en la nav) |
-| L1 a L4 | og:image faltantes, lede del grid, logo de Gentera, autoría en FOVISSSTE | ⬜ |
+| L1 a L4 | og:image y etiquetas OG completas en las 20 páginas; lede del grid en una frase; logo de Gentera fuera; marcas `[My call]` en los 3 bloques de FOVISSSTE escritos en primera persona. De paso: canonical y hreflang corregidos en 3 páginas ES que apuntaban a la versión EN | ✅ |
 | Diseño · ola 1 | Hero de casos (alias `.case-hero-*`), contraste AA (`--text-tertiary`, `--brand-ink`), method/roadmap, figcaptions, callouts por audiencia, "Headline impact" en fila propia, lightbox en OCC | ✅ |
 | Diseño · ola 2 | Figuras legibles (breakout en desktop, scroll lateral de journey maps en móvil, phone trio en carrusel, láminas de `ui-design` a fila completa), link "Ver resultados ↓" en los 14 casos, métricas y tags en neutro, línea de métrica en las tarjetas del home, visual destacado en móvil, columnas alineadas, skip link, menú con Esc, lightbox con teclado, logos legibles, marco redondo del retrato | ✅ |
 | Diseño · ola 3 | Índice fijo por caso con sección activa (barra horizontal bajo la nav, para no chocar con el breakout de figuras), láminas de `ui-design` a 1080 px en desktop y con scroll lateral en móvil, escala tipográfica en tokens (`--fs-*`), `<style>` de `ui-design` movido a extras, `div.figure` → `<figure>`, `style="margin-top"` → utilidades `.mt-*`, medida de prosa a 70ch. OCC con capas: láminas JTBD, imagen del roadmap y formularios de CAJA en `<details>` (20,800 → 17,400 px). Whisper sin cambios: ya seguía el patrón | ✅ |
@@ -81,4 +81,4 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con los Low de la auditoría UX (L1 a L4). Las 3 olas de la crítica de diseño están aplicadas. No cambies las decisiones de dominio e indexación.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. La auditoría UX y las 3 olas de la crítica de diseño están aplicadas. Pendientes de David: confirmar la frase de la pre-verificación en Compartamos y la elección de retrato. No cambies las decisiones de dominio e indexación.
