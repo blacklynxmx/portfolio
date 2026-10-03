@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003d" />
 
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
@@ -92,6 +92,18 @@
       <a href="#impact" class="case-jump">Ver resultados ↓</a>
     </div>
   </header>
+
+  <nav class="case-toc" aria-label="En este caso">
+    <div class="case-toc-inner">
+      <a href="#context">01 · El problema</a>
+      <a href="#research">02 · Investigación</a>
+      <a href="#product">03 · Diseño de producto</a>
+      <a href="#onboarding">04 · Diseño de onboarding</a>
+      <a href="#gtm">05 · Diseño go-to-market</a>
+      <a href="#impact">06 · Resultados</a>
+    </div>
+  </nav>
+
 
   <hr class="divider" />
 
@@ -212,15 +224,15 @@
         <span class="authorship">[Yo]</span> La solución fue un onboarding progresivo de 7 pasos que convirtió el problema de la pantalla en blanco en un recorrido guiado - no un demo del producto, sino una serie de microtareas que producían output real. En el paso 3, el usuario ya había recibido un análisis generado por IA de sus propios datos. En el paso 5, había visto una gráfica. En el paso 7, había configurado su primera alerta. El onboarding <em>era</em> el primer uso exitoso del producto.
       </p>
 
-      <div class="figure figure-frame" data-zoomable>
+      <figure class="figure figure-frame" data-zoomable>
         <img src="/assets/cases/whisper/whisper-onboarding-1.png" alt="Whisper BI - Onboarding paso 1: bienvenida y resumen de capacidades" loading="lazy" />
         <figcaption>Paso 1 de 7 - "¡Bienvenido a WhisperBI!" El primer paso no pide nada. Enmarca cuatro capacidades y ofrece "Saltar tutorial" para quienes prefieren explorar solos. La barra de progreso arriba hace visible el compromiso - 7 pasos, no setup infinito. <em>Clic para ampliar.</em></figcaption>
-      </div>
+      </figure>
 
-      <div class="figure figure-frame" data-zoomable>
+      <figure class="figure figure-frame" data-zoomable>
         <img src="/assets/cases/whisper/whisper-onboarding-2.png" alt="Whisper BI - Onboarding paso 2: orientación del panel de navegación" loading="lazy" />
         <figcaption>Paso 2 - "Panel de Navegación." El tooltip resalta el sidebar explicando que las conversaciones se organizan por tema y pueden archivarse. <span class="authorship">[Yo]</span> Este paso existe porque la investigación mostró que los usuarios que no entendían la función de historial abandonaban la herramienta en la segunda sesión - creían que su primer análisis se había perdido. Exponer el modelo organizacional temprano previno ese patrón de abandono. <em>Clic para ampliar.</em></figcaption>
-      </div>
+      </figure>
 
       <div class="callout for-research">
         <span class="callout-label">Cómo se midió el 28% → 40%</span>
@@ -286,7 +298,7 @@
       </ul>
     </div>
 
-    <div class="container-narrow" style="margin-top: 3rem;">
+    <div class="container-narrow mt-3">
       <div class="callout for-ops">
         <span class="callout-label"><span class="authorship">[Yo]</span> Sobre construir disciplina de investigación en una startup</span>
         <p>
@@ -316,6 +328,6 @@
     </div>
   </footer>
 
-  <script src="/scripts/main.js?v=20261003"></script>
+  <script src="/scripts/main.js?v=20261003b"></script>
 </body>
 </html>

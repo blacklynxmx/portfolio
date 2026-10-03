@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UI Design &amp; Design Systems - David G. Mendieta</title>
   <meta name="description" content="Design System components, mobile UI craft, and product interfaces across Compartamos Banco and Whisper BI. High-fidelity Figma exports." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://davidgmendieta.vercel.app/work/ui-design.html" />
+  <meta property="og:title" content="UI Design &amp; Design Systems - David G. Mendieta" />
+  <meta property="og:description" content="Design System components, mobile UI craft, and product interfaces across Compartamos Banco and Whisper BI. High-fidelity Figma exports." />
+  <meta property="og:image" content="https://davidgmendieta.vercel.app/assets/cases/ui/ds-atoms.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="author" content="David G. Mendieta" />
   <link rel="canonical" href="https://davidgmendieta.vercel.app/work/ui-design.html" />
   <link rel="alternate" hreflang="en" href="https://davidgmendieta.vercel.app/work/ui-design.html" />
@@ -15,202 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003d" />
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
-  <style>
-    /* ── UI Showcase specific styles ─────────────────────────────────────── */
-    .ui-hero {
-      padding: 6rem 0 4rem;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .exhibit {
-      padding: 5rem 0;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .exhibit:last-child {
-      border-bottom: none;
-    }
-
-    .exhibit-header {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: start;
-      margin-bottom: 3rem;
-    }
-
-    @media (max-width: 720px) {
-      .exhibit-header { grid-template-columns: 1fr; gap: 1.5rem; }
-    }
-
-    .exhibit-num {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--brand-ink, var(--brand));
-      margin-bottom: 0.5rem;
-    }
-
-    .exhibit-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
-      font-weight: 300;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .exhibit-meta {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      color: var(--text-secondary);
-      margin-top: 0.75rem;
-    }
-
-    .exhibit-description {
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-
-    .exhibit-decision {
-      margin-top: 1.5rem;
-      padding: 1rem 1.25rem;
-      border-left: 2px solid var(--tech);
-      background: var(--surface);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
-
-    .exhibit-decision strong {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--tech);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Asset containers */
-    .asset-frame {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .asset-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .asset-frame.dark {
-      background: #0d1117;
-    }
-
-    .asset-caption {
-      padding: 1rem 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      border-top: 0.5px solid var(--border);
-      font-family: var(--font-mono);
-      letter-spacing: 0.02em;
-    }
-
-    /* Phone frame trio */
-    .phone-showcase {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      align-items: flex-start;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .phone-showcase .asset-frame {
-      flex: 0 1 200px;
-      min-width: 160px;
-      border-radius: 28px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
-    }
-
-    /* DS grid */
-    .ds-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 640px) {
-      .ds-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Color tokens strip */
-    .color-strip {
-      display: flex;
-      gap: 0;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      height: 48px;
-      margin: 1.5rem 0;
-    }
-
-    .color-swatch {
-      flex: 1;
-      display: flex;
-      align-items: flex-end;
-      padding: 0.25rem 0.5rem;
-    }
-
-    .color-label {
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      letter-spacing: 0.04em;
-      opacity: 0.75;
-    }
-
-    /* Annotation */
-    .annotation {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      color: var(--tech);
-      text-transform: uppercase;
-      margin-top: 1rem;
-    }
-
-    .annotation::before {
-      content: "↑";
-      font-size: 0.9rem;
-    }
-
-    /* Whisper dual */
-    .dual-frame {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 720px) {
-      .dual-frame { grid-template-columns: 1fr; }
-    }
-
-    .dual-frame .asset-frame {
-      min-width: 0;
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -388,7 +201,7 @@
         </div>
       </div>
 
-      <figure class="asset-frame" data-zoomable style="margin-top: 1.5rem;">
+      <figure class="asset-frame mt-15" data-zoomable>
         <img src="/assets/cases/ui/ds-fields-full.png" alt="Compartamos Design System - input field variants: masks, states, sizes" loading="lazy" />
       </figure>
       <p class="annotation">Input field system - format masks (phone, currency, date, card) · Status states (default, focus, filled, error, validation, disabled) · Size variants</p>
@@ -499,7 +312,7 @@
       </figure>
       <p class="annotation">Home · Menú · Mi Menú - the three entry points of the field agent workflow. Role-based: promotoras see a 3-item home grid; asesores CI see an expanded menu with additional product lines.</p>
 
-      <div class="phone-showcase" style="margin-top: 3rem;">
+      <div class="phone-showcase mt-3">
         <figure class="asset-frame" data-zoomable>
           <img src="/assets/cases/ui/app-clientes.jpg" alt="Compartamos app - Clientes screen with product breakdown" loading="lazy" />
           <div class="asset-caption">Clientes - product-level portfolio view</div>
@@ -572,7 +385,7 @@
         </figure>
       </div>
 
-      <div class="callout for-engineering" style="margin-top: 3rem;">
+      <div class="callout for-engineering mt-3">
         <span class="callout-label">Design system contrast: mobile vs. web vs. AI-native</span>
         <p>
           These two products - Compartamos and Whisper BI - represent opposite ends of the design constraint spectrum. Compartamos: light theme, maximum contrast, large touch targets, offline-capable, for a user who may be using the phone with one hand in the sun. Whisper BI: dark theme, dense information, keyboard-navigable, for a user at a desk who needs to see data and act on it in the same view. The underlying system thinking is identical - the visual output is intentionally different because the context of use is different.
@@ -601,6 +414,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js?v=20261003"></script>
+  <script src="/scripts/main.js?v=20261003b"></script>
 </body>
 </html>

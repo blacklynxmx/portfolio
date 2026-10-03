@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003d" />
 
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
@@ -96,6 +96,18 @@
     </div>
   </header>
 
+  <nav class="case-toc" aria-label="En este caso">
+    <div class="case-toc-inner">
+      <a href="#before">01 · El problema</a>
+      <a href="#research">02 · Investigación</a>
+      <a href="#design">03 · Sistema de diseño y producto</a>
+      <a href="#compliance">04 · Cumplimiento regulatorio</a>
+      <a href="#impact">05 · Resultados</a>
+      <a href="#reflection">06 · Cierre</a>
+    </div>
+  </nav>
+
+
   <hr class="divider" />
 
   <!-- ================= 01 · ANTES ================= -->
@@ -163,35 +175,35 @@
         </p>
       </div>
 
-      <h3 style="margin-top: 4rem;">Artefactos de investigación - Journey Maps</h3>
+      <h3 class="mt-4">Artefactos de investigación - Journey Maps</h3>
       <p>
         Mapas de estado actual construidos con shadowing y entrevistas. Cuando un director de Riesgo decía "el proceso funciona bien", poníamos el journey map en pantalla y la conversación cambiaba.
       </p>
 
-      <div class="figure figure-wide figure-frame" data-zoomable>
+      <figure class="figure figure-wide figure-frame" data-zoomable>
         <img src="/assets/cases/compartamos/journey-nueva-contratacion-a.png" alt="Journey map - Nueva Contratación, Fase 1: captura de datos y generación de oferta" loading="lazy" />
         <figcaption><strong>Nueva Contratación (Fase 1)</strong> - Desde la asignación del prospecto hasta la generación de oferta. Captura las etapas de recolección de datos y pre-verificación de riesgo - la parte del flujo donde el ciclo de 8 días se consumía en viajes de ida y vuelta que el compliance no requería en realidad.</figcaption>
-      </div>
+      </figure>
 
       <details class="case-details">
         <summary>Ver los otros 4 journey maps</summary>
         <div class="case-details-body">
-          <div class="figure figure-wide figure-frame" data-zoomable>
+          <figure class="figure figure-wide figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/journey-cambaceo.png" alt="Journey map - Cambaceo (ciclo diario de prospección en campo)" loading="lazy" />
             <figcaption><strong>Cambaceo</strong> - El ciclo diario completo de una promotora de campo: prospectar una zona, identificar potenciales integrantes del grupo, iniciar contacto y gestionar el pipeline de prospectos. Los puntos de fricción visibles aquí (los viajes repetidos, los estados de espera) alimentaron directamente el backlog de producto.</figcaption>
-          </div>
-          <div class="figure figure-wide figure-frame" data-zoomable>
+          </figure>
+          <figure class="figure figure-wide figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/journey-nueva-contratacion-b.png" alt="Journey map - Nueva Contratación, Fase 2: desembolso y confirmación" loading="lazy" />
             <figcaption><strong>Nueva Contratación (Fase 2)</strong> - Desembolso y confirmación. Las etapas finales desde la aprobación del crédito hasta la firma digital y confirmación por SMS al cliente. Esta es la parte que el cliente realmente ve - y donde se validó el objetivo de 2 horas de extremo a extremo.</figcaption>
-          </div>
-          <div class="figure figure-wide figure-frame" data-zoomable>
+          </figure>
+          <figure class="figure figure-wide figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/journey-renovacion.png" alt="Journey map - Renovación (flujo de renovación de crédito)" loading="lazy" />
             <figcaption><strong>Renovación</strong> - Renovación de crédito para integrantes existentes. Sustancialmente más simple que la nueva originación (datos KYC ya capturados, historial de riesgo disponible) - el journey map lo confirmó e informó el UX de renovación acelerada que omite la mayoría de los pasos de captura.</figcaption>
-          </div>
-          <div class="figure figure-frame" style="max-width: 480px;">
+          </figure>
+          <figure class="figure figure-frame" style="max-width: 480px;">
             <img src="/assets/cases/compartamos/journey-mis-clientes.png" alt="Journey map - Mis Clientes (gestión de portafolio en campo)" loading="lazy" />
             <figcaption><strong>Mis Clientes</strong> - Cómo una promotora gestiona su portafolio activo: rastrear estado de pagos, marcar cuentas en riesgo y planear la ruta de visitas del día. El layout de pantalla móvil se diseñó alrededor del punto de decisión clave de este journey: quién necesita una llamada hoy vs. quién puede esperar.</figcaption>
-          </div>
+          </figure>
         </div>
       </details>
 
@@ -210,29 +222,29 @@
         <span class="authorship">[Yo]</span> No había Design System cuando llegué. Construí uno desde cero para tres canales (app de campo, Contact Center y Portal de Administrador) con una restricción: Android de gama baja, luz variable y usuarios que no siempre miraban la pantalla. Tres decisiones definieron el producto.
       </p>
 
-      <h3 style="margin-top: 3rem;">1 · Certeza antes que papeleo</h3>
+      <h3 class="mt-3">1 · Certeza antes que papeleo</h3>
       <p>
         La investigación señaló la incertidumbre, no el papel, como el costo real, así que el flujo se reordenó alrededor de la pre-verificación de riesgo: el sistema señala una aprobación probable antes de que el promotor o la promotora visite, y los documentos vienen después. <span class="authorship">[Yo]</span> La app se construyó offline-first (sincroniza con conexión y funciona completa sin ella) porque en zonas rurales muchas veces no había señal 4G.
       </p>
 
-      <div class="figure figure-wide figure-frame">
+      <figure class="figure figure-wide figure-frame">
         <img src="/assets/cases/compartamos/app-home.png" alt="App móvil para gestores - pantallas de Inicio, Menú y Mi Menú" loading="lazy" />
         <figcaption>App de campo - Inicio (portafolio de clientes + estado de pago), Menú (navegación basada en rol), Mi Menú (timestamp de última sincronización visible - crítico para la confianza offline). Prioritario Android, probado en dispositivos de gama baja.</figcaption>
-      </div>
+      </figure>
 
       
 
-      <h3 style="margin-top: 4rem;">2 · El guion es la interfaz</h3>
+      <h3 class="mt-4">2 · El guion es la interfaz</h3>
       <p>
         Los agentes de Contact Center hacen el mismo flujo de KYC y captura por teléfono. Los guiones de voz integrados en la UI les dicen qué decir en cada paso, lo que redujo errores y tiempo de capacitación a la vez. El mismo guion entrega el aviso de privacidad oral que exige la LFPDPPP.
       </p>
 
-      <div class="figure figure-frame">
+      <figure class="figure figure-frame">
         <img src="/assets/cases/compartamos/cc-datos-capturados.png" alt="App de Contact Center - pantalla de Datos capturados con guión de voz integrado" loading="lazy" />
         <figcaption>Contact Center - Formulario de registro. El guión de voz integrado en la UI (los bloques morados "Speech:") le dice al agente qué decir verbatim. Datos del cliente capturados en tiempo real en el panel derecho. Aviso de privacidad LFPDPPP integrado en el guión de apertura.</figcaption>
-      </div>
+      </figure>
 
-      <h3 style="margin-top: 4rem;">3 · Una app para todos los roles</h3>
+      <h3 class="mt-4">3 · Una app para todos los roles</h3>
       <p>
         Una promotora necesita sus clientes, un Subgerente su equipo, un Gerente la región. <span class="authorship">[Yo]</span> En lugar de apps separadas, el RBAC decide qué ve y qué hace cada rol: una sola base de código, con la profundidad adecuada a cada rol.
       </p>
@@ -258,22 +270,22 @@
         <summary>Más pantallas: flujos de Contact Center, indicadores de campo y el Gestor de Prospectos</summary>
         <div class="case-details-body">
           <h3>Contact Center - cierre de llamada</h3>
-          <div class="figure figure-frame">
+          <figure class="figure figure-frame">
             <img src="/assets/cases/compartamos/cc-tipificar-llamada.png" alt="App de Contact Center - pantalla de Tipificar la llamada" loading="lazy" />
             <figcaption>Cierre de llamada - los agentes clasifican el resultado inmediatamente después de colgar. La confirmación verde en la parte superior confirma que el prospecto llegó a la etapa de "Creación de prospecto" antes de terminar la llamada. Datos estructurados reemplazan las notas de texto libre.</figcaption>
-          </div>
-          <h3 style="margin-top: 2.5rem;">Contact Center - registros duplicados</h3>
-          <div class="figure figure-frame">
+          </figure>
+          <h3 class="mt-25">Contact Center - registros duplicados</h3>
+          <figure class="figure figure-frame">
             <img src="/assets/cases/compartamos/cc-registro-existente.png" alt="Contact Center - pantalla de Registro duplicado para resolver registros duplicados de prospectos" loading="lazy" />
             <figcaption><strong>Registro duplicado</strong> - <span class="authorship">[Yo]</span> Uno de los casos extremos más complejos: cuando los datos de un prospecto entrante coinciden con dos registros existentes con distintos nombres o fechas, el agente debe elegir el correcto antes de continuar. El layout de comparación lado a lado (con folio, edad, fecha de nacimiento y contacto visibles para ambos) fue diseñado específicamente para apoyar esta decisión sin requerir escalación a un supervisor. El registro no seleccionado se archiva automáticamente.</figcaption>
-          </div>
-          <h3 style="margin-top: 2.5rem;">Indicadores de desempeño - vista de campo</h3>
+          </figure>
+          <h3 class="mt-25">Indicadores de desempeño - vista de campo</h3>
           <p>Cartera Activa, Ciclo del Producto e Incremento neto (las tres métricas de las que dependían los bonos) en la app, para que nadie tuviera que regresar a la sucursal a consultarlas. <span class="authorship team">[Equipo]</span> Integración del pipeline de datos con el sistema bancario core.</p>
-          <div class="figure figure-frame">
+          <figure class="figure figure-frame">
             <img src="/assets/cases/compartamos/indicadores-cartera.jpg" alt="Cartera Asesor - indicadores de desempeño del portafolio" loading="lazy" />
             <figcaption>Cartera Asesor - saldo del portafolio en tiempo real, ciclo de crédito e incremento neto. Timestamp visible al cargar; actualiza en sincronización. Diseñado para un escaneo de 10 segundos entre visitas a clientes.</figcaption>
-          </div>
-          <h3 style="margin-top: 2.5rem;">Contact Center - Gestor de Prospectos</h3>
+          </figure>
+          <h3 class="mt-25">Contact Center - Gestor de Prospectos</h3>
           <p>
           Además de las pantallas de captura de datos y cierre de llamada ya mostradas, la herramienta de Contact Center incluía un <strong>Gestor de Prospectos</strong> dedicado: un módulo de búsqueda y seguimiento que permitía a los agentes localizar prospectos existentes por nombre, folio o fecha de nacimiento antes de iniciar una nueva llamada. Esto prevenía registros duplicados, habilitaba el seguimiento de prospectos ya contactados previamente, y mostraba el estatus actual del pipeline directamente en la vista del agente. </p>
 
@@ -284,20 +296,20 @@
             </p>
           </div>
 
-          <div class="figure figure-frame" data-zoomable>
+          <figure class="figure figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/gestor-busqueda-vacia.png" alt="Gestor de Prospectos - estado vacío del buscador" loading="lazy" />
             <figcaption>Gestor de Prospectos - estado vacío. El formulario de búsqueda es el punto de entrada del agente: folio, nombre completo o fecha de nacimiento, cualquier combinación. "Consultados recientemente" abajo muestra los últimos prospectos accedidos, dando contexto inmediato incluso antes de buscar. <em>Clic para ampliar.</em></figcaption>
-          </div>
+          </figure>
 
-          <div class="figure figure-frame" data-zoomable>
+          <figure class="figure figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/gestor-busqueda-resultados.png" alt="Gestor de Prospectos - resultados con etiquetas de estatus" loading="lazy" />
             <figcaption>Resultados de búsqueda - la tabla muestra nombre, teléfono, fecha de nacimiento, lugar, estatus del pipeline, motivo de rechazo y bandera de seguimiento en una sola fila escaneable. Los badges de estatus (Perfilamiento, Validación, Llamada cortada) son codificados por color: verde para calificación activa, ámbar para seguimiento pendiente. La flecha "Retomar seguimiento" lleva al agente directamente al registro del prospecto sin reingresar datos. <em>Clic para ampliar.</em></figcaption>
-          </div>
+          </figure>
 
-          <div class="figure figure-frame" data-zoomable>
+          <figure class="figure figure-frame" data-zoomable>
             <img src="/assets/cases/compartamos/gestor-busqueda-perfilamiento.png" alt="Gestor de Prospectos - prospecto encontrado con estatus Perfilamiento" loading="lazy" />
             <figcaption>Prospecto encontrado con estatus <em>Perfilamiento</em> activo - el agente puede ver que el prospecto ya estaba en etapa de calificación desde una llamada anterior. Esta sola vista prevenía el error más común del flujo pre-digital: llamar al mismo prospecto dos veces, repetir las mismas preguntas y crear registros duplicados en el sistema. <em>Clic para ampliar.</em></figcaption>
-          </div>
+          </figure>
         </div>
       </details>
 
@@ -368,7 +380,7 @@
       </ul>
     </div>
 
-    <div class="container-narrow" style="margin-top: 3rem;">
+    <div class="container-narrow mt-3">
       <div class="callout for-research">
         <span class="callout-label">Lo que pasó después del lanzamiento</span>
         <p>
@@ -417,6 +429,6 @@
     </div>
   </footer>
 
-  <script src="/scripts/main.js?v=20261003"></script>
+  <script src="/scripts/main.js?v=20261003b"></script>
 </body>
 </html>

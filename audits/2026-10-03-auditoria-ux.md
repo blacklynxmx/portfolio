@@ -15,7 +15,7 @@
 | H4 | ✅ Corregido, con más casos de los listados aquí (22 en total) |
 | H5 | ✅ Cerrado como decisión: el sitio no se indexa. `robots.txt` deja pasar solo a los bots de vista previa |
 | M1 a M5 | ✅ Corregidos. Detalle en `HANDOFF.md` |
-| L1 a L4 | Pendientes |
+| L1 a L4 | ✅ Corregidos. L1: etiquetas OG completas en 20 páginas (58 agregadas); FOVISSSTE usa el retrato de About porque el caso no tiene imágenes. L2: lede en una frase. L3: logo de Gentera fuera. L4: `[My call]` solo donde el texto ya estaba en primera persona; no se agregó `[Team]` porque el caso no dice qué hizo el equipo |
 
 ## Escala de severidad
 
