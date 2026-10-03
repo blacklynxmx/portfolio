@@ -50,7 +50,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--brand);
+      color: var(--brand-ink, var(--brand));
       margin-bottom: 0.5rem;
     }
 
@@ -213,7 +213,8 @@
   </style>
 </head>
 <body>
-  <script src="/scripts/lightbox.js" defer></script>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <script src="/scripts/lightbox.js?v=20261003" defer></script>
 
   <nav class="nav" aria-label="Principal">
     <div class="nav-inner">
@@ -235,7 +236,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="ui-hero">
+  <header id="main" class="ui-hero">
     <div class="container-narrow">
       <p class="section-eyebrow">Diseño UI &amp; Design Systems</p>
       <h1 class="case-hero-title" style="max-width: 18ch;">El sistema detrás de la pantalla.</h1>
@@ -600,6 +601,6 @@
       <p>David G. Mendieta · <a href="mailto:davidgerardom@gmail.com">davidgerardom@gmail.com</a> · <a href="https://linkedin.com/in/david-g-mendieta" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="/scripts/main.js?v=20261003"></script>
 </body>
 </html>

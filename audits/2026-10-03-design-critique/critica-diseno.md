@@ -12,6 +12,10 @@
 
 ---
 
+## Estado (3 de octubre de 2026)
+
+Olas 1 y 2 aplicadas en `blacklynxmx/portfolio#1`. Verificado con Playwright a 390 y 1440 px: sin overflow, sin errores, todo el texto medido pasa AA, skip link, menú con Esc y lightbox con teclado funcionando. Pendiente: ola 3 y la elección de retrato (L1).
+
 ## Veredicto
 
 La dirección visual (editorial oscura, Fraunces + Inter + Mono) es correcta para el perfil, pero la ejecución se rompe justo donde un hiring manager busca evidencia: los artefactos de research se ven a un tercio de su tamaño legible, siete de ocho casos tienen el hero sin estilos y el texto de metadatos no pasa AA.

@@ -52,7 +52,10 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | M4 | Fórmula de rol | ✅ "Senior UX Researcher & Product Strategist" en title, OG, eyebrow, teaser y footer del home, y en About EN. Falta alinear el headline de LinkedIn (fuera del repo). El CV ya usa la misma fórmula |
 | M5 | CV accesible | ✅ "CV" en la nav de las 20 páginas y "Download CV" como CTA secundario del home (reemplaza "About me", que sigue en la nav) |
 | L1 a L4 | og:image faltantes, lede del grid, logo de Gentera, autoría en FOVISSSTE | ⬜ |
-| Diseño | Crítica UX-UI: 16 hallazgos (4 High, 7 Medium, 5 Low). Ver `audits/2026-10-03-design-critique/critica-diseno.md` | ⬜ Pendiente. Empezar por la ola 1 (alrededor de 1 h) |
+| Diseño · ola 1 | Hero de casos (alias `.case-hero-*`), contraste AA (`--text-tertiary`, `--brand-ink`), method/roadmap, figcaptions, callouts por audiencia, "Headline impact" en fila propia, lightbox en OCC | ✅ |
+| Diseño · ola 2 | Figuras legibles (breakout en desktop, scroll lateral de journey maps en móvil, phone trio en carrusel, láminas de `ui-design` a fila completa), link "Ver resultados ↓" en los 14 casos, métricas y tags en neutro, línea de métrica en las tarjetas del home, visual destacado en móvil, columnas alineadas, skip link, menú con Esc, lightbox con teclado, logos legibles, marco redondo del retrato | ✅ |
+| Diseño · ola 3 | Índice sticky por caso, rehacer exhibits de `ui-design`, escala tipográfica en tokens, unificar `div.figure` → `<figure>`, decidir si los casos deben medir ~27,000 px | ⬜ |
+| Diseño · L1 | Usar el mismo retrato en Home y About (decisión de David; hoy solo se corrigió el marco) | ⬜ Decisión de David |
 
 ## Backlog previo (sigue vigente)
 
@@ -69,7 +72,7 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 - `styles/base.css` y `styles/case.css` no se tocan. Todo lo nuevo va en `styles/portfolio-extras.css`.
 - Rol en Whisper BI: "Head of Product & UX Research" en todo el material público.
 - Logos públicos: un logo por tarjeta, solo de cliente final. Las agencias y holdings se mencionan en texto.
-- Si cambias `styles/portfolio-extras.css`, sube el `?v=` del `<link>` en las 20 páginas: `vercel.json` cachea los CSS como `immutable` por un año.
+- Si cambias `styles/portfolio-extras.css`, `scripts/main.js` o `scripts/lightbox.js`, sube el `?v=` de su `<link>`/`<script>` en las 20 páginas: `vercel.json` cachea CSS y JS como `immutable` por un año.
 - Sin em dashes ni patrones de redacción de IA en el copy (ver los commits del 29 de abril de 2026). Al reemplazarlos, revisa que no se coma letras (ver H4).
 - ES en español mexicano nativo, no traducción literal.
 - Deploy solo en Vercel, en `davidgmendieta.vercel.app`, sin dominio propio.
@@ -78,4 +81,4 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con la ola 1 de la crítica de diseño y luego los Low (L1 a L4). No cambies las decisiones de dominio e indexación.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con los Low de la auditoría UX (L1 a L4) o con la ola 3 de la crítica de diseño. No cambies las decisiones de dominio e indexación.
