@@ -9,7 +9,7 @@
 - **Sin dominio propio.** La URL oficial es `https://davidgmendieta.vercel.app` en canonical, hreflang, OG, sitemap, CV y LinkedIn.
 - **El sitio no se indexa.** `noindex, nofollow` en todas las páginas y `Disallow: /` en `robots.txt` se quedan así a propósito. El portfolio se comparte solo por link directo.
 
-Antes de tocar cualquier cosa, lee la auditoría más reciente: [`audits/2026-10-03-auditoria-ux.md`](audits/2026-10-03-auditoria-ux.md).
+Antes de tocar cualquier cosa, lee la auditoría UX ([`audits/2026-10-03-auditoria-ux.md`](audits/2026-10-03-auditoria-ux.md)) y la crítica de diseño ([`audits/2026-10-03-design-critique/critica-diseno.md`](audits/2026-10-03-design-critique/critica-diseno.md)).
 
 ---
 
@@ -52,7 +52,7 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | M4 | Fórmula de rol | ✅ "Senior UX Researcher & Product Strategist" en title, OG, eyebrow, teaser y footer del home, y en About EN. Falta alinear el headline de LinkedIn (fuera del repo). El CV ya usa la misma fórmula |
 | M5 | CV accesible | ✅ "CV" en la nav de las 20 páginas y "Download CV" como CTA secundario del home (reemplaza "About me", que sigue en la nav) |
 | L1 a L4 | og:image faltantes, lede del grid, logo de Gentera, autoría en FOVISSSTE | ⬜ |
-| Diseño | Design critique UX-UI (tarea aparte) | En curso |
+| Diseño | Crítica UX-UI: 16 hallazgos (4 High, 7 Medium, 5 Low). Ver `audits/2026-10-03-design-critique/critica-diseno.md` | ⬜ Pendiente. Empezar por la ola 1 (alrededor de 1 h) |
 
 ## Backlog previo (sigue vigente)
 
@@ -78,4 +78,4 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con los Low (L1 a L4) y la crítica de diseño. No cambies las decisiones de dominio e indexación.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con la ola 1 de la crítica de diseño y luego los Low (L1 a L4). No cambies las decisiones de dominio e indexación.
