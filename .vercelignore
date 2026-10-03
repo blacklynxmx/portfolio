@@ -1,0 +1,4 @@
+# Internal docs: never served in production
+*.md
+audits/
+.DS_Store
