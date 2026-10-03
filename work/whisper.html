@@ -27,7 +27,7 @@
 
   <link rel="stylesheet" href="/styles/base.css" />
   <link rel="stylesheet" href="/styles/case.css" />
-  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003b" />
+  <link rel="stylesheet" href="/styles/portfolio-extras.css?v=20261003c" />
 
   <link rel="icon" href="/assets/images/david-portrait.png" type="image/png" />
 </head>
@@ -93,6 +93,18 @@
       <a href="#impact" class="case-jump">See the results ↓</a>
     </div>
   </header>
+
+  <nav class="case-toc" aria-label="In this case">
+    <div class="case-toc-inner">
+      <a href="#context">01 · The problem</a>
+      <a href="#research">02 · Research</a>
+      <a href="#product">03 · Product design</a>
+      <a href="#onboarding">04 · Onboarding design</a>
+      <a href="#gtm">05 · Go-to-market design</a>
+      <a href="#impact">06 · Results</a>
+    </div>
+  </nav>
+
 
   <hr class="divider" />
 
@@ -217,15 +229,15 @@
         <span class="authorship">[My call]</span> The solution was a 7-step progressive onboarding that converted the blank-screen problem into a guided tour - not a product demo, but a series of micro-tasks that produced real output. By step 3, the user had already received an AI-generated analysis of their own data. By step 5, they'd seen a chart. By step 7, they'd set up their first alert. The onboarding <em>was</em> the first successful use of the product.
       </p>
 
-      <div class="figure figure-frame" data-zoomable>
+      <figure class="figure figure-frame" data-zoomable>
         <img src="/assets/cases/whisper/whisper-onboarding-1.png" alt="Whisper BI - Onboarding step 1: Welcome and capability overview" loading="lazy" />
         <figcaption>Step 1 of 7 - "¡Bienvenido a WhisperBI!" The opening step doesn't ask for anything. It frames four capabilities (connect data sources, ask in natural language, get automatic analysis, generate reports) and gives users a "Saltar tutorial" escape hatch for those who want to explore independently. The progress bar at top makes the commitment visible - 7 steps, not infinite setup. <em>Click to expand.</em></figcaption>
-      </div>
+      </figure>
 
-      <div class="figure figure-frame" data-zoomable>
+      <figure class="figure figure-frame" data-zoomable>
         <img src="/assets/cases/whisper/whisper-onboarding-2.png" alt="Whisper BI - Onboarding step 2: Navigation panel orientation" loading="lazy" />
         <figcaption>Step 2 - "Panel de Navegación." The tooltip highlights the sidebar, explaining that conversations are organized by topic and can be archived. <span class="authorship">[My call]</span> This step exists because research showed users who didn't understand the conversation history feature abandoned the tool after their second session - they thought their first analysis was lost. Surfacing the organizational model early prevented that drop-off pattern. <em>Click to expand.</em></figcaption>
-      </div>
+      </figure>
 
       <div class="callout for-research">
         <span class="callout-label">How the 28% → 40% was measured</span>
@@ -298,7 +310,7 @@
       </ul>
     </div>
 
-    <div class="container-narrow" style="margin-top: 3rem;">
+    <div class="container-narrow mt-3">
       <div class="callout for-ops">
         <span class="callout-label"><span class="authorship">[My call]</span> On building research discipline in a startup</span>
         <p>
@@ -328,6 +340,6 @@
     </div>
   </footer>
 
-  <script src="/scripts/main.js?v=20261003"></script>
+  <script src="/scripts/main.js?v=20261003b"></script>
 </body>
 </html>

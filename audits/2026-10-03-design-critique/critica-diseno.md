@@ -14,7 +14,7 @@
 
 ## Estado (3 de octubre de 2026)
 
-Olas 1 y 2 aplicadas en `blacklynxmx/portfolio#1`. Verificado con Playwright a 390 y 1440 px: sin overflow, sin errores, todo el texto medido pasa AA, skip link, menú con Esc y lightbox con teclado funcionando. Pendiente: ola 3 y la elección de retrato (L1).
+Olas 1 y 2 aplicadas en `blacklynxmx/portfolio#1`. Ola 3 aplicada en el PR siguiente (índice por caso, exhibits de `ui-design`, escala tipográfica y limpieza de markup, capas editoriales en OCC). El índice quedó como barra horizontal fija y no en el margen izquierdo: en desktop el margen lo ocupan las figuras con breakout de 1080 px. Verificado con Playwright a 390 y 1440 px: sin overflow, sin errores, todo el texto medido pasa AA, skip link, menú con Esc y lightbox con teclado funcionando. Pendiente: la elección de retrato (L1), que es decisión de David.
 
 ## Veredicto
 

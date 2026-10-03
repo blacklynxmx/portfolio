@@ -66,6 +66,42 @@
     });
   }
 
+  // ---------- Case index: mark the section being read ----------
+  const toc = document.querySelector('.case-toc');
+  if (toc && 'IntersectionObserver' in window) {
+    const tocInner = toc.querySelector('.case-toc-inner');
+    const tocLinks = Array.prototype.slice.call(toc.querySelectorAll('a[href^="#"]'));
+    const sections = tocLinks
+      .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean);
+    let current = null;
+
+    function setCurrent(id) {
+      if (id === current) return;
+      current = id;
+      tocLinks.forEach(function (a) {
+        const on = a.getAttribute('href') === '#' + id;
+        if (on) {
+          a.setAttribute('aria-current', 'true');
+          // Keep the active label visible when the bar scrolls sideways (mobile)
+          const left = a.offsetLeft - (tocInner.clientWidth - a.offsetWidth) / 2;
+          tocInner.scrollTo({ left: left, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        } else {
+          a.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    // A section counts as current while it crosses the band just below the bars
+    const tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setCurrent(entry.target.id);
+      });
+    }, { rootMargin: '-120px 0px -60% 0px' });
+
+    sections.forEach(function (s) { tocObserver.observe(s); });
+  }
+
   // ---------- Current year in footer ----------
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) {
