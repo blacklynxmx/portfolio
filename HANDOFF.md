@@ -46,11 +46,11 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | H4 | Palabras mutiladas por la limpieza de guiones | ✅ 22 correcciones en home, About ES, Compartamos EN/ES y OCC EN/ES (incluye "América Latin", "mobile-firs", "Blueprin", "carrearía"). Ya no queda ningún `&nbsp;` suelto en el copy |
 | H2 | `davidgmendieta.com` no existe | ✅ Reemplazado por `vercel.app` en los 5 HTML afectados y en `sitemap.xml`. Se verificó que las og:image responden 200 |
 | H5 | Indexación | ✅ Decidido: no se indexa. `robots.txt` deja pasar solo a los bots de vista previa (LinkedIn, Facebook, WhatsApp, X, Slack, Telegram, Discord) y bloquea a todos los demás. El `noindex` sigue en cada página. Revisar con LinkedIn Post Inspector después del merge |
-| M1 | Evidencia en el primer viewport (fila de métricas + logos pegados al hero) | ⬜ |
-| M2 | Encadenar `case-nav` 01 → 07 → UI | ⬜ |
-| M3 | Alinear la numeración "Case NN / 07" al orden del home | ⬜ |
-| M4 | Una sola fórmula de rol en title, OG, eyebrow, CV y LinkedIn | ⬜ |
-| M5 | CV accesible desde home o nav | ⬜ |
+| M1 | Evidencia en el primer viewport | ✅ Fila de 3 resultados enlazados bajo el lede (8 días → 2 h, 0.24% → 2.84%, 28% → 40%), H1 más chico en desktop, foto de 140 px en móvil y franja de logos pegada al hero. En 1440×900 se ven los resultados y los CTAs sin hacer scroll |
+| M2 | Navegación entre casos | ✅ Cadena 01 → 07 → UI showcase → home, en EN y ES |
+| M3 | Numeración | ✅ "Case NN / 07" en el orden del home, EN y ES |
+| M4 | Fórmula de rol | ✅ "Senior UX Researcher & Product Strategist" en title, OG, eyebrow, teaser y footer del home, y en About EN. Falta alinear el headline de LinkedIn (fuera del repo). El CV ya usa la misma fórmula |
+| M5 | CV accesible | ✅ "CV" en la nav de las 20 páginas y "Download CV" como CTA secundario del home (reemplaza "About me", que sigue en la nav) |
 | L1 a L4 | og:image faltantes, lede del grid, logo de Gentera, autoría en FOVISSSTE | ⬜ |
 | Diseño | Design critique UX-UI (tarea aparte) | En curso |
 
@@ -69,6 +69,7 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 - `styles/base.css` y `styles/case.css` no se tocan. Todo lo nuevo va en `styles/portfolio-extras.css`.
 - Rol en Whisper BI: "Head of Product & UX Research" en todo el material público.
 - Logos públicos: un logo por tarjeta, solo de cliente final. Las agencias y holdings se mencionan en texto.
+- Si cambias `styles/portfolio-extras.css`, sube el `?v=` del `<link>` en las 20 páginas: `vercel.json` cachea los CSS como `immutable` por un año.
 - Sin em dashes ni patrones de redacción de IA en el copy (ver los commits del 29 de abril de 2026). Al reemplazarlos, revisa que no se coma letras (ver H4).
 - ES en español mexicano nativo, no traducción literal.
 - Deploy solo en Vercel, en `davidgmendieta.vercel.app`, sin dominio propio.
@@ -77,4 +78,4 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Empieza por M1 a M5. No cambies las decisiones de dominio e indexación.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Sigue con los Low (L1 a L4) y la crítica de diseño. No cambies las decisiones de dominio e indexación.

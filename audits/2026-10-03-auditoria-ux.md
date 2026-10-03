@@ -14,7 +14,8 @@
 | H3 | ✅ Corregido: "28% → 40% (+12 pts)" en todas las menciones EN/ES |
 | H4 | ✅ Corregido, con más casos de los listados aquí (22 en total) |
 | H5 | ✅ Cerrado como decisión: el sitio no se indexa. `robots.txt` deja pasar solo a los bots de vista previa |
-| Resto | Pendiente. Ver la tabla en `HANDOFF.md` |
+| M1 a M5 | ✅ Corregidos. Detalle en `HANDOFF.md` |
+| L1 a L4 | Pendientes |
 
 ## Escala de severidad
 
@@ -143,5 +144,5 @@ Los demás casos usan `[My call]` / `[Team]`, que es justo la evidencia que busc
 1. H1 (ya aplicado en este cambio; solo falta verificar después del deploy).
 2. ~~H3 + H4~~ (resueltos).
 3. ~~H2 + H5~~ (resueltos) + L1: agregar og:image a las 9 páginas que no tienen.
-4. M1 a M5.
+4. ~~M1 a M5~~ (resueltos).
 5. Low cuando haya tiempo.
