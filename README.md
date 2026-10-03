@@ -2,6 +2,14 @@
 
 Static bilingual portfolio. No framework, no build step. Hand-rolled HTML + CSS + vanilla JS. Deploys as a static site on Vercel free tier.
 
+> **Current state (October 2026).** This README documents the Phase 1 build and is kept as history. For what is live today and what is pending, read `HANDOFF.md` and the latest file in `audits/`.
+>
+> Locked decisions since Phase 1:
+> - **URL:** `https://davidgmendieta.vercel.app`. No custom domain. Canonical, hreflang, og:url, og:image and `sitemap.xml` all use it.
+> - **Indexing:** the site is private by design. Every page carries `noindex, nofollow` and `robots.txt` is `Disallow: /`. The portfolio is shared by direct link (CV, LinkedIn, applications) and must not show up in search results.
+> - **Internal docs:** `*.md` and `audits/` are excluded from deploys via `.vercelignore`.
+> - **Cases:** all 7 cases plus the UI showcase are live in EN and ES.
+
 ---
 
 ## What's built (Phase 1 — this ZIP)
@@ -63,7 +71,7 @@ portfolio/
 │   │   └── santander.svg        End client
 │   └── cases/
 │       └── occ/                 11 images (before/after shots, roadmap, revenue chart, 3 JTBD reference pages)
-├── robots.txt                   Allow all + Disallow /private/
+├── robots.txt                   Disallow: / (site is not indexed, see decisions above)
 ├── sitemap.xml                  6 URLs with hreflang alternates
 ├── vercel.json                  Security headers + cache control + X-Robots-Tag for /private/
 ├── README.md                    this file
@@ -155,7 +163,7 @@ Using David's `base.css` + `case.css` exact names:
 - [ ] All case hero images load (OCC hero screenshot, before/after pairs, roadmap, revenue chart)
 - [ ] Reveal-on-scroll triggers for `.case-card.featured` once
 - [ ] `/sitemap.xml` is reachable publicly
-- [ ] `/robots.txt` is reachable publicly and shows `Disallow: /private/`
+- [ ] `/robots.txt` is reachable publicly and shows `Disallow: /`
 - [ ] OG preview shows portrait image when you paste a link in Slack / LinkedIn / WhatsApp
 
 ---
@@ -167,7 +175,7 @@ Using David's `base.css` + `case.css` exact names:
 3. **About — "How I think about the work"** — three callouts articulating principles. If any feels too absolute, soften with a hedging clause.
 4. **Timeline — Whisper BI framing** — currently "Confidential B2B SaaS engagement · Senior IC". Confirm this is how you want it shown publicly while job-searching.
 5. **OCC — Reflection section** — two honest "what I'd do differently" items. If this level of self-critique reads as weakness to a specific recruiter segment, we can hide or tighten.
-6. **Contact email** — `davidgerardom@gmail.com` hardcoded in 3 places per language. If you want a professional alias (`hello@davidgmendieta.com` once domain is live), search/replace in all 6 HTML files.
+6. **Contact email** — `davidgerardom@gmail.com` hardcoded in 3 places per language. If you want a professional alias (no custom domain planned; any alias would need its own mail domain), search/replace in all 6 HTML files.
 
 ---
 
@@ -175,5 +183,5 @@ Using David's `base.css` + `case.css` exact names:
 
 1. **5 remaining case studies** — use `/work/occ.html` as template. Each should hit 600–900 lines: Before → Research → Roadmap/Decisions → After → Impact → Reflection. Bilingual from day one.
 2. **Private routes** — `/private/*` for material with sensitive client data (Compartamos loan flow with real customer journeys, Santander CRM screenshots, Whisper BI founder angle). Each gets an obscure URL you share privately in applications.
-3. **LinkedIn alignment** — once live, update LinkedIn `Contact &amp; basic info → Website` with `davidgmendieta.com`. Update the 3 CV variants (Master ATS, Regulated Financial, UX Design Engineering) to cite the portfolio URL under Contact.
+3. **LinkedIn alignment** — once live, update LinkedIn `Contact &amp; basic info → Website` with `https://davidgmendieta.vercel.app`. Update the 3 CV variants (Master ATS, Regulated Financial, UX Design Engineering) to cite the portfolio URL under Contact.
 4. **Analytics review** — first 2 weeks after going live, check Vercel Analytics for which cases get traffic, where people bounce, and whether the OCC case completion rate is acceptable.

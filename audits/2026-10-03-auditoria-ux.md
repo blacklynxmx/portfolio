@@ -5,6 +5,15 @@
 **Lentes:** `product:ux-product-auditor` (formato de hallazgo y escala de severidad) y `people:hiring-and-interviewing` (cómo evalúa un hiring manager) del repo [cbrock84/headcount](https://github.com/cbrock84/headcount).
 **Persona del recorrido:** recruiter o hiring manager de fintech, banca o B2B SaaS que llega desde LinkedIn o desde el CV, primera visita, con 60 a 90 segundos de atención antes de decidir si lee un caso completo.
 
+## Estado al cierre (3 de octubre de 2026)
+
+| # | Estado |
+|---|---|
+| H1 | ✅ Corregido con `.vercelignore`. Falta verificar en producción después del merge |
+| H2 | ✅ Corregido. Decisión: sin dominio propio, todo apunta a `davidgmendieta.vercel.app` |
+| H5 | ✅ Cerrado como decisión: el sitio no se indexa a propósito. Se queda como riesgo aceptado para las vistas previas de links |
+| Resto | Pendiente. Ver la tabla en `HANDOFF.md` |
+
 ## Escala de severidad
 
 | Nivel | Criterio |
@@ -131,6 +140,6 @@ Los demás casos usan `[My call]` / `[Team]`, que es justo la evidencia que busc
 
 1. H1 (ya aplicado en este cambio; solo falta verificar después del deploy).
 2. H3 + H4 en una sola pasada de copy: son 30 minutos y son los que más afectan la credibilidad.
-3. H2 + H5 + L1 juntos: es la misma tarea de metadatos. Primero decide si compras el dominio.
+3. ~~H2 + H5~~ (resueltos) + L1: agregar og:image a las 9 páginas que no tienen.
 4. M1 a M5.
 5. Low cuando haya tiempo.

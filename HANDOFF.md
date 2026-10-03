@@ -5,6 +5,10 @@
 **Repo:** https://github.com/blacklynxmx/portfolio
 **Flujo de trabajo:** commits directos en el repo. El flujo anterior de ZIP y sobrescritura ya no aplica.
 
+**Decisiones vigentes (3 de octubre de 2026):**
+- **Sin dominio propio.** La URL oficial es `https://davidgmendieta.vercel.app` en canonical, hreflang, OG, sitemap, CV y LinkedIn.
+- **El sitio no se indexa.** `noindex, nofollow` en todas las páginas y `Disallow: /` en `robots.txt` se quedan así a propósito. El portfolio se comparte solo por link directo.
+
 Antes de tocar cualquier cosa, lee la auditoría más reciente: [`audits/2026-10-03-auditoria-ux.md`](audits/2026-10-03-auditoria-ux.md).
 
 ---
@@ -40,14 +44,15 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | H1 | Los `.md` se publicaban en producción | ✅ `.vercelignore` agregado. Falta confirmar que `/HANDOFF.md` y `/DEPLOY.md` den 404 después del deploy |
 | H3 | Whisper: cambiar "40% lift" por "28% → 40% (+12 pts)" en home, meta y caso, EN y ES | ⬜ |
 | H4 | Corregir palabras mutiladas (home tarjeta 01, Compartamos EN 3, ES 6) | ⬜ |
-| H2 | `davidgmendieta.com` no existe: comprarlo o reemplazar por `vercel.app` en 6 archivos públicos + sitemap | ⬜ |
-| H5 | Decidir si el sitio se indexa (hoy `noindex` global + `Disallow: /`) | ⬜ Decisión de David |
+| H2 | `davidgmendieta.com` no existe | ✅ Reemplazado por `vercel.app` en los 5 HTML afectados y en `sitemap.xml`. Se verificó que las og:image responden 200 |
+| H5 | Indexación | ✅ Decidido: no se indexa. Efecto a vigilar: algunos generadores de vista previa (probablemente LinkedIn) respetan `robots.txt`, así que la tarjeta del link puede salir sin imagen. Revisar con LinkedIn Post Inspector |
 | M1 | Evidencia en el primer viewport (fila de métricas + logos pegados al hero) | ⬜ |
 | M2 | Encadenar `case-nav` 01 → 07 → UI | ⬜ |
 | M3 | Alinear la numeración "Case NN / 07" al orden del home | ⬜ |
 | M4 | Una sola fórmula de rol en title, OG, eyebrow, CV y LinkedIn | ⬜ |
 | M5 | CV accesible desde home o nav | ⬜ |
 | L1 a L4 | og:image faltantes, lede del grid, logo de Gentera, autoría en FOVISSSTE | ⬜ |
+| Diseño | Design critique UX-UI (tarea aparte) | En curso |
 
 ## Backlog previo (sigue vigente)
 
@@ -66,9 +71,10 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 - Logos públicos: un logo por tarjeta, solo de cliente final. Las agencias y holdings se mencionan en texto.
 - Sin em dashes ni patrones de redacción de IA en el copy (ver los commits del 29 de abril de 2026). Al reemplazarlos, revisa que no se coma letras (ver H4).
 - ES en español mexicano nativo, no traducción literal.
-- Deploy solo en Vercel.
+- Deploy solo en Vercel, en `davidgmendieta.vercel.app`, sin dominio propio.
+- El sitio no se indexa: no quites `noindex` ni el `Disallow: /`.
 - Los archivos internos (`*.md`, `audits/`) no se publican. Si agregas otro tipo de archivo interno, súmalo a `.vercelignore`.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Empieza por los pendientes H3 y H4.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Empieza por los pendientes H3 y H4. No cambies las decisiones de dominio e indexación.

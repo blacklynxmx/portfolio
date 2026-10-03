@@ -16,6 +16,8 @@ That's it. No credit card required for any of this.
 
 ## Step 1 — Pre-deploy cleanup (5 min)
 
+> **Done (October 2026).** Decision: no custom domain. All placeholders now point to `https://davidgmendieta.vercel.app`. Keep this section only as reference if a domain is ever bought.
+
 Before uploading, replace the placeholder domain in three files:
 
 ### If you're buying `davidgmendieta.com` (or any custom domain)
@@ -102,7 +104,7 @@ Open the URL. Everything should look identical to your local preview. If not, se
 
 ## Step 4 — Point your custom domain (10 min)
 
-Skip this if you didn't buy a domain.
+Skip this if you didn't buy a domain. **Current decision: skipped, the site lives on `davidgmendieta.vercel.app`.**
 
 1. In Vercel, go to your project → **Settings** → **Domains**.
 2. Type your domain (`davidgmendieta.com`) and click **Add**.
