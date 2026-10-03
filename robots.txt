@@ -1,4 +1,34 @@
-# robots.txt — David G. Mendieta portfolio
-# Private portfolio — not for public indexing
+# robots.txt · David G. Mendieta portfolio
+# Private portfolio: not for search indexing. Every page also carries
+# <meta name="robots" content="noindex, nofollow">.
+#
+# Link-preview bots are allowed so shared links render a card (title,
+# description, og:image). They only fetch URLs someone pastes; they do
+# not crawl or index the site.
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
 User-agent: *
 Disallow: /

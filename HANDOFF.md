@@ -19,9 +19,9 @@ Los 7 casos y el showcase de UI están publicados en EN y ES.
 
 | # (home) | Caso | EN | ES | Notas |
 |---|---|---|---|---|
-| 01 · Anchor | Compartamos Banco · originación de crédito | `work/compartamos.html` | `es/work/compartamos.html` | Featured card. Tiene restos de la limpieza de guiones (auditoría H4) |
+| 01 · Anchor | Compartamos Banco · originación de crédito | `work/compartamos.html` | `es/work/compartamos.html` | Featured card |
 | 02 | OCC Mundial · job-ad commerce | `work/occ.html` | `es/work/occ.html` | |
-| 03 | Whisper BI · zero-to-one | `work/whisper.html` | `es/work/whisper.html` | Métrica 40% mal enunciada (auditoría H3) |
+| 03 | Whisper BI · zero-to-one | `work/whisper.html` | `es/work/whisper.html` | |
 | 04 | Santander · Neo Jupiter CRM | `work/santander.html` | `es/work/santander.html` | Vía Leo Burnett |
 | 05 | Movistar · landing pages dinámicas | `work/movistar.html` | `es/work/movistar.html` | Vía Accenture |
 | 06 | Compartamos · ResearchOps y gobierno de diseño | `work/compartamos-ops.html` | `es/work/compartamos-ops.html` | |
@@ -42,10 +42,10 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 | ID | Pendiente | Estado |
 |---|---|---|
 | H1 | Los `.md` se publicaban en producción | ✅ `.vercelignore` agregado. Falta confirmar que `/HANDOFF.md` y `/DEPLOY.md` den 404 después del deploy |
-| H3 | Whisper: cambiar "40% lift" por "28% → 40% (+12 pts)" en home, meta y caso, EN y ES | ⬜ |
-| H4 | Corregir palabras mutiladas (home tarjeta 01, Compartamos EN 3, ES 6) | ⬜ |
+| H3 | Métrica de Whisper | ✅ Ahora dice "28% → 40% (+12 pts)" en home, About, meta, OG, hero, callout, impact card y reflexión, EN y ES. El CV no mencionaba el 40% |
+| H4 | Palabras mutiladas por la limpieza de guiones | ✅ 22 correcciones en home, About ES, Compartamos EN/ES y OCC EN/ES (incluye "América Latin", "mobile-firs", "Blueprin", "carrearía"). Ya no queda ningún `&nbsp;` suelto en el copy |
 | H2 | `davidgmendieta.com` no existe | ✅ Reemplazado por `vercel.app` en los 5 HTML afectados y en `sitemap.xml`. Se verificó que las og:image responden 200 |
-| H5 | Indexación | ✅ Decidido: no se indexa. Efecto a vigilar: algunos generadores de vista previa (probablemente LinkedIn) respetan `robots.txt`, así que la tarjeta del link puede salir sin imagen. Revisar con LinkedIn Post Inspector |
+| H5 | Indexación | ✅ Decidido: no se indexa. `robots.txt` deja pasar solo a los bots de vista previa (LinkedIn, Facebook, WhatsApp, X, Slack, Telegram, Discord) y bloquea a todos los demás. El `noindex` sigue en cada página. Revisar con LinkedIn Post Inspector después del merge |
 | M1 | Evidencia en el primer viewport (fila de métricas + logos pegados al hero) | ⬜ |
 | M2 | Encadenar `case-nav` 01 → 07 → UI | ⬜ |
 | M3 | Alinear la numeración "Case NN / 07" al orden del home | ⬜ |
@@ -72,9 +72,9 @@ Prioridad en este orden. El detalle de cada uno está en la auditoría.
 - Sin em dashes ni patrones de redacción de IA en el copy (ver los commits del 29 de abril de 2026). Al reemplazarlos, revisa que no se coma letras (ver H4).
 - ES en español mexicano nativo, no traducción literal.
 - Deploy solo en Vercel, en `davidgmendieta.vercel.app`, sin dominio propio.
-- El sitio no se indexa: no quites `noindex` ni el `Disallow: /`.
+- El sitio no se indexa: no quites `noindex` ni el `Disallow: /` para `User-agent: *`. Solo los bots de vista previa tienen `Allow`.
 - Los archivos internos (`*.md`, `audits/`) no se publican. Si agregas otro tipo de archivo interno, súmalo a `.vercelignore`.
 
 ## Prompt para la siguiente sesión
 
-> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Empieza por los pendientes H3 y H4. No cambies las decisiones de dominio e indexación.
+> Continúa el portfolio en blacklynxmx/portfolio. Lee HANDOFF.md y audits/2026-10-03-auditoria-ux.md antes de hacer cualquier cosa. Empieza por M1 a M5. No cambies las decisiones de dominio e indexación.

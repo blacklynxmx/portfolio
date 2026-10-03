@@ -11,7 +11,9 @@
 |---|---|
 | H1 | ✅ Corregido con `.vercelignore`. Falta verificar en producción después del merge |
 | H2 | ✅ Corregido. Decisión: sin dominio propio, todo apunta a `davidgmendieta.vercel.app` |
-| H5 | ✅ Cerrado como decisión: el sitio no se indexa a propósito. Se queda como riesgo aceptado para las vistas previas de links |
+| H3 | ✅ Corregido: "28% → 40% (+12 pts)" en todas las menciones EN/ES |
+| H4 | ✅ Corregido, con más casos de los listados aquí (22 en total) |
+| H5 | ✅ Cerrado como decisión: el sitio no se indexa. `robots.txt` deja pasar solo a los bots de vista previa |
 | Resto | Pendiente. Ver la tabla en `HANDOFF.md` |
 
 ## Escala de severidad
@@ -139,7 +141,7 @@ Los demás casos usan `[My call]` / `[Team]`, que es justo la evidencia que busc
 ## Orden de ataque recomendado
 
 1. H1 (ya aplicado en este cambio; solo falta verificar después del deploy).
-2. H3 + H4 en una sola pasada de copy: son 30 minutos y son los que más afectan la credibilidad.
+2. ~~H3 + H4~~ (resueltos).
 3. ~~H2 + H5~~ (resueltos) + L1: agregar og:image a las 9 páginas que no tienen.
 4. M1 a M5.
 5. Low cuando haya tiempo.

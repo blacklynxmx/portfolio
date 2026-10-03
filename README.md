@@ -6,7 +6,7 @@ Static bilingual portfolio. No framework, no build step. Hand-rolled HTML + CSS 
 >
 > Locked decisions since Phase 1:
 > - **URL:** `https://davidgmendieta.vercel.app`. No custom domain. Canonical, hreflang, og:url, og:image and `sitemap.xml` all use it.
-> - **Indexing:** the site is private by design. Every page carries `noindex, nofollow` and `robots.txt` is `Disallow: /`. The portfolio is shared by direct link (CV, LinkedIn, applications) and must not show up in search results.
+> - **Indexing:** the site is private by design. Every page carries `noindex, nofollow` and `robots.txt` is `Disallow: /` for every crawler except link-preview bots (LinkedIn, Facebook, WhatsApp, X, Slack, Telegram, Discord), which are allowed so shared links render a card. The portfolio is shared by direct link (CV, LinkedIn, applications) and must not show up in search results.
 > - **Internal docs:** `*.md` and `audits/` are excluded from deploys via `.vercelignore`.
 > - **Cases:** all 7 cases plus the UI showcase are live in EN and ES.
 
@@ -71,7 +71,7 @@ portfolio/
 │   │   └── santander.svg        End client
 │   └── cases/
 │       └── occ/                 11 images (before/after shots, roadmap, revenue chart, 3 JTBD reference pages)
-├── robots.txt                   Disallow: / (site is not indexed, see decisions above)
+├── robots.txt                   Allow for link-preview bots only, Disallow: / for everyone else
 ├── sitemap.xml                  6 URLs with hreflang alternates
 ├── vercel.json                  Security headers + cache control + X-Robots-Tag for /private/
 ├── README.md                    this file
@@ -163,7 +163,7 @@ Using David's `base.css` + `case.css` exact names:
 - [ ] All case hero images load (OCC hero screenshot, before/after pairs, roadmap, revenue chart)
 - [ ] Reveal-on-scroll triggers for `.case-card.featured` once
 - [ ] `/sitemap.xml` is reachable publicly
-- [ ] `/robots.txt` is reachable publicly and shows `Disallow: /`
+- [ ] `/robots.txt` is reachable publicly: preview bots allowed, `Disallow: /` for `*`
 - [ ] OG preview shows portrait image when you paste a link in Slack / LinkedIn / WhatsApp
 
 ---
